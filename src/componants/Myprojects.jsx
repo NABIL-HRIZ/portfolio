@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import '../styles/MyProjects.css';
 import eventify from '../assets/eventify.png'
 import secure from '../assets/secure.png'
-import movie from '../assets/movie.png'
+import movie from '../assets/movie-scope.png'
 import food from '../assets/food.png'
+import educaty from '../assets/educaty.png'
+import booking from '../assets/booking.png'
+
 
 const MyProjects = () => {
   const [showAll, setShowAll] = useState(false);
@@ -50,7 +53,17 @@ const MyProjects = () => {
       name: "Sky 365",
       description: "Un site web pour le booking en ligne des hotels moderne et responsive .",
       tags: ["Figma","React", "Uiverse", "Materiel Ui"],
-      image: "/images/green-street.jpg", 
+      image:booking, 
+      demoLink: "#",
+      codeLink: "#"
+    },
+
+     {
+      id: 5,
+      name: "Educaty",
+      description:"Plateforme d’apprentissage innovante qui révolutionne la manière dont les étudiants accèdent aux ressources éducatives en ligne. ",
+      tags: ["Figma","React", "WebLeb ", "Dribble Inspiration"],
+      image:educaty, 
       demoLink: "#",
       codeLink: "#"
     },

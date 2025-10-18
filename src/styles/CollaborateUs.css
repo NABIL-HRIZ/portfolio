@@ -4,8 +4,8 @@
 
   position: relative;
   overflow: hidden;
-  margin-left:500px;
-  margin-top: -150px;
+  margin-left: 0;
+  margin-top: 0;
 }
 
 
@@ -171,86 +171,94 @@
   transition: all 0.4s ease;
 }
 
-
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .collaborate-section {
-    padding: 3rem 1rem;
+    padding:1rem 1rem;
+    min-height: auto;
+    margin-left: 0;
+    margin-top:-60px;
   }
-  
-  .collaborate-card {
-    padding: 3rem 2rem;
-    border-radius: 25px;
-  }
-  
-  .collaborate-title {
-    font-size: 2.5rem;
-  }
-  
-  .collaborate-subtitle {
-    font-size: 1.1rem;
-  }
-  
-  .collaborate-icon {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .main-icon {
-    font-size: 2.5rem;
-  }
-  
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .feature-item {
-    padding: 1.25rem;
-  }
-  
-  .cta-button {
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
-  }
-}
 
-@media (max-width: 480px) {
+  .collaborate-container {
+    max-width: 100%;
+  }
+
   .collaborate-card {
     padding: 2rem 1.5rem;
+    border-radius: 20px;
   }
-  
+  .collaborate-icon{
+    margin-left: -600px;
+  }
+
+  .collaborate-content {
+    margin-bottom: 2rem;
+  }
+
   .collaborate-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
-  
+
   .collaborate-subtitle {
     font-size: 1rem;
+    text-align:center;
+    margin: 0;
+    max-width:300px;
   }
-  
-  .collaborate-icon {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1.5rem;
-  }
-  
-  .main-icon {
-    font-size: 2rem;
-  }
-  
-  .feature-item {
+
+  .features-grid {
     flex-direction: column;
-    text-align: center;
-    gap: 0.75rem;
+    gap: 1rem;
+    margin-bottom: 2rem;
   }
-  
-  .feature-content {
-    text-align: center;
+
+  .feature-item {
+    padding: 1.2rem;
+    gap: 0.8rem;
+    max-width:250px;
   }
-  
-  .cta-button {
+
+  .feature-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .feature-content h4 {
+    font-size: 1rem;
+  }
+
+  .feature-content p {
+    font-size: 0.85rem;
+  }
+
+  .collaborate-icon {
+    width: 60px;
+    height: 60px;
+    margin-left: 0;
+    margin: 0 auto 2rem auto;
+  }
+
+  .main-icon {
+    font-size: 1.5rem;
+  }
+
+  /* If you have an input field, add this */
+  .collaborate-input {
+    width: 200px !important;
+    max-width: 100%;
+  }
+
+  /* Adjust the contact form if it exists */
+  .contact-form {
     width: 100%;
-    padding: 1rem 2rem;
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
   }
 }
-

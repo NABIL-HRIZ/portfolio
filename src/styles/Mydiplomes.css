@@ -284,79 +284,113 @@
   transform: translateY(0);
 }
 
-/* Mobile Responsive */
+html {
+  scroll-behavior: smooth;
+}
+
+
 @media (max-width: 768px) {
   .diplomes-section {
     padding: 3rem 1rem;
+    min-height: auto;
+    margin-left: 0;
+    margin-top: 0;
+    display: block;
   }
-  
-  .section-title {
-    font-size: 2.5rem;
-  }
-  
-  .timeline-line {
-    left: 30px;
-  }
-  
-  .diplome-card {
-    width: calc(100% - 60px);
-    margin-left: 60px !important;
-    margin-right: 0 !important;
-    align-self: flex-start !important;
-  }
-  
-  .diplome-card.left .card-decoration,
-  .diplome-card.right .card-decoration {
-    left: -50px;
-    right: auto;
-  }
-  
-  .diplome-card.left .decoration-dot::before,
-  .diplome-card.right .decoration-dot::before {
-    left: 8px;
-    right: auto;
-    width: 30px;
-  }
-  
-  .card-content {
-    padding: 2rem 1.5rem;
-  }
-  
-  .etablissement {
-    font-size: 1.1rem;
-  }
-  
-  .diplome {
-    font-size: 1rem;
-  }
-}
 
-@media (max-width: 480px) {
+  .diplomes-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
   .section-title {
-    font-size: 2rem;
+    font-size:1.7rem !important;
+    margin-bottom: 2rem;
+    margin-left:-800px;
   }
-  
-  .section-subtitle {
-    font-size: 1rem;
+
+ 
+  .timeline {
+    max-width: 100%;
+    margin: 0 auto;
   }
-  
+
+  .timeline-line {
+    left:20px;
+    transform: none;
+  }
+
+  .timeline-line::before,
+  .timeline-line::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .diplomes-grid {
     gap: 2rem;
+    padding-left: 0;
   }
-  
+
+  .diplome-card {
+    width: 100%;
+  }
+
+  .diplome-card.left,
+  .diplome-card.right {
+    margin: 0;
+  }
+
   .card-content {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem 1.5rem;
+    margin-left:40px;
+    border-radius: 15px;
+    max-width: 200px;
   }
-  
+
   .card-icon {
+    position: absolute;
+    top: 50%;
+    left: -85px;
+    transform: translateY(-50%);
+    margin-top: 0;
     width: 50px;
     height: 50px;
     font-size: 1.2rem;
-    top: -20px;
   }
-}
 
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
+  .card-header {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .card-body {
+    text-align: left;
+  }
+
+  .etablissement {
+    font-size: 1.1rem;
+  }
+
+  .periode {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .diplome {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  /* Remove the decoration dots and lines */
+  .card-decoration {
+    display: none;
+  }
+
+  .diplome-card.left .card-decoration,
+  .diplome-card.right .card-decoration {
+    display: none;
+  }
 }

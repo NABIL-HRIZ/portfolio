@@ -7,7 +7,6 @@ const HeroSection = () => {
   return (
     <section className="hero-section" id='hero-section'>
       <div className="hero-container">
-        {/* Partie gauche fixe */}
         <div className="hero-left">
           <div className="profile-card">
             <div className="profile-image">
