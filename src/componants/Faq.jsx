@@ -59,7 +59,7 @@ const Faq = () => {
   return (
     <section ref={sectionRef} className="faq-section">
       <div className="faq-container">
-        <h2 className="section-title fade-in-up" style={{marginLeft:'-110px'}}>
+        <h2 className="section-faqs-title fade-in-up" style={{marginLeft:'-110px'}}>
           Foire aux <span className="highlight">Questions</span>
         </h2>
         <p className="section-subtitle fade-in-up">

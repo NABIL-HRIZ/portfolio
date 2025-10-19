@@ -15,7 +15,7 @@ const HeroSection = () => {
             </div>
             <div className="profile-details">
               <h3 className="profile-card-name">NABIL HRIZ</h3>
-              <p className="profile-card-title">Full Stack Developer</p>
+              <p className="profile-card-title">Développeur Full-Stack </p>
 
               <div className="social-icons">
                 <a href="https://github.com/NABIL-HRIZ" target="_blank" rel="noopener noreferrer" className="social-link">
@@ -30,8 +30,13 @@ const HeroSection = () => {
               </div>
 
               <div className="profile-actions">
-                <button className="action-btn primary">Download CV</button>
-                <a href='#contact' style={{textDecoration:"none"}} className="action-btn secondary">Contact Me</a>
+                <button class="cta">
+                  <span>Télécharger CV</span>
+                </button>
+
+                <button class="cta-reverse">
+                  <span>Contactez-moi</span>
+                </button>
               </div>
             </div>
           </div>
@@ -40,16 +45,15 @@ const HeroSection = () => {
         <div className="hero-right">
           <h1 className="hero-title">
           Faire passer vos idées du concept à  <span className="highlight">la réalité</span>
-
           </h1>
           <p className="hero-subtitle">
             Développeur Full Stack passionné par les technologies modernes et leur potentiel pour transformer les entreprises,
-            je m’efforce de concevoir des solutions web innovantes, performantes et intuitives. J’aime transformer des idées en applications concrètes.
+            je m'efforce de concevoir des solutions web innovantes, performantes et intuitives. J'aime transformer des idées en applications concrètes.
           </p>
           <div className="hero-buttons">
-            <a className="action-btn primary" href='#projects-section'>
-              Mes Projets <span className="arrow"></span>
-            </a>
+<a href='#projects-section' class="button" style={{textDecoration:"none"}}> Mes Projets</a>
+
+            
           </div>
         </div>
       </div>

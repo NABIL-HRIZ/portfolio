@@ -20,6 +20,7 @@
   top:83px;
   left:3.5rem;
   width:370px;
+  margin-top: -30px;
 }
 
 .profile-card {
@@ -72,6 +73,105 @@
   color:#94e6ca;
   margin-bottom: 1rem;
   font-weight: 500;
+}
+
+
+
+
+
+
+
+
+.cta {
+  position: relative;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: -20px;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #94e6ca;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #fbfdfe;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: linear-gradient(135deg, #2ed861 0%, #94e6ca 100%);
+}
+
+.cta:hover span {
+  color: #000000;
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+
+.cta-reverse {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta-reverse:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #2ed861 0%, #94e6ca 100%);
+  width: 100%;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta-reverse span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.cta-reverse:hover:before {
+  width: 45px;
+  background: #94e6ca;
+}
+
+.cta-reverse:hover span {
+  color: #fbfdfe;
+}
+
+.cta-reverse:active {
+  transform: scale(0.95);
 }
 
 
@@ -166,7 +266,7 @@
 
 .action-btn {
   flex: 1;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem .5rem !important;
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -219,6 +319,70 @@
   color: #b0b0b0;
   margin-top: -50px;
 }
+
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #94e6ca;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  cursor: pointer;
+  color: rgb(250, 248, 248);
+  z-index: 1;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color:#94e6ca;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:hover {
+  color: #0b0b0b;
+  border: 1px solid #39bda7;
+}
+
+.button:hover:before {
+  top: -35%;
+  background-color:#94e6ca;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+  top: -45%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
 
 .hero-buttons {
   margin-top: -1rem;
@@ -312,13 +476,9 @@
     gap: 0.8rem;
   }
 
-  .action-btn {
-    padding: 0.8rem 1rem;
-    
-  }
 
   .hero-right {
-    margin-left: 0;
+    margin-left:-15px;
     max-width: 100%;
     text-align: center;
     gap: 1.5rem;
@@ -326,7 +486,7 @@
 
   .hero-title {
     margin-top: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.1;
   }
 
@@ -361,47 +521,37 @@
   }
 }
 
-@media (max-width: 480px) {
-  .hero-section {
-    padding: 0.5rem;
-  }
 
-  .profile-card {
-    padding: 1rem;
-  }
 
-  .profile-image {
-    width: 200px !important;
-    height: 160px !important;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1rem;
-    padding: 0;
-  }
-
-  .btn {
-    padding: 0.8rem 1.5rem;
+@media (max-width: 768px) {
+  .profile-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
-    max-width: 280px;
   }
 
-  .social-icons {
-    gap: 0.6rem;
+  .cta, .cta-reverse {
+    width: 250px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .social-link {
-    width: 35px;
-    height: 35px;
+
+  .cta:before, .cta-reverse:before {
+    height: 50px;
   }
-  
-  .social-icon {
-    font-size: 1rem;
+
+  .cta span, .cta-reverse span {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
-/* Remove the existing 968px media query and replace with the above */
