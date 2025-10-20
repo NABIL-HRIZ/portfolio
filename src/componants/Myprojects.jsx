@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import '../styles/MyProjects.css';
-import eventify from '../assets/eventify.png'
-import secure from '../assets/secure.png'
-import movie from '../assets/movie-scope.png'
-import food from '../assets/food.png'
-import educaty from '../assets/educaty.png'
+import eventify from '../assets/eventify.jpg'
+import secure from '../assets/secure.jpg'
+import movie from '../assets/movie-scope.jpg'
+import food from '../assets/food.jpg'
+import educaty from '../assets/educaty.jpg'
 import booking from '../assets/booking.png'
-import pizza from '../assets/pizza.png'
-import dari from '../assets/dari.png'
-import jardinage from '../assets/jardinage.png'
-import honey from '../assets/honey.png'
+import pizza from '../assets/pizza.jpg'
+import dari from '../assets/dari.jpg'
+import jardinage from '../assets/jardinage.jpg'
+import honey from '../assets/honey.jpg'
 import weather from '../assets/weather.png'
 
 
