@@ -7,7 +7,7 @@ const Navbar = () => {
     {
       title: "Accueil",
       icon: <FaHome className="nav-icon" />,
-      path: "#hero-section"
+      path: "#accueil"
     },
     {
       title: "Projets",

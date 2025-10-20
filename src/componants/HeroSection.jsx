@@ -1,11 +1,23 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { FaGithub, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import '../styles/HeroSection.css';
 import my_pic from '../assets/my_pic.png';
-
+import TextType from './TextType';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const HeroSection = () => {
+
+    useEffect(() => {
+    AOS.init({
+      duration: 500,  
+      once: false,     
+    });
+  }, []);
+
+
   return (
-    <section className="hero-section" id='hero-section'>
+    <section className="hero-section" id='accueil'>
       <div className="hero-container">
         <div className="hero-left">
           <div className="profile-card">
@@ -30,13 +42,15 @@ const HeroSection = () => {
               </div>
 
               <div className="profile-actions">
-                <button class="cta">
-                  <span>Télécharger CV</span>
-                </button>
+               <a href="public/my_CV.pdf" download>
+  <button className="cta">
+    <span>Télécharger CV</span>
+  </button>
+</a>
 
-                <button class="cta-reverse">
+                <a class="cta-reverse" href='#contact' style={{textDecoration:"none"}}>
                   <span>Contactez-moi</span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -44,16 +58,20 @@ const HeroSection = () => {
 
         <div className="hero-right">
           <h1 className="hero-title">
-          Faire passer vos idées du concept à  <span className="highlight">la réalité</span>
+         <TextType
+    text="Faire passer vos idées du concept à la réalité "
+    typingSpeed={50}
+  />
           </h1>
-          <p className="hero-subtitle">
+          <p className="hero-subtitle" data-aos="fade-left" data-aos-delay="3000">
             Développeur Full Stack passionné par les technologies modernes et leur potentiel pour transformer les entreprises,
             je m'efforce de concevoir des solutions web innovantes, performantes et intuitives. J'aime transformer des idées en applications concrètes.
           </p>
-          <div className="hero-buttons">
-<a href='#projects-section' class="button" style={{textDecoration:"none"}}> Mes Projets</a>
+          <div className="hero-buttons" data-aos="fade-left" data-aos-delay="3000">
 
-            
+            <a class="cta-reverse" href='#accueil' style={{textDecoration:"none"}}>
+                  <span>Mes Projets</span>
+                </a>
           </div>
         </div>
       </div>

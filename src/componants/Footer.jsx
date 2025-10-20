@@ -25,7 +25,7 @@ const Footer = () => {
                 <span className="year">© {currentYear}</span>
                 <span className="separator">|</span>
                 <span className="made-with">
-                  Crafted with <FaHeart className="heart-icon" /> using React
+                 using React
                   <FaReact className="react-icon" />
                 </span>
               </div>

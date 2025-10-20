@@ -23,7 +23,7 @@ const MyProjects = () => {
       id: 1,
       name: "EVENTIFY - GESTION DES EVENEMENTS ",
       description: "Développeur Full Stack  - Réalisation d'une application web en Laravel (API REST, validation, cache, tests,intégration Stripe et webhook) et React.js (interface dynamique, gestion des états, formulaires validés). Conception, intégration et communication client–serveur complètes avec paiement en ligne sécurisé.",
-      tags: ["Laravel" , "React ", "Bootsrap" , "Mysql" , "Stripe" , "Webhook", "Mailhog" ,  "Gsap"  ],
+      tags: ["Laravel" , "React", "Redux","Bootsrap" , "Mysql" , "Stripe" , "Webhook", "Mailhog" ,  "Gsap"  ],
       image:eventify,
       demoLink: "#",
       codeLink: "https://github.com/NABIL-HRIZ/Eventify.git"
@@ -32,7 +32,7 @@ const MyProjects = () => {
       id: 2,
       name: "SECUREBOARD – GESTION DES TACHES ",
       description: "Développeur Full Stack (Laravel + React) – Création d'une application de gestion de projets avec authentification, rôles & permissions, notifications temps réel (Pusher), emails asynchrones et documentation API (Swagger).",
-      tags: ["Laravel", "React","SweetAlert","ChartJs" , "Pusher" , "MailTrap" ,""],
+      tags: ["Laravel", "React","SweetAlert","ReChartJs" , "Pusher" ,"EchoJs","MailTrap"],
       image:secure, 
       demoLink: "#",
       codeLink:'https://github.com/NABIL-HRIZ/SecureBoard.git'
@@ -41,7 +41,7 @@ const MyProjects = () => {
       id: 3,
       name: "FOODIEAPP – COMMANDE EN LIGNE",
       description: "Développeur Front-End React – Développement d'une application web avec React et Redux  pour la gestion d'état, consommation d'une API externe, mise à jour du panier en temps réel, gestion des erreurs et optimisation des performances. Interface réactive et responsive.",
-      tags: ["React","Tailwind","React Bits", "Gsap" ,"ThreeJs" , " Aos" ,  "Api"],
+      tags: ["React","Redux","Tailwind","EmailJs","React Bits", "Gsap" ,"AtroposJs" , " Aos" ,  "Rest Api"],
       image:food, 
       demoLink: "#",
       codeLink: "https://github.com/NABIL-HRIZ/FoodlyApp.git"
@@ -50,7 +50,7 @@ const MyProjects = () => {
       id: 4,
       name: "MOVIESCOPE",
       description: "Une application web moderne permettant de découvrir et explorer films et séries selon vos préférences, avec une interface épurée, des fonctionnalités interactives et une vidéo d'introduction immersive.",
-      tags: ["React", "React Router DOM", "AOS (Animate On Scroll)", "API"],
+      tags: ["React", "SwiperJs","Uiverse" ,"AOS (Animate On Scroll)", "Rest Api"],
       image:movie, 
       demoLink: "#",
       codeLink: "https://github.com/NABIL-HRIZ/-MovieScope.git"
@@ -59,7 +59,7 @@ const MyProjects = () => {
       id: 4,
       name: "HITRADIO_WEATHER",
       description: "HitRadio, une station de radio dynamique et populaire, souhaite enrichir l'expérience de ses auditeurs en intégrant des fonctionnalités météorologiques avancées sur leur site web officiel ",
-      tags: ["React","","Splite 3D ", "Gsap", "API"],
+      tags: ["React","Splite 3D ", "Gsap", "Rest Api"],
       image:weather, 
       demoLink: "https://nabil-hriz.github.io/HitRadio-Weather/",
       codeLink: "https://github.com/NABIL-HRIZ/HitRadio-Weather.git"
@@ -78,7 +78,7 @@ const MyProjects = () => {
       id: 6,
       name: "Educaty",
       description:"Plateforme d’apprentissage innovante qui révolutionne la manière dont les étudiants accèdent aux ressources éducatives en ligne. ",
-      tags: ["Figma","React", "WebLeb ", "Dribble Inspiration"],
+      tags: ["Figma","React","Bootsrap","WebLeb ", "Dribble Inspiration"],
       image:educaty, 
       demoLink: "#",
       codeLink: "https://github.com/NABIL-HRIZ/Educaty-app.git"

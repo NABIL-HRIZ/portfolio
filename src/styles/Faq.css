@@ -60,6 +60,7 @@
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.4s ease;
+  width:90%;
 }
 
 
@@ -207,7 +208,7 @@ html {
   .faq-section {
     padding: 3rem 1rem;
     min-height: auto;
-    margin-left: 0;
+    margin-left:-20px;
     margin-top: 0;
     display: block;
   }
@@ -236,6 +237,7 @@ html {
   .faq-grid {
     gap: 0.8rem;
     width:320px;
+    margin-left:55px !important;
   }
 
   .faq-item {
@@ -243,7 +245,7 @@ html {
   }
 
   .faq-question {
-    padding: 1rem !important;
+    padding: .3rem !important;
   }
 
   .question-header {

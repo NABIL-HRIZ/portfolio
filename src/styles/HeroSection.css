@@ -20,7 +20,8 @@
   top:83px;
   left:3.5rem;
   width:370px;
-  margin-top: -30px;
+  margin-top:-20px;
+  z-index: 1000 !important;
 }
 
 .profile-card {
@@ -443,7 +444,7 @@
   .hero-left {
     position: relative;
     top: 0;
-    left: 0;
+    left:-10px;
     width: 100%;
     margin-bottom: 1rem;
   }
@@ -482,16 +483,17 @@
     max-width: 100%;
     text-align: center;
     gap: 1.5rem;
+    margin-top:20px;
   }
 
   .hero-title {
     margin-top: 0;
-    font-size: 2rem;
+    font-size:1.5rem;
     line-height: 1.1;
   }
 
   .hero-subtitle {
-    font-size: 1.1rem;
+    font-size: .9rem;
     line-height: 1.5;
     margin-top: 0;
     padding: 0 0.5rem;

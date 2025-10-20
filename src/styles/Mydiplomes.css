@@ -58,7 +58,7 @@
   transform: translateY(0);
 }
 
-/* Timeline */
+
 .timeline {
   position: relative;
   max-width: 1000px;
@@ -192,6 +192,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   border: 1px solid rgba(16, 185, 129, 0.3);
+  margin-top: 15px !important;
 }
 
 .card-body {
@@ -235,6 +236,7 @@
   background: #10b981;
   border-radius: 50%;
   position: relative;
+  margin-top: 10px;
 }
 
 .diplome-card.left .decoration-dot::before {
