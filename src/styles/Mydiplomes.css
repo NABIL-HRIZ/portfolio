@@ -1,0 +1,394 @@
+.diplomes-section {
+  padding: 5rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-left:530px;
+  margin-top: -90px;
+}
+
+
+
+.diplomes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+
+.section-title {
+  font-size:4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transition: all 0.8s ease;
+  text-align: left !important;
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title .highlight {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #b0b0b0;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease 0.2s;
+}
+
+.section-subtitle.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #10b981, transparent);
+  background: rgba(16, 185, 129, 0.3);
+}
+
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.timeline-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border-radius: 50%;
+  animation: pulse 2s infinite 1s;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+  50% { opacity: 0.5; transform: translateX(-50%) scale(1.2); }
+}
+
+.diplomes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+}
+
+.diplome-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+  width: 45%;
+  position: relative;
+}
+
+.diplome-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.diplome-card.left {
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.diplome-card.right {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.card-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+
+
+.card-icon {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  border: 4px solid #0a0a0a;
+  z-index: 3;
+  margin-top:40px;
+}
+
+.card-header {
+  text-align: center;
+  margin-top:60px;
+
+}
+
+.etablissement {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.periode {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.card-body {
+  text-align: center;
+}
+
+.diplome {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.description {
+  color: #b0b0b0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card-decoration {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.diplome-card.left .card-decoration {
+  right: -60px;
+}
+
+.diplome-card.right .card-decoration {
+  left: -60px;
+}
+
+.decoration-dot {
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border-radius: 50%;
+  position: relative;
+}
+
+.diplome-card.left .decoration-dot::before {
+  content: '';
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 2px;
+  background: #10b981;
+}
+
+.diplome-card.right .decoration-dot::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 2px;
+  background: #10b981;
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@media (max-width: 768px) {
+  .diplomes-section {
+    padding: 3rem 1rem;
+    min-height: auto;
+    margin-left: 0;
+    margin-top: 0;
+    display: block;
+  }
+
+  .diplomes-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .section-title {
+    font-size:1.7rem !important;
+    margin-bottom: 2rem;
+    margin-left:-800px;
+  }
+
+ 
+  .timeline {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .timeline-line {
+    left:20px;
+    transform: none;
+  }
+
+  .timeline-line::before,
+  .timeline-line::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .diplomes-grid {
+    gap: 2rem;
+    padding-left: 0;
+  }
+
+  .diplome-card {
+    width: 100%;
+  }
+
+  .diplome-card.left,
+  .diplome-card.right {
+    margin: 0;
+  }
+
+  .card-content {
+    padding: 2rem 1.5rem 1.5rem;
+    margin-left:40px;
+    border-radius: 15px;
+    max-width: 200px;
+  }
+
+  .card-icon {
+    position: absolute;
+    top: 50%;
+    left: -85px;
+    transform: translateY(-50%);
+    margin-top: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .card-header {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .card-body {
+    text-align: left;
+  }
+
+  .etablissement {
+    font-size: 1.1rem;
+  }
+
+  .periode {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .diplome {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  /* Remove the decoration dots and lines */
+  .card-decoration {
+    display: none;
+  }
+
+  .diplome-card.left .card-decoration,
+  .diplome-card.right .card-decoration {
+    display: none;
+  }
+}
