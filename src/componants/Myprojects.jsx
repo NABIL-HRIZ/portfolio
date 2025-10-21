@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/MyProjects.css';
+import '../styles/Myprojects.css';
 import eventify from '../assets/eventify.jpg'
 import secure from '../assets/secure.jpg'
 import movie from '../assets/movie-scope.jpg'
