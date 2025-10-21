@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaLaravel, FaReact, FaDocker, FaGitAlt,FaCogs} from 'react-icons/fa';
 import { SiMysql, SiHtml5 } from 'react-icons/si';
-import '../styles/MyTools.css';
+import '../styles/Mytools.css';
 
 const MyTools = () => {
   const tools = [
