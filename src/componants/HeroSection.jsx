@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { FaGithub, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 import '../styles/HeroSection.css';
-import my_pic from '../assets/my_pic.png';
+import my_pic from '../assets/my_pic.jpeg';
 import TextType from './TextType';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
