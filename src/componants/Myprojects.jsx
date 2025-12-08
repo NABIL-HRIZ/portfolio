@@ -11,7 +11,7 @@ import dari from '../assets/dari.jpg'
 import jardinage from '../assets/jardinage.jpg'
 import honey from '../assets/honey.jpg'
 import weather from '../assets/weather.png'
-
+import fanzone from '../assets/fanzone.jpg'
 
 
 
@@ -19,6 +19,17 @@ const MyProjects = () => {
   const [showAll, setShowAll] = useState(false);
 
   const projects = [
+   
+      {
+      id: 1,
+      name: "FANZONE - DIGITALISATION DES FAN ZONES (CAN 2025) ",
+      description: "Conception et réalisation  une plateforme web avancée Full-Stack (React.js/Laravel) pour la gestion digitalisée (réservation, e-tickets QR Code, scan , intégration Stripe et webhooks , statistiques) des 10+ Fan Zones. Projet conteneurisé avec Docker et optimisé par des pipelines de CI/CD" , 
+      tags: ["Laravel" , "React", "Redux", "Mysql" , "PDF Simple" , "Scan QR" ,"Swagger" , "Stripe", "Mailhog" , "AOS Animation"  ],
+      image:fanzone,
+      demoLink: "#",
+      codeLink: "https://github.com/NABIL-HRIZ/fanzone-frontend.git"
+    },
+
     {
       id: 1,
       name: "EVENTIFY - GESTION DES EVENEMENTS ",
