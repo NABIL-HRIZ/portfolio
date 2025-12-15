@@ -1,10 +1,10 @@
 .navbar {
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 0;
-  top: 0;
-  width: 100%;
-  z-index: 1000;position: sticky;
+  backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 1rem 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 1000;position: sticky !important;
 }
 
 .nav-container {
@@ -32,12 +32,12 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  color: #ffffff !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
 }
 
 

@@ -56,14 +56,14 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="hero-right">
+        <div className="hero-right" style={{marginTop:"15px"}}>
           <h1 className="hero-title">
          <TextType
     text="Faire passer vos idées du concept à la réalité "
     typingSpeed={50}
   />
           </h1>
-          <p className="hero-subtitle" data-aos="fade-left" data-aos-delay="3000">
+          <p className="hero-subtitle" data-aos="fade-left" data-aos-delay="3000" style={{marginTop:"-10px"}}>
             Développeur Full Stack passionné par les technologies modernes et leur potentiel pour transformer les entreprises,
             je m'efforce de concevoir des solutions web innovantes, performantes et intuitives. J'aime transformer des idées en applications concrètes.
           </p>
