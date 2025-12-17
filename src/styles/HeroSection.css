@@ -302,7 +302,7 @@
   font-size:4rem;
   font-weight: bold;
   line-height: 1.2;
-  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #67b489 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: capitalize;
@@ -449,15 +449,11 @@
     margin-bottom: 1rem!important;
   }
 
-  .profile-card {
-    padding: 1.5rem !important;
-    margin: 0 auto !important;
-    width:300px !important;
-  }
+ 
 
   .profile-image {
     margin: 0 auto 1.5rem auto !important;
-    height: 500px !important;
+    height:300px !important;
   }
 
   .profile-img {
@@ -488,15 +484,15 @@
 
   .hero-title {
     margin-top: 0;
-    font-size:1.5rem;
-    line-height: 1.1;
+    font-size:1.5rem !important;
+    line-height: 1.1 !important;
   }
 
   .hero-subtitle {
-    font-size: .9rem;
-    line-height: 1.5;
-    margin-top: 0;
-    padding: 0 0.5rem;
+    font-size: .8rem !important;
+    line-height: 1.5 !important;
+    margin-top: 0 !important;
+    padding: 0 0.5rem !important;
   }
 
   .hero-buttons {
@@ -534,7 +530,7 @@
   }
 
   .cta, .cta-reverse {
-    width: 250px;
+    width: 200px;
     margin: 10px auto;
     display: flex;
     justify-content: center;

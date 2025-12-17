@@ -309,7 +309,7 @@ html {
   .section-title {
     font-size:1.7rem !important;
     margin-bottom: 2rem;
-    margin-left:-800px;
+    margin-left:10px;
   }
 
  
@@ -352,8 +352,8 @@ html {
 
   .card-icon {
     position: absolute;
-    top: 50%;
-    left: -85px;
+    top:0%;
+    left:40px;
     transform: translateY(-50%);
     margin-top: 0;
     width: 50px;
@@ -371,12 +371,11 @@ html {
   }
 
   .etablissement {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .periode {
     font-size: 0.8rem;
-    padding: 0.3rem 0.8rem !important;
   }
 
   .diplome {

@@ -42,7 +42,7 @@ const HeroSection = () => {
               </div>
 
               <div className="profile-actions">
-               <a href="public/my_CV.pdf" download>
+               <a href="public/nabil-hriz.pdf" download>
   <button className="cta">
     <span>Télécharger CV</span>
   </button>

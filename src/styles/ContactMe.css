@@ -3,15 +3,13 @@
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  margin-left: 550px;
-  margin-top: -240px;
-  margin-bottom: 80px;
+  margin: 0 auto 80px auto;
 }
 
 
 
 .contact-container {
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -45,10 +43,10 @@
 
 
 .contact-form-container {
-  background-color: rgba(0, 0, 0, 2);
-  backdrop-filter: blur(20px);
-  border-radius: 25px;
-  padding:1rem !important;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 1.5rem;
   position: relative;
   transition: all 0.4s ease;
 }
@@ -58,9 +56,10 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  width:90% !important;
-
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
 }
 
 .form-group {
@@ -75,19 +74,19 @@
 
 .input-icon {
   position: absolute;
-  left: 1rem;
+  left: 0.9rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  background: rgba(16, 185, 129, 0.1);
-  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  background: rgba(16, 185, 129, 0.08);
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #10b981;
-  font-size: 1.2rem;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  font-size: 1.05rem;
+  border: 1px solid rgba(16, 185, 129, 0.15);
   transition: all 0.3s ease;
   z-index: 2;
 }
@@ -100,10 +99,10 @@
 .form-input,
 .form-textarea {
   width: 100%;
-  padding: 1.5rem 1.5rem 1.5rem 5rem;
-  background: rgba(255, 255, 255, 0.08);
+  padding: 1.25rem 1.5rem 1.25rem 5rem;
+  background: rgba(255, 255, 255, 0.06);
   border: 2px solid transparent;
-  border-radius: 15px;
+  border-radius: 14px;
   color: #ffffff;
   font-size: 1rem;
   font-weight: 500;
@@ -138,23 +137,21 @@
 
 .animated-button {
   position: relative;
-  right:-65px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 16px 30px;
-  border: 4px solid;
-  border-color: transparent;
-  font-size: 16px;
+  gap: 8px;
+  padding: 12px 26px;
+  border: 2px solid transparent;
+  font-size: 15px;
   background-color: inherit;
-  border-radius: 100px;
+  border-radius: 50px;
   font-weight: 600;
   color: #6bdbb6;
-  box-shadow: 0 0 0 2px #6bdbb6;
+  box-shadow: 0 0 0 2px rgba(107, 219, 182, 0.08);
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  width: 80%;
+  transition: all 0.4s ease;
+  width: auto;
 }
 
 .animated-button svg {
@@ -255,7 +252,7 @@
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
-  margin-left: 10px;
+  margin-left: 0;
 }
 
 
@@ -295,12 +292,12 @@
 @media (max-width: 768px) {
   .animated-button {
     width: 200px;
-    margin-left: 20px;
+    margin-left:0px !important;
   }
 
   .contact-section {
     padding: 3rem 1rem;
-    margin-left: -400px;
+    margin-left:-400px !important;
     margin-top: -30px;
   }
 
@@ -308,17 +305,19 @@
     font-size: 2rem;
     text-align: center;
     max-width: 350px;
-    margin-left: 20px;
+    margin-left:50px;
 
   }
 
   .contact-subtitle {
     font-size: 1.1rem;
   }
+.contact-form {
+   margin-left:100px;
+   margin-top: -30px;
+}
 
-  .contact-form-container {
-    padding: 2rem;
-  }
+
 
   .input-icon {
     width: 45px;
@@ -326,10 +325,7 @@
     font-size: 1.1rem;
   }
 
-  .form-input,
-  .form-textarea {
-    padding-left: 4.5rem;
-  }
+ 
 
   .animated-button {
     padding: .3rem 1.2rem !important;
@@ -382,7 +378,7 @@
   }
 }
 
-/* Form validation styles */
+
 .form-input:invalid:not(:focus):not(:placeholder-shown),
 .form-textarea:invalid:not(:focus):not(:placeholder-shown) {
   border-color: rgba(239, 68, 68, 0.5);
@@ -393,7 +389,6 @@
   border-color: rgba(16, 185, 129, 0.5);
 }
 
-/* Loading state for button */
 .submit-btn.loading {
   pointer-events: none;
   opacity: 0.8;
