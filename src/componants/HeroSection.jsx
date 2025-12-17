@@ -69,7 +69,7 @@ const HeroSection = () => {
           </p>
           <div className="hero-buttons" data-aos="fade-left" data-aos-delay="3000">
 
-            <a class="cta-reverse" href='#accueil' style={{textDecoration:"none"}}>
+            <a class="cta-reverse" href='#projects-section' style={{textDecoration:"none"}}>
                   <span>Mes Projets</span>
                 </a>
           </div>
