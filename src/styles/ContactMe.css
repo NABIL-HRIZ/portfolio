@@ -4,6 +4,8 @@
   position: relative;
   overflow: hidden;
   margin: 0 auto 80px auto;
+  margin-left: 530px !important;
+  margin-top: -150px !important;
 }
 
 
