@@ -1,85 +1,90 @@
-import React from 'react';
-import { FaLaravel, FaReact, FaDocker, FaGitAlt,FaCogs} from 'react-icons/fa';
-import { SiMysql, SiHtml5 } from 'react-icons/si';
-import '../styles/Mytools.css';
+"use client";
+
+import React, { useState, useEffect } from "react";
+import { motion } from "@motionone/react";
+import { 
+  FaLaravel, FaReact, FaDocker, FaGitAlt, FaCogs, FaNodeJs, 
+  FaBootstrap, FaDatabase, FaBrain 
+} from "react-icons/fa";
+import { 
+  SiMysql, SiHtml5, SiMongodb, SiExpress, SiTailwindcss, 
+  SiFigma, SiOpenai, SiAnthropic 
+} from "react-icons/si";
+import "../styles/Mytools.css";
+
+const toolsData = [
+
+  { id: 1, name: "Laravel", description: "Framework Backend (PHP)", icon: <FaLaravel />, color: "#FF2D20", type: "Backend" },
+  { id: 2, name: "Node.js", description: "Environnement d'exécution JS", icon: <FaNodeJs />, color: "#339933", type: "Backend" },
+  { id: 4, name: "API REST", description: "Conception & Intégration", icon: <FaCogs />, color: "#2088FF", type: "API" },
+  
+  { id: 5, name: "React Js", description: "Interfaces réactives (Redux)", icon: <FaReact />, color: "#61DAFB", type: "Frontend" },
+  { id: 6, name: "HTML/CSS", description: "Structure & Style Moderne", icon: <SiHtml5 />, color: "#E34F26", type: "Design" },
+  { id: 7, name: "Tailwind ", description: "Framework CSS utilitaire", icon: <SiTailwindcss />, color: "#06B6D4", type: "Design" },
+  { id: 8, name: "Bootstrap", description: "Framework CSS Responsive", icon: <FaBootstrap />, color: "#7952B3", type: "Design" },
+  { id: 9, name: "Figma", description: "Prototypage & Design UI", icon: <SiFigma />, color: "#F24E1E", type: "UI/UX" },
+  
+  { id: 10, name: "MySQL", description: "Gestion de données SQL", icon: <SiMysql />, color: "#4479A1", type: "Database" },
+  { id: 11, name: "MongoDB", description: "Base de données NoSQL", icon: <SiMongodb />, color: "#47A248", type: "Database" },
+  
+  { id: 12, name: "Docker", description: "Conteneurisation d'apps", icon: <FaDocker />, color: "#2496ED", type: "DevOps" },
+  { id: 13, name: "CI/CD", description: "Pipelines automatisés", icon: <FaCogs />, color: "#0d6efd", type: "DevOps" },
+  { id: 14, name: "Git / GitHub", description: "Contrôle de version", icon: <FaGitAlt />, color: "#F05032", type: "Tools" },
+  
+  { id: 15, name: "Claude AI", description: "Optimisation & Documentation", icon: <SiAnthropic />, color: "#D97757", type: "IA Tool" },
+  { id: 16, name: "ChatGPT", description: "Assistance au codage", icon: <SiOpenai />, color: "#10a37f", type: "IA Tool" },
+];
 
 const MyTools = () => {
-  const tools = [
-    {
-      id: 1,
-      name: "Laravel",
-      description: "Framework Backend (PHP)",
-      icon: <FaLaravel className="tool-icon" />,
-      color: "#FF2D20"
-    },
-    {
-      id: 2,
-      name: "React Js",
-      description: "Framework Frontend (JS)",
-      icon: <FaReact className="tool-icon" />,
-      color: "#0b1c8aff"
-    },
-    {
-      id: 3,
-      name: "HTML/CSS",
-      description: "Structure & Styling",
-      icon: <SiHtml5 className="tool-icon" />,
-      color: "#E34F26"
-    },
-    {
-      id: 4,
-      name: "MySQL",
-      description: "Base de Données (SQL)",
-      icon: <SiMysql className="tool-icon" />,
-      color: "#8bb7d8ff"
-    },
-    {
-      id: 5,
-      name: "Docker",
-      description: "Containerisation",
-      icon: <FaDocker className="tool-icon" />,
-      color: "#2496ED"
-    },
-      {
-      id: 7,
-      name: "CI CD ",
-      description: "Git Hub actions",
-      icon: <FaCogs className="tool-icon" />,
-      color: "#0d6efd"
-    },
-   
-    {
-      id: 8,
-      name: "Git",
-      description: "Contrôle de Version",
-      icon: <FaGitAlt className="tool-icon" />,
-      color: "#F05032"
-    },
-  
-  ];
+  const [items, setItems] = useState([{ ...toolsData[0], key: 'init' }]);
+  const [nextIndex, setNextIndex] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setItems((prev) => {
+        const nextTool = toolsData[nextIndex % toolsData.length]; 
+        return [{ ...nextTool, key: Date.now() }, ...prev].slice(0, 6); 
+      });
+      setNextIndex((prev) => (prev + 1) % toolsData.length);
+    },3000);
+
+    return () => clearInterval(interval);
+  }, [nextIndex]);
 
   return (
-    <section className="tools-section" id='tools'>
+    <section className="tools-section" id="tools">
       <div className="tools-container">
-        <h2 className="tools-title" style={{marginTop:"-20px"}}>
-          Technologies de Pointe  pour Des Résultats  <span className="highlight">Exceptionnels</span>
+        <h2 className="tools-title">
+          Technologies de <span className="highlight">Pointe</span>
         </h2>
 
-        
-        
-        <div className="tools-grid">
-          {tools.map(tool => (
-            <div key={tool.id} className="tool-card">
-              <div className="tool-icon-container" style={{ color: tool.color }}>
-                {tool.icon}
-              </div>
-              <div className="tool-content">
-                <h3 className="tool-name">{tool.name}</h3>
-                <p className="tool-description">{tool.description}</p>
-              </div>
-              <div className="tool-hover-effect"></div>
-            </div>
-          ))}
+        <div className="animated-list-wrapper">
+          <div className="list-inner">
+            {items.map((tool) => (
+              <motion.figure
+                key={tool.key}
+                initial={{ opacity: 0, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, easing: [0.23, 1, 0.32, 1] }}
+                className="tool-card"
+              >
+                <div className="tool-card-content">
+                  <div className="tool-icon-box" style={{ backgroundColor: tool.color }}>
+                    {tool.icon}
+                  </div>
+                  <div className="tool-text">
+                    <div className="tool-header">
+                      <figcaption className="tool-name">{tool.name}</figcaption>
+                     
+                      <span className="tool-type">{tool.type}</span>
+                    </div>
+                    <p className="tool-description">{tool.description}</p>
+                  </div>
+                </div>
+              </motion.figure>
+            ))}
+          </div>
+          <div className="list-fade-bottom"></div>
         </div>
       </div>
     </section>

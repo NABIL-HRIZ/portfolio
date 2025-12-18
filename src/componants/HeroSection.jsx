@@ -6,6 +6,7 @@ import my_pic from '../assets/my_pic.jpeg';
 import TextType from './TextType';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import MotionPathBg from "./MotionPathBg";
 const HeroSection = () => {
 
     useEffect(() => {
@@ -56,24 +57,32 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="hero-right" style={{marginTop:"15px"}}>
-          <h1 className="hero-title">
-         <TextType
-    text="Faire passer vos idées du concept à la réalité "
-    typingSpeed={50}
-  />
-          </h1>
-          <p className="hero-subtitle" data-aos="fade-left" data-aos-delay="3000" style={{marginTop:"-10px"}}>
-            Développeur Full Stack passionné par les technologies modernes et leur potentiel pour transformer les entreprises,
-            je m'efforce de concevoir des solutions web innovantes, performantes et intuitives. J'aime transformer des idées en applications concrètes.
-          </p>
-          <div className="hero-buttons" data-aos="fade-left" data-aos-delay="3000">
 
-            <a class="cta-reverse" href='#projects-section' style={{textDecoration:"none"}}>
-                  <span>Mes Projets</span>
-                </a>
-          </div>
-        </div>
+<div
+  className="hero-right"
+  style={{
+    position: "relative",
+    overflow: "hidden",
+    width: "100%",
+    minHeight: "400px", 
+  }}
+>
+
+  <MotionPathBg />
+
+  <div style={{ position: "relative", zIndex: 2,marginTop:"118px" }}>
+    <h1 className="hero-title">
+      <TextType
+        text="Faire passer vos idées du concept à la réalité"
+        typingSpeed={50}
+      />
+    </h1>
+   
+    
+  </div>
+</div>
+
+
       </div>
     </section>
   );

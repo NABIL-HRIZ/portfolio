@@ -12,6 +12,7 @@
     "deploy": "gh-pages -d dist -b gh-pages -f"
   },
   "dependencies": {
+    "@motionone/react": "^10.16.4",
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.4.2",
     "aos": "^2.3.4",

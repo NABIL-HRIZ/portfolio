@@ -1,0 +1,31 @@
+.motion-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.motion-bg svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+.motion-dot {
+  width: 20px;
+  height: 20px;
+  background: #00ff88;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  offset-path: path(
+    "M 239 17 C 142 17 48.5 103 48.5 213.5 C 48.5 324 126 408 244 408 C 362 408 412 319 412 213.5"
+  );
+  offset-rotate: 0deg; /* optional: keeps dot upright along path */
+}
+
