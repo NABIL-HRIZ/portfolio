@@ -11,7 +11,7 @@ const HeroSection = () => {
 
     useEffect(() => {
     AOS.init({
-      duration: 510,  
+      duration: 500,  
       once: false,     
     });
   }, []);
