@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaPaperPlane, FaUser, FaEnvelope, FaComment } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import '../styles/ContactMe.css';
+import { motion } from "@motionone/react";
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -77,8 +78,19 @@ const ContactMe = () => {
         <div className="contact-content">
           <div className="contact-header">
             <h2 className="contact-title">
-              Créons Quelque Chose <span className="highlight">d'Extraordinaire</span>
+               <span className="highlight"></span>
             </h2>
+             <div className="header-designer-container">
+                                                <motion.h2
+                                                  className="projects-title-large"
+                                                  initial={{ opacity: 0, x: 50 }}
+                                                  animate={{ opacity: 1, x: 0 }}
+                                                  transition={{ duration: 0.8, easing: "ease-out" }}
+                                                >
+                                                  <span className="line-one"> Créons Quelque Chose </span>
+                                                  <span className="line-two highlight-large">d'Extraordinaire</span>
+                                                </motion.h2>
+                                              </div>
           </div>
 
           <div className="contact-form-container">

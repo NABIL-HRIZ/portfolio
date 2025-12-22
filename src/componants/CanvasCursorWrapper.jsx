@@ -8,7 +8,7 @@ const CanvasCursorWrapper = () => {
       text="Let's Code!"          
       color="#00ff88"             
       font="monospace"           
-      textSize={12}               
+      textSize={12}  
     />
   );
 };

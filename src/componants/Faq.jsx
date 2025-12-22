@@ -3,7 +3,7 @@ import { FaCode, FaRocket, FaUsers, FaTools, FaCalendarAlt } from 'react-icons/f
 import { Accordion } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/Faq.css';
-
+import { motion } from "@motionone/react";
 const Faq = () => {
   const [activeKey, setActiveKey] = useState('0');
 
@@ -43,9 +43,19 @@ const Faq = () => {
   return (
     <section className="faq-section">
       <div className="faq-container">
-        <h2 className="section-faqs-title">
-          Foire aux <span className="highlight">Questions</span>
-        </h2>
+        
+
+         <div className="header-designer-container">
+                        <motion.h2
+                          className="projects-title-large"
+                          initial={{ opacity: 0, x: 50 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.8, easing: "ease-out" }}
+                        >
+                          <span className="line-one">  Foire aux </span>
+                          <span className="line-two highlight-large">Questions</span>
+                        </motion.h2>
+                      </div>
         
         <div className="faq-content">
           <Accordion activeKey={activeKey} onSelect={(key) => setActiveKey(key)}>

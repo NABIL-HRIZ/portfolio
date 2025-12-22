@@ -46,7 +46,7 @@ const MyTools = () => {
         return [{ ...nextTool, key: Date.now() }, ...prev].slice(0, 6); 
       });
       setNextIndex((prev) => (prev + 1) % toolsData.length);
-    },3000);
+    },2000);
 
     return () => clearInterval(interval);
   }, [nextIndex]);
@@ -54,9 +54,18 @@ const MyTools = () => {
   return (
     <section className="tools-section" id="tools">
       <div className="tools-container">
-        <h2 className="tools-title">
-          Technologies de <span className="highlight">Pointe</span>
-        </h2>
+      
+         <div className="header-designer-container">
+                        <motion.h2
+                          className="projects-title-large"
+                          initial={{ opacity: 0, x: 50 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.8, easing: "ease-out" }}
+                        >
+                          <span className="line-one"> Technologies de </span>
+                          <span className="line-two highlight-large">Pointe</span>
+                        </motion.h2>
+                      </div>
 
         <div className="animated-list-wrapper">
           <div className="list-inner">

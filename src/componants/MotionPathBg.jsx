@@ -49,7 +49,7 @@ export default function MotionPathBg() {
           borderRadius: 10,
           position: "absolute",
           top:0,
-          left: 0,
+          left: -30,
           offsetPath: `path("${pathData}")`,
         }}
         initial={{ offsetDistance: "0%", scale: 2.5 }}

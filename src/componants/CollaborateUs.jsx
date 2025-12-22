@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaHandshake, FaRocket, FaCode, FaHeart, FaPaperPlane } from 'react-icons/fa';
 import '../styles/CollaborateUs.css';
+import { motion } from "@motionone/react";
 
 const CollaborateUs = () => {
   return (
@@ -12,9 +13,18 @@ const CollaborateUs = () => {
           </div>
         
           <div className="collaborate-content">
-            <h2 className="collaborate-title">
-              Travaillons <span className="highlight">Ensemble</span>
-            </h2>
+          
+             <div className="header-designer-container">
+                                    <motion.h2
+                                      className="projects-title-large"
+                                      initial={{ opacity: 0, x: 50 }}
+                                      animate={{ opacity: 1, x: 0 }}
+                                      transition={{ duration: 0.8, easing: "ease-out" }}
+                                    >
+                                      <span className="line-one"> Travaillons </span>
+                                      <span className="line-two highlight-large">Ensemble</span>
+                                    </motion.h2>
+                                  </div>
             <p className="collaborate-subtitle">
               Collaborons pour transformer vos idées en projets numériques performants et innovants. 
               Je m'engage à concrétiser vos projets avec efficacité, créativité et passion.
