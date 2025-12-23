@@ -400,6 +400,29 @@
   animation: spin 1s linear infinite;
 }
 
+@media (max-width: 768px) {
+  .contact-section {
+    margin-left:0px !important;
+    margin-top: 0 !important;
+    padding: 2.5rem 1rem !important;
+  }
+
+  .contact-form {
+    
+    max-width: 100% !important;
+    padding: 0 0.5rem !important;
+    margin-left:70px;
+  }
+
+  .contact-title {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    text-align: center;
+  }
+
+  .animated-button { margin-left: 0 !important; }
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

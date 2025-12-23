@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
 import '../styles/HeroSection.css';
-import my_pic from '../assets/my_pic.jpeg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { 
@@ -11,12 +10,11 @@ import {
 import { SiTailwindcss, SiRedux, SiGithubactions } from 'react-icons/si'; // Extra icons
 import '../styles/HeroSection.css';
 import { motion } from "@motionone/react";
+import hero_pic from '../assets/hero-pic.png'
 const HeroSection = () => {
 
   const titles = [
-    "Développeur Full-Stack",
-    "Architecte Solutions Web",
-    "Concepteur de Solutions"
+    "Creative Mind"
    
   ];
 
@@ -42,51 +40,43 @@ const HeroSection = () => {
   return (
     <section className="hero-section" id='accueil'>
       <div className="hero-container">
-       <div className="hero-left">
-  <div className="profile-card">
-    <div className="content"> 
-      <div className="modern-status-badge">
-      <div className="inner-badge">
-        <span className="pulse-ring"></span>
-        <span className="status-dot"></span>
-        <span className="status-text">DISPONIBLE</span>
-      </div>
-    </div>
-      <div className="profile-image">
-        <img src={my_pic} alt="NABIL HRIZ" className="profile-img" />
-        <div className="image-overlay"></div>
-      </div>
-      
-      <div className="profile-details">
-        <h3 className="profile-card-name">NABIL HRIZ</h3>
-<p className="profile-subtitle">Développeur Full Stack React & Laravel</p>
-        <div className="social-icons">
-          <a href="https://github.com/NABIL-HRIZ" target="_blank" rel="noopener noreferrer" className="social-link">
-            <FaGithub className="social-icon" />
-          </a>
-          <a href="mailto:hariznabil663@gmail.com" className="social-link">
-            <FaEnvelope className="social-icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/nabil-hriz-0937b1390/" target="_blank" rel="noopener noreferrer" className="social-link">
-            <FaLinkedin className="social-icon" />
-          </a>
-        </div>
+         <div className="hero-left">
+  <div className="abstract-art-container">
+    <div className="shape-fragment fragment-1"></div>
+    <div className="shape-fragment fragment-2"></div>
+    
+    <motion.div 
+      className="picasso-image-frame"
+      initial={{ clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)" }}
+      animate={{ clipPath: "polygon(0% 0%, 100% 15%, 100% 100%, 15% 85%)" }}
+      transition={{ duration: 1, ease: "circOut" }}
+    >
+      <img src={hero_pic} alt="Creative Mind" className="hero-img-designer" />
+    </motion.div>
 
-        <div className="profile-actions">
-          <a href="/nabil-hriz.pdf" download className="cssbuttons-io-button" style={{ textDecoration: "none" }}>
-            <span style={{ color: "#000" }}>Télécharger CV</span>
-            <div className="icon">
-              <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
-              </svg>
-            </div>
-          </a>
-        </div>
-      </div>
+    <div className="designer-title-wrap">
+      <motion.div 
+        className="vertical-label"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 1 }}
+      >
+        <span>CREATIVE FORCE</span>
+        
+      </motion.div>
+      
+      <motion.h1 
+        className="abstract-dynamic-title"
+        key={index}
+        initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
+        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1 }}
+      >
+        {titles[index]}
+      </motion.h1>
     </div>
   </div>
-      </div>
+     </div>
 
         <div className="hero-right">
   <div className="orbit-wrapper">
@@ -101,7 +91,7 @@ const HeroSection = () => {
        
         <span className="text-top">FULL</span>
         <span className="text-middle">STACK</span>
-        <span className="text-bottom">ARCH</span>
+        <span className="text-bottom">DEV</span>
       </motion.h2>
     </div>
 

@@ -194,9 +194,13 @@
 
 @media (max-width: 768px) {
   .tools-section {
-    padding: 80px 20px;
+    padding: 80px 20px !important;
     margin-left: 0 !important;
+    margin-top: 50px !important;
   }
+.tools-container {
+ margin-left:40px;
+}
   
   .tools-title {
     font-size: 2rem;

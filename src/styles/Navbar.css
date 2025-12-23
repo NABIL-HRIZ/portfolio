@@ -79,7 +79,12 @@
 
   .nav-menu {
     gap: 1rem;
-    margin-left:-800px;
+    /* allow horizontal scrolling on small screens instead of pushing off-screen */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    margin: 0;
   }
   
   .nav-link {
