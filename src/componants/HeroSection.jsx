@@ -40,7 +40,7 @@ const HeroSection = () => {
   return (
     <section className="hero-section" id='accueil'>
       <div className="hero-container">
-         <div className="hero-left">
+         <div className="hero-leftt">
   <div className="abstract-art-container">
     <div className="shape-fragment fragment-1"></div>
     <div className="shape-fragment fragment-2"></div>

@@ -142,17 +142,23 @@
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 
   .project-hover-overlay {
-    padding: 18px !important;
     align-items: flex-start;
+
+  }
+
+  .hover-content{
+    padding-top:10px !important;
+    margin-top:200px !important;
+
   }
 
   .project-card {
     min-height: 260px;
     border-radius: 14px;
+    padding: 10px !important;
   }
 
   .project-base-image img {
@@ -166,12 +172,31 @@
   }
 
   .project-name {
-    font-size: 1.4rem;
+    font-size: 1rem !important;
+  }
+.projects-title {
+    font-size: 2.5rem !important;
+    margin-left: 40px;
+  }
+  .project-description-short{
+    font-size: 12px !important;
   }
 
   .project-tags-hover {
-    gap: 8px;
+    padding: 10px !important;
+    opacity: 0;
+
   }
+  .mini-tag {
+    padding: 4px 8px;
+    font-size: 0.65rem;
+    opacity: 0;
+
+  }
+  .buttonn{
+    opacity: 0;
+  }
+
 }
 
 @media (max-width: 480px) {

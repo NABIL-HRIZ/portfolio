@@ -10,7 +10,7 @@
 
 
 
-.hero-left {
+.hero-leftt {
   flex: 1;
   position: relative;
   display: flex;
@@ -408,6 +408,8 @@
     min-height: auto !important;
     padding: 1rem !important;
     flex-direction: column !important;
+    margin-top: 40px !important;
+    margin-bottom: -300px !important;
   }
 
   .hero-container {
