@@ -5,7 +5,7 @@
   overflow: hidden;
   margin: 0 auto 80px auto;
   margin-left: 530px !important;
-  margin-top: -150px !important;
+  margin-top: -120px !important;
 }
 
 
@@ -60,7 +60,8 @@
   gap: 1.5rem;
   width: 100%;
   max-width: 820px;
-  margin: 0 auto;
+  margin-top: -50px;
+  margin-left: -30px;
 }
 
 .form-group {

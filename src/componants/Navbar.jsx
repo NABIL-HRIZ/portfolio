@@ -1,51 +1,31 @@
-import React from 'react';
-import { FaHome, FaFolder, FaWrench, FaBriefcase, FaEnvelope } from 'react-icons/fa';
-import '../styles/Navbar.css';
+import React from "react";
+import my8logo from "../assets/my-logo.png";
+import BubbleMenu from "./NewMenu";
 
 const Navbar = () => {
-  const navItems = [
-    {
-      title: "Accueil",
-      icon: <FaHome className="nav-icon" />,
-      path: "#accueil"
-    },
-    {
-      title: "Projets",
-      icon: <FaFolder className="nav-icon" />,
-      path: "#projects-section"
-    },
-    {
-      title: "Outils",
-      icon: <FaWrench className="nav-icon" />,
-      path: "#tools"
-    },
-    {
-      title: "Éducation",
-      icon: <FaBriefcase className="nav-icon" />,
-      path: "#diplomes"
-    },
-    {
-      title: "Contact",
-      icon: <FaEnvelope className="nav-icon" />,
-      path: "#contact"
-    }
+  const items = [
+    { label: "Accueil", href: "#accueil", rotation: -8, hoverStyles: { bgColor: "rgba(18, 65, 70, 0.85)", textColor: "#ffffff" } },
+    { label: "À propos", href: "#a-propos", rotation: 8, hoverStyles: { bgColor: "rgba(18, 65, 70, 0.85)", textColor: "#ffffff" } },
+    { label: "Projets", href: "#projects-section", rotation: 8, hoverStyles: { bgColor: "rgba(18, 65, 70, 0.85)", textColor: "#ffffff" } },
+    { label: "Outils", href: "#tools", rotation: 8, hoverStyles: { bgColor: "rgba(18, 65, 70, 0.85)", textColor: "#ffffff" } },
+    { label: "Éducation", href: "#diplomes", rotation: -8, hoverStyles: { bgColor: "rgba(18, 65, 70, 0.85)", textColor: "#ffffff" } },
+    { label: "Contact", href: "#contact", rotation: -8, hoverStyles: { bgColor: "rgba(18, 65, 70, 0.85)", textColor: "#ffffff" } }
   ];
 
   return (
-    <nav className="navbar">
-      <div className="nav-container">
-        <ul className="nav-menu">
-          {navItems.map((item, index) => (
-            <li key={index} className="nav-item">
-              <a href={item.path} className="nav-link">
-                {item.icon}
-               
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+    <header style={{ position: "fixed", top: 0, width: "100%", zIndex: 2000}}>
+      <BubbleMenu
+        logo={<img src={my8logo} alt="Nabil Logo" style={{ height: "40px" }} />}
+        items={items}
+        menuAriaLabel="Toggle navigation"
+        menuBg="#ffffff"
+        menuContentColor="#111111"
+        useFixedPosition={true}
+        animationEase="back.out(1.5)"
+        animationDuration={0.5}
+        staggerDelay={0.12}
+      />
+    </header>
   );
 };
 

@@ -85,7 +85,7 @@
   .github-calendar-container {
     padding: 1rem;
     width:300px !important;
-    margin-left: 30px;
+    margin-left:20px !important;
   }
    .react-activity-calendar__footer{
     font-size: 10px !important;

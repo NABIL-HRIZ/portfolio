@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   gap:10px !important;
-  margin-top:-50px !important;
+  margin-top:30px !important;
 
 }
 
@@ -417,10 +417,10 @@
     gap: 2rem !important;
   }
 
-  .hero-left {
+  .hero-leftt {
    
     top: 0 !important;
-    left:0px !important;
+    left:10px !important;
    
   }
 

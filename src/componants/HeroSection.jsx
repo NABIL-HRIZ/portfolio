@@ -7,7 +7,7 @@ import {
   FaGithub, FaEnvelope, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, 
   FaJs, FaPhp, FaLaravel, FaDatabase, FaBootstrap, FaDocker 
 } from 'react-icons/fa';
-import { SiTailwindcss, SiRedux, SiGithubactions } from 'react-icons/si'; // Extra icons
+import { SiTailwindcss, SiRedux, SiGithubactions } from 'react-icons/si';
 import '../styles/HeroSection.css';
 import { motion } from "@motionone/react";
 import hero_pic from '../assets/hero-pic.png'

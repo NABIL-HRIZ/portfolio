@@ -1,0 +1,62 @@
+.bubble-menu {
+  left: 0; right: 0; top: 15px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 0 2rem; pointer-events: none; z-index: 99;
+   position: fixed;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 90;
+}
+
+
+.bubble-menu.fixed { position: fixed; }
+.bubble-menu.absolute { position: absolute; }
+
+.bubble { --bubble-size: 48px; width: var(--bubble-size); height: var(--bubble-size); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; pointer-events: auto; }
+.logo-bubble { padding: 0 16px; min-height: var(--bubble-size); border-radius: 999px; }
+.toggle-bubble { width: var(--bubble-size); height: var(--bubble-size); }
+
+.menu-line { width: 26px; height: 2px; background: #111; border-radius: 2px; margin: 0 auto; transition: transform 0.3s ease, opacity 0.3s ease; }
+.menu-line + .menu-line { margin-top: 6px; }
+.menu-btn.open .menu-line:first-child { transform: translateY(4px) rotate(45deg); }
+.menu-btn.open .menu-line:last-child { transform: translateY(-4px) rotate(-45deg); }
+
+.bubble-menu-items { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; z-index: 98; }
+.pill-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; list-style: none; padding: 0; margin: 0; pointer-events: auto; }
+.pill-col { display: flex; justify-content: center; align-items: stretch; flex: 0 0 auto; }
+.pill-link { width: 120px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 999px; text-decoration: none; color: var(--pill-color); background: var(--pill-bg); transform: rotate(var(--item-rot)); transition: all 0.3s ease; }
+.pill-link:hover { background: var(--hover-bg); color: var(--hover-color); transform: rotate(var(--item-rot)) scale(1.06); }
+
+
+.bubble-menu-items{
+    margin-top:40px;
+}
+
+@media screen and (max-width: 768px) {
+  .bubble-menu {
+    padding: 0 1rem;
+  }
+  
+  .pill-link {
+    width: 100px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  .bubble-menu-items{
+   margin-top: 120px; 
+  }
+    
+}
+
+
+body.menu-open main,
+body.menu-open section {
+  filter: blur(3px);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+body.menu-open .bubble-menu,
+body.menu-open .bubble-menu-items {
+  opacity: 1 !important;
+  pointer-events: auto;
+}

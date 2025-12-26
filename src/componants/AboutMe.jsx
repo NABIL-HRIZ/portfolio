@@ -40,7 +40,7 @@ useEffect(() => {
 };
 
   return (
-    <section className="about-section">
+    <section className="about-section" id='a-propos'>
      
       
         <div className={`hero-left ${isVisible ? 'is-visible' : ''}`}>

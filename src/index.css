@@ -31,7 +31,7 @@ body {
   --accent: #00d1b2;
 }
 
-/* Layout helpers */
+
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -50,7 +50,6 @@ body {
   min-width: 0;
 }
 
-/* Breakpoints */
 @media (min-width: 768px) {
   .container { padding: 0 1.5rem; }
 }
