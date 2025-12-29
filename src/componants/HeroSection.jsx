@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState,useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import '../styles/HeroSection.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -13,9 +14,9 @@ import { motion } from "@motionone/react";
 import hero_pic from '../assets/hero-pic.png'
 const HeroSection = () => {
 
+  const { t } = useTranslation();
   const titles = [
-    "Creative Mind"
-   
+    t('hero.title')
   ];
 
   const [index, setIndex] = useState(0);
@@ -55,13 +56,13 @@ const HeroSection = () => {
     </motion.div>
 
     <div className="designer-title-wrap">
-      <motion.div 
+        <motion.div 
         className="vertical-label"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 1 }}
       >
-        <span>CREATIVE FORCE</span>
+        <span>{t('hero.verticalLabel')}</span>
         
       </motion.div>
       
@@ -81,17 +82,16 @@ const HeroSection = () => {
         <div className="hero-right">
   <div className="orbit-wrapper">
     <div className="hero-text-inside-orbit">
-      <motion.h2 
+        <motion.h2 
         className="hero-title-designer"
         key={index}
         initial={{ opacity: 0, scale: 0.5, filter: "blur(10px)" }}
         animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.8, easing: "ease-out" }}
       >
-       
-        <span className="text-top">FULL</span>
-        <span className="text-middle">STACK</span>
-        <span className="text-bottom">DEV</span>
+        <span className="text-top">{t('hero.full')}</span>
+        <span className="text-middle">{t('hero.stack')}</span>
+        <span className="text-bottom">{t('hero.dev')}</span>
       </motion.h2>
     </div>
 

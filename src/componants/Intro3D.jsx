@@ -1,4 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Canvas } from '@react-three/fiber'
 import { useGLTF, OrbitControls, Center } from '@react-three/drei'
 
@@ -34,6 +35,8 @@ export default function Intro3D({ onFinish }) {
     onFinish()
   }
 
+  const { t } = useTranslation()
+
   return (
     <div style={{ height: '100vh', width: '100vw', background: '#000' }}>
       <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
@@ -63,7 +66,7 @@ export default function Intro3D({ onFinish }) {
           fontFamily: 'monospace'
         }}
       >
-        CLIQUEZ ET FAITES GLISSER POUR EXPLORER MON PORTFOLIO ({count}s)
+        {t('intro3d.message', { count })}
       </div>
 
     

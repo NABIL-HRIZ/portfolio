@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-        import { motion } from "@motionone/react";
+  import { motion } from "@motionone/react";
+import { useTranslation } from 'react-i18next';
 
 import '../styles/Myprojects.css';
 
@@ -29,120 +30,35 @@ const hoverColors = [
   "rgba(255, 77, 136, 0.75)"   
 ];
 
-  const projects = [
-    {
-      id: 1,
-      name: "FANZONE - DIGITALISATION DES FAN ZONES (CAN 2025)",
-      description: "Conception et réalisation d'une plateforme web avancée Full-Stack (React.js/Laravel) pour la gestion digitalisée (réservation, e-tickets QR Code, scan, intégration Stripe et webhooks, statistiques) des 10+ Fan Zones. Projet conteneurisé avec Docker et optimisé par des pipelines de CI/CD",
-      tags: ["Laravel" , "React", "Redux", "Mysql" , "PDF Simple" , "Scan QR" ,"Swagger" , "Stripe", "Mailhog" , "AOS Animation"],
-      image: fanzone,
-      demoLink: "#",
-      codeLink: "https://github.com/NABIL-HRIZ/fanzone-frontend.git"
-    },
-    {
-      id: 2,
-      name: "EVENTIFY - GESTION DES EVENEMENTS",
-      description: "Développeur Full Stack - Réalisation d'une application web en Laravel (API REST, validation, cache, tests, intégration Stripe et webhook) et React.js (interface dynamique, gestion des états, formulaires validés). Conception, intégration et communication client–serveur complètes avec paiement en ligne sécurisé.",
-      tags: ["Laravel" , "React", "Redux","Bootstrap" , "Mysql" , "Stripe" , "Webhook", "Mailhog" ,  "Gsap"],
-      image: eventify,
-      demoLink: "#",
-      codeLink: "https://github.com/NABIL-HRIZ/Eventify.git"
-    },
-    {
-      id: 3,
-      name: "SECUREBOARD – GESTION DES TACHES",
-      description: "Développeur Full Stack (Laravel + React) – Création d'une application de gestion de projets avec authentification, rôles & permissions, notifications temps réel (Pusher), emails asynchrones et documentation API (Swagger).",
-      tags: ["Laravel", "React","SweetAlert","ReChartJs" , "Pusher" ,"EchoJs","MailTrap"],
-      image: secure, 
-      demoLink: "#",
-      codeLink:'https://github.com/NABIL-HRIZ/SecureBoard.git'
-    },
-    {
-      id: 4,
-      name: "FOODIEAPP – COMMANDE EN LIGNE",
-      description: "Développeur Front-End React – Développement d'une application web avec React et Redux pour la gestion d'état, consommation d'une API externe, mise à jour du panier en temps réel, gestion des erreurs et optimisation des performances. Interface réactive et responsive.",
-      tags: ["React","Redux","Tailwind","EmailJs","React Bits", "Gsap" ,"AtroposJs" , "Aos" ,  "Rest Api"],
-      image: food, 
-      demoLink: "#",
-      codeLink: "https://github.com/NABIL-HRIZ/FoodlyApp.git"
-    },
-    {
-      id: 5,
-      name: "MOVIESCOPE",
-      description: "Une application web moderne permettant de découvrir et explorer films et séries selon vos préférences, avec une interface épurée, des fonctionnalités interactives et une vidéo d'introduction immersive.",
-      tags: ["React", "SwiperJs","Uiverse" ,"AOS (Animate On Scroll)", "Rest Api"],
-      image: movie, 
-      demoLink: "#",
-      codeLink: "https://github.com/NABIL-HRIZ/-MovieScope.git"
-    },
-    {
-      id: 6,
-      name: "HITRADIO_WEATHER",
-      description: "HitRadio, une station de radio dynamique et populaire, souhaite enrichir l'expérience de ses auditeurs en intégrant des fonctionnalités météorologiques avancées sur leur site web officiel",
-      tags: ["React","Splite 3D ", "Gsap", "Rest Api"],
-      image: weather, 
-      demoLink: "https://nabil-hriz.github.io/HitRadio-Weather/",
-      codeLink: "https://github.com/NABIL-HRIZ/HitRadio-Weather.git"
-    },
-    {
-      id: 7,
-      name: "Sky 365",
-      description: "Un site web pour le booking en ligne des hotels moderne et responsive.",
-      tags: ["Figma","React", "Uiverse", "Material UI"],
-      image: booking, 
-      demoLink: "#",
-      codeLink: "https://github.com/NABIL-HRIZ/Sky365.git"
-    },
-    {
-      id: 8,
-      name: "Educaty",
-      description:"Plateforme d’apprentissage innovante qui révolutionne la manière dont les étudiants accèdent aux ressources éducatives en ligne.",
-      tags: ["Figma","React","Bootstrap","WebLeb", "Dribble Inspiration"],
-      image: educaty, 
-      demoLink: "#",
-      codeLink: "https://github.com/NABIL-HRIZ/Educaty-app.git"
-    },
-    {
-      id: 9,
-      name: "SERVICE_JARDINAGE",
-      description: "Notre site propose une gamme complète de services professionnels pour prendre soin de votre jardin et de votre espace extérieur, demander un devis en ligne",
-      tags: ["React", "Bootstrap", "EmailJS", "SwiperJs"],
-      image: jardinage,
-      demoLink: "#",
-      codeLink: "https://github.com/NABIL-HRIZ/ServiceJardinage.git"
-    },
-    {
-      id: 10,
-      name: "HONEY WEB",
-      description: "Notre site propose une sélection variée de miels artisanaux provenant de sources locales et durables. Que vous recherchiez du miel cru, du miel biologique ou des variétés spéciales comme le miel de lavande ou de trèfle",
-      tags: ["React", "Bootstrap", "EmailJS"],
-      image: honey,
-      demoLink: "#",
-      codeLink: "https://github.com/NABIL-HRIZ/Honey.git"
-    },
-    {
-      id:11,
-      name: "DARIShop",
-      description: "Plateforme eCommerce dédiée à l'univers de la maison. Parcourez notre sélection variée de produits soigneusement sélectionnés pour embellir et optimiser votre espace de vie",
-      tags: ["Laravel", "Blade", "Mysql", "HTML", "CSS", "JS" ,"Tailwind"],
-      image: dari, 
-      demoLink: "#",
-      codeLink: "https://github.com/NABIL-HRIZ/Dari_shop.git"
-    },
-    {
-      id:12,
-      name: "Pizza Dyalna",
-      description: "Plongez dans un monde de saveurs délicieuses où chaque bouchée est une explosion de goût.. Un site Web",
-      tags: ["Laravel", "Blade", "Mysql", "HTML", "CSS" ,"JS", "Tailwind"],
-      image: pizza,
-      demoLink: "#",
-      codeLink: "https://github.com/NABIL-HRIZ/PizzaDyalna.git"
-    }
-  ];
+  const { t } = useTranslation();
+
+  const translations = t('projects.list', { returnObjects: true }) || [];
+
+  const imageMap = {
+    1: fanzone,
+    2: eventify,
+    3: secure,
+    4: food,
+    5: movie,
+    6: weather,
+    7: booking,
+    8: educaty,
+    9: jardinage,
+    10: honey,
+    11: dari,
+    12: pizza
+  };
+
+  const projects = translations.map((p) => ({
+    ...p,
+    image: imageMap[p.id] || null,
+    demoLink: p.demoLink || '#',
+    codeLink: p.codeLink || '#'
+  }));
 
   const displayedProjects = showAll ? projects : projects.slice(0, 4);
 
-   return (
+  return (
     <section className="projects-section" id='projects-section'>
       <div className="projects-container">
         
@@ -153,8 +69,8 @@ const hoverColors = [
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, easing: "ease-out" }}
                 >
-                  <span className="line-one">Projets Récents & </span>
-                  <span className="line-two highlight-large">Réalisations</span>
+                  <span className="line-one">{t('projects.header.lineOne')}</span>
+                  <span className="line-two highlight-large">{t('projects.header.lineTwo')}</span>
                 </motion.h2>
               </div>
 
@@ -234,7 +150,7 @@ const hoverColors = [
               className="show-more-btn"
               onClick={() => setShowAll(!showAll)}
             >
-              {showAll ? 'Afficher moins' : 'Afficher plus'} 
+              {showAll ? t('projects.showLess') : t('projects.showMore')} 
                <span className="btn-arrow">{showAll ? '↑' : '↓'}</span>
             </button>
           </div>

@@ -1,9 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaHandshake, FaRocket, FaCode, FaHeart, FaPaperPlane } from 'react-icons/fa';
 import '../styles/CollaborateUs.css';
 import { motion } from "@motionone/react";
 
 const CollaborateUs = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="collaborate-section">
       <div className="collaborate-container">
@@ -21,13 +24,12 @@ const CollaborateUs = () => {
                                       animate={{ opacity: 1, x: 0 }}
                                       transition={{ duration: 0.8, easing: "ease-out" }}
                                     >
-                                      <span className="line-one"> Travaillons </span>
-                                      <span className="line-two highlight-large">Ensemble</span>
+                                      <span className="line-one">{t('collaborate.header.lineOne')}</span>
+                                      <span className="line-two highlight-large">{t('collaborate.header.lineTwo')}</span>
                                     </motion.h2>
                                   </div>
             <p className="collaborate-subtitle">
-              Collaborons pour transformer vos idées en projets numériques performants et innovants. 
-              Je m'engage à concrétiser vos projets avec efficacité, créativité et passion.
+              {t('collaborate.subtitle')}
             </p>
           </div>
 
@@ -36,8 +38,8 @@ const CollaborateUs = () => {
               <div className="feature-icon">
                 <FaRocket className="icon" />
               </div>
-              <div className="feature-content">
-                <h4>Innovation</h4>
+                <div className="feature-content">
+                <h4>{t('collaborate.features.innovation')}</h4>
               </div>
             </div>
 
@@ -46,7 +48,7 @@ const CollaborateUs = () => {
                 <FaCode className="icon" />
               </div>
               <div className="feature-content">
-                <h4>Qualité</h4>
+                <h4>{t('collaborate.features.quality')}</h4>
               </div>
             </div>
 
@@ -55,7 +57,7 @@ const CollaborateUs = () => {
                 <FaHeart className="icon" />
               </div>
               <div className="feature-content">
-                <h4>Passion</h4>
+                <h4>{t('collaborate.features.passion')}</h4>
               </div>
             </div>
           </div>

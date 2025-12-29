@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 import { motion } from "@motionone/react";
 import '../styles/AboutMe.css';
 import my_pic from '../assets/my_pic.jpeg';
@@ -6,6 +7,7 @@ import {
   FaGithub, FaEnvelope, FaLinkedin
 } from 'react-icons/fa';
 const AboutMe = () => {
+  const { t } = useTranslation();
   const skills = ["Nabil Hriz", "Full-Stack", "Devloper", "Maker"];
   const [index, setIndex] = useState(0);
 const [isVisible, setIsVisible] = useState(false);
@@ -50,7 +52,7 @@ useEffect(() => {
       <div className="inner-badge">
         <span className="pulse-ring"></span>
         <span className="status-dot"></span>
-        <span className="status-text">DISPONIBLE</span>
+        <span className="status-text">{t('about.status')}</span>
       </div>
     </div>
       <div className="profile-image">
@@ -60,7 +62,7 @@ useEffect(() => {
       
       <div className="profile-details">
         <h3 className="profile-card-name">NABIL HRIZ</h3>
-<p className="profile-subtitle">Développeur Full Stack React & Laravel</p>
+<p className="profile-subtitle">{t('about.subtitle')}</p>
         <div className="social-icons">
           <a href="https://github.com/NABIL-HRIZ" target="_blank" rel="noopener noreferrer" className="social-link">
             <FaGithub className="social-icon" />
@@ -74,8 +76,8 @@ useEffect(() => {
         </div>
 
         <div className="profile-actions">
-          <a href="/nabil-hriz.pdf" download className="cssbuttons-io-button" style={{ textDecoration: "none" }}>
-            <span style={{ color: "#000" }}>Télécharger CV</span>
+            <a href="/nabil-hriz.pdf" download className="cssbuttons-io-button" style={{ textDecoration: "none" }}>
+            <span style={{ color: "#000" }}>{t('about.downloadCV')}</span>
             <div className="icon">
               <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0h24v24H0z" fill="none"></path>
@@ -108,10 +110,14 @@ useEffect(() => {
       </div>
 
   <p className="about-description">
-    Maîtrisant le <HighLight color="#7df4cc" type="underline">Front et le Back</HighLight>, 
-    je conçois des applications web modernes et performantes. 
-    Spécailsé en  <HighLight color="violet" type="underline">PHP, Laravel et React</HighLight>, 
-    j'optimise les structures de données pour des <HighLight color="#4d94ff" type="underline">résultats concrets</HighLight>.
+    <Trans
+      i18nKey="about.description"
+      components={[
+        <HighLight color="#7df4cc" type="underline" />,
+        <HighLight color="violet" type="underline" />,
+        <HighLight color="#4d94ff" type="underline" />
+      ]}
+    />
   </p>
     <div className="velocity-wrapper" style={{marginTop:"30px"}}>
         <div className="scroll-track track-right">

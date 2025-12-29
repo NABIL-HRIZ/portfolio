@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import '../styles/NewMenu.css'
-
+import { useTranslation } from 'react-i18next';
 export default function BubbleMenu({
   logo,
   items,
@@ -68,6 +68,14 @@ const handleToggle = () => {
     }
   }, [isMenuOpen, showOverlay, animationEase, animationDuration, staggerDelay]);
 
+
+  const {i18n } = useTranslation();
+
+   const toggleLanguage = () => {
+    const next = i18n.language === 'fr' ? 'en' : 'fr';
+    i18n.changeLanguage(next);
+  };
+
   return (
     <>
       <nav className={`bubble-menu ${useFixedPosition ? "fixed" : "absolute"}`} aria-label="Main navigation">
@@ -75,7 +83,19 @@ const handleToggle = () => {
           <span className="logo-content">{logo}</span>
         </div>
 
-        <button
+<div>
+
+ <button
+        onClick={toggleLanguage}
+        aria-label="Toggle language"
+        className="bubble language-btn"
+          style={{}}
+        
+      >
+        {i18n.language === 'fr' ? 'EN' : 'FR'}
+      </button>
+
+ <button
           type="button"
           className={`bubble toggle-bubble menu-btn ${isMenuOpen ? "open" : ""}`}
           onClick={handleToggle}
@@ -85,7 +105,13 @@ const handleToggle = () => {
         >
           <span className="menu-line" style={{ background: menuContentColor }} />
           <span className="menu-line short" style={{ background: menuContentColor }} />
+      
         </button>
+        
+</div>
+
+       
+        
       </nav>
 
       {showOverlay && (

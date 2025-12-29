@@ -1,10 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { GitHubCalendar } from 'react-github-calendar';
 
 import { motion } from "@motionone/react";
 import '../styles/Portfolio.css';
 
 const Portfolio = () => {
+  const { t } = useTranslation();
 
   const selectLastSixMonths = (contributions) => {
     const today = new Date();
@@ -26,8 +28,8 @@ const Portfolio = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, easing: "ease-out" }}
         >
-          <span className="line-one">MON ACTIVITÉ</span>
-          <span className="line-two highlight-large">OPEN SOURCE</span>
+          <span className="line-one">{t('portfolio.header.lineOne')}</span>
+          <span className="line-two highlight-large">{t('portfolio.header.lineTwo')}</span>
         </motion.h2>
       </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 import { motion } from "@motionone/react";
 import { 
   FaLaravel, FaReact, FaDocker, FaGitAlt, FaCogs, FaNodeJs, 
@@ -36,6 +37,7 @@ const toolsData = [
 ];
 
 const MyTools = () => {
+  const { t } = useTranslation();
   const [items, setItems] = useState([{ ...toolsData[0], key: 'init' }]);
   const [nextIndex, setNextIndex] = useState(1);
 
@@ -62,8 +64,8 @@ const MyTools = () => {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.8, easing: "ease-out" }}
                         >
-                          <span className="line-one"> Technologies de </span>
-                          <span className="line-two highlight-large">Pointe</span>
+                          <span className="line-one">{t('tools.header.lineOne')}</span>
+                          <span className="line-two highlight-large">{t('tools.header.lineTwo')}</span>
                         </motion.h2>
                       </div>
 

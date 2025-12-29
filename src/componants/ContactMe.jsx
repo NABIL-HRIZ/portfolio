@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaPaperPlane, FaUser, FaEnvelope, FaComment } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import '../styles/ContactMe.css';
@@ -12,6 +13,7 @@ const ContactMe = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const handleChange = (e) => {
     setFormData({
@@ -28,8 +30,8 @@ const ContactMe = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
 
       Swal.fire({
-        title: 'Message Envoyé!',
-        text: `Merci ${formData.name}, votre message a été envoyé avec succès.`,
+        title: t('contact.toast.sentTitle'),
+        text: t('contact.toast.sentText', { name: formData.name }),
         icon: 'success',
         toast: true,
         position: 'top-end',
@@ -55,8 +57,8 @@ const ContactMe = () => {
     } catch (error) {
       // Show error toast notification
       Swal.fire({
-        title: 'Erreur!',
-        text: 'Erreur lors de l\'envoi du message.',
+        title: t('contact.toast.errorTitle'),
+        text: t('contact.toast.errorText'),
         icon: 'error',
         toast: true,
         position: 'top-end',
@@ -80,15 +82,15 @@ const ContactMe = () => {
             <h2 className="contact-title">
                <span className="highlight"></span>
             </h2>
-             <div className="header-designer-container">
+            <div className="header-designer-container">
                                                 <motion.h2
                                                   className="projects-title-large"
                                                   initial={{ opacity: 0, x: 50 }}
                                                   animate={{ opacity: 1, x: 0 }}
                                                   transition={{ duration: 0.8, easing: "ease-out" }}
                                                 >
-                                                  <span className="line-one"> Créons Quelque Chose </span>
-                                                  <span className="line-two highlight-large">d'Extraordinaire</span>
+                                                  <span className="line-one">{t('contact.header.lineOne')}</span>
+                                                  <span className="line-two highlight-large">{t('contact.header.lineTwo')}</span>
                                                 </motion.h2>
                                               </div>
           </div>
@@ -105,7 +107,7 @@ const ContactMe = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder="Votre nom complet"
+                    placeholder={t('contact.placeholder.name')}
                     className="form-input"
                     required
                     disabled={isSubmitting}
@@ -124,7 +126,7 @@ const ContactMe = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="Votre adresse email"
+                    placeholder={t('contact.placeholder.email')}
                     className="form-input"
                     required
                     disabled={isSubmitting}
@@ -142,7 +144,7 @@ const ContactMe = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Parlez-moi de votre projet..."
+                    placeholder={t('contact.placeholder.message')}
                     className="form-textarea"
                     rows="5"
                     required
@@ -164,7 +166,7 @@ const ContactMe = () => {
     ></path>
   </svg>
   <span className="text">
-                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                  {isSubmitting ? t('contact.sending') : t('contact.send')}
                 </span>
   <span class="circle"></span>
   <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
