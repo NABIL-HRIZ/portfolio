@@ -520,11 +520,11 @@
 }
 
 .track-right .scroll-content {
-  animation: scroll-right 20s linear infinite;
+  animation: scroll-right 10s linear infinite;
 }
 
 .track-left .scroll-content {
-  animation: scroll-left 25s linear infinite;
+  animation: scroll-left 10s linear infinite;
 }
 
 @keyframes scroll-right {

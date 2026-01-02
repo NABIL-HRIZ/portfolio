@@ -124,18 +124,14 @@ useEffect(() => {
           <div className="scroll-content">
             LARAVEL • REACT • NODE.JS • REDUX • DOCKER • GITHUB •
           </div>
-          <div className="scroll-content">
-            LARAVEL • REACT • NODE.JS • REDUX • DOCKER  • GITHUB •
-          </div>
+         
         </div>
         
         <div className="scroll-track track-left">
           <div className="scroll-content">
             MYSQL • MONGODB • CI/CD • FIGMA • TAILWIND • JS •
           </div>
-          <div className="scroll-content">
-            MYSQL • MONGODB • CI/CD • FIGMA • TAILWIND • JS •
-          </div>
+          
         </div>
       </div>
 </div>
