@@ -76,7 +76,7 @@ useEffect(() => {
         </div>
 
         <div className="profile-actions">
-            <a href="/nabil-hriz.pdf" download className="cssbuttons-io-button" style={{ textDecoration: "none" }}>
+            <a href="/cv-nabil-hriz.pdf" download className="cssbuttons-io-button" style={{ textDecoration: "none" }}>
             <span style={{ color: "#000" }}>{t('about.downloadCV')}</span>
             <div className="icon">
               <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
