@@ -12,7 +12,7 @@ import Portfolio from './componants/Portfolio';
 import Intro3D from './componants/Intro3D';
 import CanvasCursorWrapper from './componants/CanvasCursorWrapper';
 import AboutMe from './componants/AboutMe';
-
+import { Analytics } from '@vercel/analytics/react';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -31,6 +31,7 @@ const App = () => {
       ) : (
         <div className="fade-in-content">
           <Navbar />
+          <Analytics />
           <HeroSection />
           <AboutMe />
           <Portfolio />
