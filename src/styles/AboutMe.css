@@ -98,6 +98,46 @@
 }
 
 
+.stat-item {
+  position: absolute;
+  font-size: 0.7rem;
+  color: #7df4cc;
+  margin-left:-150px;
+  margin-bottom: -30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(125, 244, 204, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px solid rgba(125, 244, 204, 0.3);
+  box-shadow: 0 2px 8px rgba(125, 244, 204, 0.1);
+  pointer-events: auto;
+  z-index: 10;
+  animation: statItemIn 0.8s ease-out forwards;
+}
+
+
+.stat-item:last-child {
+  bottom:40px;
+  left:58%;
+  transform: translateX(-50%);
+}
+
+@keyframes statItemIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+
 .profile-card {
   width: 370px;
   height:500px; 
@@ -363,7 +403,8 @@
   height: 2.8em;
   padding-right: 3.3em;
   cursor: pointer;
-  margin-left:40px;
+  margin-left:0px;
+  margin-top: 10px;
 }
 
 .cssbuttons-io-button .icon {

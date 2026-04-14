@@ -63,7 +63,10 @@ useEffect(() => {
       <div className="profile-details">
         <h3 className="profile-card-name">NABIL HRIZ</h3>
 <p className="profile-subtitle">{t('about.subtitle')}</p>
-        <div className="social-icons">
+        <div className="profile-stats">
+          <div className="stat-item">{t('about.projectsCount')}</div>
+        </div>
+        {/* <div className="social-icons">
           <a href="https://github.com/NABIL-HRIZ" target="_blank" rel="noopener noreferrer" className="social-link">
             <FaGithub className="social-icon" />
           </a>
@@ -73,7 +76,7 @@ useEffect(() => {
           <a href="https://www.linkedin.com/in/nabil-hriz-0937b1390/" target="_blank" rel="noopener noreferrer" className="social-link">
             <FaLinkedin className="social-icon" />
           </a>
-        </div>
+        </div> */}
 
         <div className="profile-actions">
             <a href="/cv-nabil-hriz.pdf" download className="cssbuttons-io-button" style={{ textDecoration: "none" }}>
@@ -122,14 +125,14 @@ useEffect(() => {
     <div className="velocity-wrapper" style={{marginTop:"30px"}}>
         <div className="scroll-track track-right">
           <div className="scroll-content">
-            LARAVEL • REACT • NODE.JS • REDUX • DOCKER • GITHUB •
+            JS • REACT • REDUX • TAILWIND
           </div>
          
         </div>
         
         <div className="scroll-track track-left">
           <div className="scroll-content">
-            MYSQL • MONGODB • CI/CD • FIGMA • TAILWIND • JS •
+          PHP • LARAVEL • JAVA • Spring Boot • NODE.JS • SQL
           </div>
           
         </div>

@@ -48,6 +48,32 @@
   transition: all 0.3s ease;
 }
 
+.vertical-timeline-element--experience .vertical-timeline-element-content {
+  background: rgba(0, 30, 40, 0.88) !important;
+  border-color: rgba(125, 244, 204, 0.3) !important;
+}
+
+.vertical-timeline-element--experience .vertical-timeline-element-content:hover {
+  border-color: #7df4cc !important;
+  box-shadow: 0 0 20px rgba(125, 244, 204, 0.2) !important;
+}
+
+.vertical-timeline-element--experience .timeline-diplome {
+  color: #7df4cc !important;
+}
+
+.vertical-timeline-element--experience .timeline-etablissement {
+  color: #c9f9ee !important;
+}
+
+.vertical-timeline-element--education .timeline-diplome {
+  color: #4ab677 !important;
+}
+
+.vertical-timeline-element--education .timeline-etablissement {
+  color: #e0e0e0 !important;
+}
+
 .vertical-timeline-element-icon svg {
   animation: iconPulse 2s infinite;
 }

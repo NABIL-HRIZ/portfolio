@@ -17,7 +17,7 @@ import jardinage from '../assets/jardinage.jpg'
 import honey from '../assets/honey.jpg'
 import weather from '../assets/weather.png'
 import fanzone from '../assets/fanzone.jpg'
-
+import paws from '../assets/paws.png'
 const MyProjects = () => {
   const [showAll, setShowAll] = useState(false);
 
@@ -35,18 +35,19 @@ const hoverColors = [
   const translations = t('projects.list', { returnObjects: true }) || [];
 
   const imageMap = {
-    1: fanzone,
-    2: eventify,
-    3: secure,
-    4: food,
-    5: movie,
-    6: weather,
-    7: booking,
-    8: educaty,
-    9: jardinage,
-    10: honey,
-    11: dari,
-    12: pizza
+    1: paws,
+    2: fanzone,
+    3: eventify,
+    4: secure,
+    5: food,
+    6: movie,
+    7: weather,
+    8: booking,
+    9: educaty,
+    10: jardinage,
+    11: honey,
+    12: dari,
+    13: pizza
   };
 
   const projects = translations.map((p) => ({

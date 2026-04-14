@@ -5,10 +5,10 @@ import { useTranslation } from 'react-i18next';
 import { motion } from "@motionone/react";
 import { 
   FaLaravel, FaReact, FaDocker, FaGitAlt, FaCogs, FaNodeJs, 
-  FaBootstrap, FaDatabase, FaBrain 
+  FaBootstrap, FaDatabase, FaJava
 } from "react-icons/fa";
 import { 
-  SiMysql, SiHtml5, SiMongodb, SiExpress, SiTailwindcss, 
+  SiMysql, SiHtml5, SiMongodb, SiExpress, SiTailwindcss, SiSpringboot,
   SiFigma, SiOpenai, SiAnthropic 
 } from "react-icons/si";
 import "../styles/Mytools.css";
@@ -17,8 +17,10 @@ const toolsData = [
 
   { id: 1, name: "Laravel", description: "Framework Backend (PHP)", icon: <FaLaravel />, color: "#FF2D20", type: "Backend" },
   { id: 2, name: "Node.js", description: "Environnement d'exécution JS", icon: <FaNodeJs />, color: "#339933", type: "Backend" },
+  {id:3 , name : "JAVA" , description : "Programmation orientée objet" , icon : <FaJava /> , color : "#007396" , type : "Backend"},
   { id: 4, name: "API REST", description: "Conception & Intégration", icon: <FaCogs />, color: "#2088FF", type: "API" },
-  
+  {id : 5 , name:"spring boot" , description : "Framework Java pour microservices" , icon : <SiSpringboot /> , color : "#6DB33F" , type : "Backend"},
+
   { id: 5, name: "React Js", description: "Interfaces réactives (Redux)", icon: <FaReact />, color: "#61DAFB", type: "Frontend" },
   { id: 6, name: "HTML/CSS", description: "Structure & Style Moderne", icon: <SiHtml5 />, color: "#E34F26", type: "Design" },
   { id: 7, name: "Tailwind ", description: "Framework CSS utilitaire", icon: <SiTailwindcss />, color: "#06B6D4", type: "Design" },

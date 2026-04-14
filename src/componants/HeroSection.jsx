@@ -6,8 +6,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { 
   FaGithub, FaEnvelope, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, 
-  FaJs, FaPhp, FaLaravel, FaDatabase, FaBootstrap, FaDocker 
+  FaJs, FaPhp, FaLaravel, FaDatabase, FaBootstrap, FaDocker , FaJava
 } from 'react-icons/fa';
+import { SiSpringboot } from "react-icons/si";
 import { SiTailwindcss, SiRedux, SiGithubactions } from 'react-icons/si';
 import '../styles/HeroSection.css';
 import { motion } from "@motionone/react";
@@ -103,12 +104,14 @@ const HeroSection = () => {
               <div className="orbiting-icon icon-4" title="CSS3"><FaCss3Alt /></div>
               <div className="orbiting-icon icon-5" title="PHP"><FaPhp /></div>
               <div className="orbiting-icon icon-6" title="Laravel"><FaLaravel /></div>
-              <div className="orbiting-icon icon-7" title="SQL"><FaDatabase /></div>
-              <div className="orbiting-icon icon-8" title="Tailwind"><SiTailwindcss /></div>
-              <div className="orbiting-icon icon-9" title="Bootstrap"><FaBootstrap /></div>
-              <div className="orbiting-icon icon-10" title="Redux"><SiRedux /></div>
-              <div className="orbiting-icon icon-11" title="Docker"><FaDocker /></div>
-              <div className="orbiting-icon icon-12" title="CI/CD"><SiGithubactions /></div>
+              <div className="orbiting-icon icon-7" title="Java"><FaJava /></div>
+              <div className="orbiting-icon icon-8" title="Spring Boot"><SiSpringboot /></div>
+              <div className="orbiting-icon icon-9" title="SQL"><FaDatabase /></div>
+              <div className="orbiting-icon icon-10" title="Tailwind"><SiTailwindcss /></div>
+              <div className="orbiting-icon icon-11" title="Bootstrap"><FaBootstrap /></div>
+              <div className="orbiting-icon icon-12" title="Redux"><SiRedux /></div>
+              <div className="orbiting-icon icon-13" title="Docker"><FaDocker /></div>
+              <div className="orbiting-icon icon-14" title="CI/CD"><SiGithubactions /></div>
             </div>
   </div>
 </div>

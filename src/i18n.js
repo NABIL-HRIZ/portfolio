@@ -28,8 +28,10 @@ const resources = {
       },
       about: {
         status: 'AVAILABLE',
-        subtitle: 'Full-Stack Developer React & Laravel',
-        description: "Mastering both <0>Front and Back</0>, I design modern and high-performance web applications. Specialized in <1>PHP, Laravel and React</1>, I optimize data structures for <2>tangible results</2>.",
+        subtitle: 'Full-Stack Developer ',
+        experience: 'available (+ 3yrs experience)',
+        projectsCount: '15 projects',
+        description: "Mastering both <0>Front and Back</0>, I design modern and high-performance web applications. Specialized in <1>PHP Laravel Java Spring Boot and React</1>, I optimize data structures for <2>tangible results</2>.",
         downloadCV: 'Download CV',
         marquee1: 'LARAVEL • REACT • NODE.JS • REDUX • DOCKER • GITHUB •',
         marquee2: 'MYSQL • MONGODB • CI/CD • FIGMA • TAILWIND • JS •'
@@ -66,6 +68,13 @@ const resources = {
         { id: 2, etablissement: "BEN M'SIK UNIVERSITY", periode: 'July 2022', diplome: 'Bachelor in Mathematical and Computer Sciences', description: 'In-depth academic program in mathematics and computer science fundamentals.' },
         { id: 3, etablissement: 'MOULAY ISMAIL HIGH SCHOOL', periode: 'July 2019', diplome: 'Baccalaureate in Physical and Chemical Sciences', description: 'High school diploma with a scientific specialization.' }
       ]
+      },
+      experiences: {
+        list: [
+          { id: 101, etablissement: 'IFGA - Casablanca', periode: 'December 2024 – May 2025', diplome: 'Full-Stack Developer', description: 'Full-Stack development with React.js, Laravel & Spring Boot, API integration and MySQL management.' },
+          { id: 102, etablissement: 'DIRECTINVEST', periode: '2022 – 2024', diplome: 'Front-End Developer', description: 'Front-end development with React.js and Redux, WordPress customization and API integration.' },
+          { id: 103, etablissement: 'SOURCE IT', periode: 'July 2021 – October 2021', diplome: 'Web Developer', description: 'Complete web development, front-end and back-end integration, performance optimization.' }
+        ]
       },
       portfolio: {
         header: { lineOne: 'MY ACTIVITY', lineTwo: 'OPEN SOURCE' }
@@ -119,8 +128,10 @@ const resources = {
       },
       about: {
         status: 'DISPONIBLE',
-        subtitle: 'Développeur Full Stack React & Laravel',
-        description: "Maîtrisant le <0>Front et le Back</0>, je conçois des applications web modernes et performantes. Spécialisé en <1>PHP, Laravel et React</1>, j'optimise les structures de données pour des <2>résultats concrets</2>.",
+        subtitle: 'Développeur Full Stack ',
+        experience: 'disponible (+ 3 ans d\'expérience)',
+        projectsCount: ' + 15 projets',
+        description: "Maîtrisant le <0>Front et le Back</0>, je conçois des applications web modernes et performantes. Spécialisé  <1>PHP Laravel Java Spring Boot et React</1>, j'optimise les structures de données pour des <2>résultats concrets</2>.",
         downloadCV: 'Télécharger CV',
         marquee1: 'LARAVEL • REACT • NODE.JS • REDUX • DOCKER • GITHUB •',
         marquee2: 'MYSQL • MONGODB • CI/CD • FIGMA • TAILWIND • JS •'
@@ -132,9 +143,10 @@ const resources = {
         codeAlt: 'Code source'
       ,
       list: [
-        { id: 1, name: 'FANZONE - DIGITALISATION DES FAN ZONES (CAN 2025)', description: "Conception et réalisation d'une plateforme web avancée Full-Stack (React.js/Laravel) pour la gestion digitalisée (réservation, e-tickets QR Code, scan, intégration Stripe et webhooks, statistiques) des 10+ Fan Zones. Projet conteneurisé avec Docker et optimisé par des pipelines de CI/CD", tags: ['Laravel','React','Redux','Mysql','PDF Simple','Scan QR','Swagger','Stripe','Mailhog','AOS Animation'] },
-        { id: 2, name: 'EVENTIFY - GESTION DES EVENEMENTS', description: "Développeur Full Stack - Réalisation d'une application web en Laravel (API REST, validation, cache, tests, intégration Stripe et webhook) et React.js (interface dynamique, gestion des états, formulaires validés). Conception, intégration et communication client–serveur complètes avec paiement en ligne sécurisé.", tags: ['Laravel','React','Redux','Bootstrap','Mysql','Stripe','Webhook','Mailhog','Gsap'] },
-        { id: 3, name: 'SECUREBOARD – GESTION DES TACHES', description: "Développeur Full Stack (Laravel + React) – Création d'une application de gestion de projets avec authentification, rôles & permissions, notifications temps réel (Pusher), emails asynchrones et documentation API (Swagger).", tags: ['Laravel','React','SweetAlert','ReChartJs','Pusher','EchoJs','MailTrap'] },
+        { id: 1, name: 'PAWSADOPT - SOLUTION DIGITALE D’INTERMÉDIATION ANIMALIÈRE', description: "Conception d'une application Full-Stack complète optimisant le processus d'adoption via la cartographie interactive et la monétisation sécurisée[cite: 62]. Maîtrise de l'intégralité du cycle de développement : des API REST performantes à un front-end réactif avec intégration poussée de services tiers.", tags: ['Spring Boot 3', 'Java', 'React', 'Tailwind CSS', 'MySQL', 'Leaflet.js', 'Stripe API', 'Spring Security', 'Axios', 'Docker']},
+      
+        { id: 2, name: 'FANZONE - DIGITALISATION DES FAN ZONES (CAN 2025)', description: "Conception et réalisation d'une plateforme web avancée Full-Stack (React.js/Laravel) pour la gestion digitalisée (réservation, e-tickets QR Code, scan, intégration Stripe et webhooks, statistiques) des 10+ Fan Zones. Projet conteneurisé avec Docker et optimisé par des pipelines de CI/CD", tags: ['Laravel','React','Redux','Mysql','PDF Simple','Scan QR','Swagger','Stripe','Mailhog','AOS Animation'] },        
+        { id: 3, name: 'EVENTIFY - GESTION DES EVENEMENTS', description: "Développeur Full Stack - Réalisation d'une application web en Laravel (API REST, validation, cache, tests, intégration Stripe et webhook) et React.js (interface dynamique, gestion des états, formulaires validés). Conception, intégration et communication client–serveur complètes avec paiement en ligne sécurisé.", tags: ['Laravel','React','Redux','Bootstrap','Mysql','Stripe','Webhook','Mailhog','Gsap'] },
         { id: 4, name: 'FOODIEAPP – COMMANDE EN LIGNE', description: "Développeur Front-End React – Développement d'une application web avec React et Redux pour la gestion d'état, consommation d'une API externe, mise à jour du panier en temps réel, gestion des erreurs et optimisation des performances. Interface réactive et responsive.", tags: ['React','Redux','Tailwind','EmailJs','React Bits','Gsap','AtroposJs','Aos','Rest Api'] },
         { id: 5, name: 'MOVIESCOPE', description: "Une application web moderne permettant de découvrir et explorer films et séries selon vos préférences, avec une interface épurée, des fonctionnalités interactives et une vidéo d'introduction immersive.", tags: ['React','SwiperJs','Uiverse','AOS (Animate On Scroll)','Rest Api'] },
         { id: 6, name: 'HITRADIO_WEATHER', description: "HitRadio, une station de radio dynamique et populaire, souhaite enrichir l'expérience de ses auditeurs en intégrant des fonctionnalités météorologiques avancées sur leur site web officiel", tags: ['React','Splite 3D','Gsap','Rest Api'] },
@@ -153,10 +165,17 @@ const resources = {
         header: { lineOne: 'Mon Parcours', lineTwo: 'Académique' }
       ,
       list: [
-        { id: 1, etablissement: 'SIMPLON ACADEMY', periode: 'Juin 2025 – Présent', diplome: 'Formation : Full Stack React & Laravel', description: 'Formation intensive en développement web full stack avec les technologies modernes' },
+        { id: 1, etablissement: 'SIMPLON ACADEMY', periode: 'Juin 2025 – Présent', diplome: 'Certification professionnelle : Développeur Full Stack', description: 'Formation intensive en développement web full stack avec les technologies modernes' },
         { id: 2, etablissement: "UNIVERSITÉ BEN M'SIK", periode: 'Juillet 2022', diplome: 'Licence fondamentale en sciences mathématiques et informatiques', description: 'Parcours académique approfondi en mathématiques et informatique fondamentale' },
         { id: 3, etablissement: 'LYCÉE MOULAY ISMAIL', periode: 'Juillet 2019', diplome: 'Baccalauréat en sciences physiques et chimiques', description: 'Diplôme de fin d\'études secondaires avec spécialisation scientifique' }
       ]
+      },
+      experiences: {
+        list: [
+          { id: 101, etablissement: 'IFGA - Casablanca', periode: 'Décembre 2024 – Mai 2025', diplome: 'Développeur Full-Stack', description: 'Développement Full-Stack avec React.js, Laravel & Spring Boot, intégration API REST et gestion MySQL.' },
+          { id: 102, etablissement: 'DIRECTINVEST', periode: '2022 – 2024', diplome: 'Développeur Front-End', description: 'Développement front-end React.js avec Redux, personnalisation WordPress et intégration API.' },
+          { id: 103, etablissement: 'SOURCE IT', periode: 'Juillet 2021 – Octobre 2021', diplome: 'Développeur Web', description: 'Développement web complet, intégration front-end et back-end, optimisation performances.' }
+        ]
       },
       portfolio: {
         header: { lineOne: 'MON ACTIVITÉ', lineTwo: 'OPEN SOURCE' }
