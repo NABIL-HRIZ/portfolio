@@ -1,0 +1,150 @@
+.hero-container {
+  background-color: #f6f5f3;
+  height: 100vh;
+  width: 100%;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Status Badge */
+.status-badge {
+  background: white;
+  padding: 10px 22px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  z-index: 10;
+  color: #333;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #0bad13;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #0bad13;
+}
+
+.hero-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.hero-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+}
+
+/* LEFT COLUMN */
+.identity-block {
+  margin-bottom: 40px;
+}
+
+.hey-text {
+  font-family: 'Playfair Display', serif; /* Or Cursive */
+  font-size: 3rem;
+  font-style: italic;
+}
+
+.main-name {
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -5px;
+  margin: 10px 0;
+  color: #000;
+}
+
+.sub-role {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #333;
+}
+
+/* CENTER COLUMN */
+.column-center {
+  flex: 1.5; /* Give more room to the image */
+  justify-content: center;
+  align-items: center;
+}
+
+.image-frame {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.hero-main-img {
+  max-height: 95vh;
+  width: auto;
+  max-width: 100%;
+  filter: contrast(1.05);
+  margin-top: -30px;
+}
+
+/* RIGHT COLUMN */
+.column-right {
+  justify-content: space-between; /* Pushes one box up, one box down */
+  align-items: flex-end;
+  padding-bottom:130px !important;
+}
+
+.info-box {
+  text-align: right;
+}
+
+.box-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #0d0c0c;
+  margin-bottom: 10px;
+}
+
+.box-text {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color:#515050ef
+}
+
+.massive-role {
+  font-size:3rem;
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom:-140px;
+  opacity: 0.2; /* Minimalist background text look */
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  color: rgb(30, 51, 36);
+  text-align:center;
+}
+
+.scroll-indicator {
+  font-weight: 800;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+}

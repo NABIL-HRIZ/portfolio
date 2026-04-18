@@ -1,8 +1,7 @@
 .portfolio-section {
   background: #000;
   padding: 80px 40px;
-  margin-left: 500px; 
-  width: calc(100% - 530px);
+  width: 100%;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
@@ -42,12 +41,72 @@
   position: relative;
 }
 
-.github-calendar-container {
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  max-width: fit-content;
+.github-calendar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.calendar-card {
+  width: 100%;
+  max-width: 1400px;
+  padding: 40px;
+  background: rgba(10, 15, 25, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(18px);
+  overflow-x: auto;
+}
+
+.calendar-card .react-activity-calendar,
+.calendar-card .react-activity-calendar svg {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.calendar-fallback {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  color: #e8f0ff;
+}
+
+.calendar-fallback h3 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  color: #b1f5b6;
+}
+
+.calendar-fallback p {
+  margin: 0;
+  line-height: 1.6;
+  color: #d1d9e6;
+}
+
+.calendar-fallback a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4ab677;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.react-activity-calendar__header,
+.react-activity-calendar__footer,
+.react-activity-calendar__legend-month {
+  color: #e3e2e2;
+}
+
+.react-activity-calendar__footer {
+  margin-top: 26px;
+}
+
+.react-activity-calendar__legend-month {
+  font-size: 0.95rem;
 }
 
 
@@ -70,39 +129,37 @@
     width: 100% !important;
   }
   
-  .github-calendar-container {
-    width: 100% !important;
+  .calendar-card {
+    max-width: 100%;
+    padding: 32px;
   }
 }
 
 @media (max-width: 768px) {
   .portfolio-section h2 {
-    font-size: 1.5rem;
-    margin-top:100px;
-    margin-left: 40px;
+    font-size: 2.8rem;
+    margin-top: 80px;
+    margin-left: 24px;
   }
   
-  .github-calendar-container {
-    padding: 1rem;
-    width:300px !important;
-    margin-left:20px !important;
+  .calendar-card {
+    padding: 24px;
   }
-   .react-activity-calendar__footer{
+
+  .react-activity-calendar__footer {
     font-size: 10px !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-   
-}
-.react-activity-calendar__legend-month{
-    font-size: 10px !important;
-}
+  }
 
-.projects-title-large{
+  .react-activity-calendar__legend-month {
+    font-size: 10px !important;
+  }
+
+  .projects-title-large {
     font-size: 2.5rem !important;
-    margin-left: 40px;
-}
-  
-  
+    margin-left: 24px;
+  }
 }

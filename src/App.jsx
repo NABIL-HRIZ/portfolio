@@ -13,11 +13,12 @@ import Intro3D from './componants/Intro3D';
 import CanvasCursorWrapper from './componants/CanvasCursorWrapper';
 import AboutMe from './componants/AboutMe';
 import { Analytics } from '@vercel/analytics/react';
+import PortfolioHero from './componants/PortfolioHero';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 5000);
+    const timer = setTimeout(() => setIsLoading(false), 4500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -32,7 +33,8 @@ const App = () => {
         <div className="fade-in-content">
           <Navbar />
           <Analytics />
-          <HeroSection />
+          {/* <HeroSection /> */}
+          <PortfolioHero />
           <AboutMe />
           <Portfolio />
           <MyProjects />

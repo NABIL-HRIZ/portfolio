@@ -2,28 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 import { motion } from "@motionone/react";
 import '../styles/AboutMe.css';
-import my_pic from '../assets/my_pic.jpeg';
-import { 
-  FaGithub, FaEnvelope, FaLinkedin
-} from 'react-icons/fa';
+import { color } from 'three/tsl';
 const AboutMe = () => {
   const { t } = useTranslation();
-  const skills = ["Nabil Hriz", "Full-Stack", "Devloper", "Maker"];
+  const skills = ["Devloper", "Maker","Designer"];
   const [index, setIndex] = useState(0);
-const [isVisible, setIsVisible] = useState(false);
-
-useEffect(() => {
-    const handleScroll = () => {
-    
-      if (window.scrollY >500) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   
 
   useEffect(() => {
@@ -41,61 +24,21 @@ useEffect(() => {
   );
 };
 
+
+const developerData = {
+    name: "Nabil Hriz",
+    role: "Full Stack Developer",
+    base: "Casablanca, Morocco",
+    status: "Freelancer",
+    since: 2022,
+    webStack: ["WP","React", "Laravel", "Spring Boot"],
+    languages: ["AR", "FR", "EN"]
+  };
+
+
   return (
     <section className="about-section" id='a-propos'>
      
-      
-        <div className={`hero-left ${isVisible ? 'is-visible' : ''}`}>
-     <div className="profile-card">
-    <div className="content"> 
-      <div className="modern-status-badge">
-      <div className="inner-badge">
-        <span className="pulse-ring"></span>
-        <span className="status-dot"></span>
-        <span className="status-text">{t('about.status')}</span>
-      </div>
-    </div>
-      <div className="profile-image">
-        <img src={my_pic} alt="NABIL HRIZ" className="profile-img" />
-        <div className="image-overlay"></div>
-      </div>
-      
-      <div className="profile-details">
-        <h3 className="profile-card-name">NABIL HRIZ</h3>
-<p className="profile-subtitle">{t('about.subtitle')}</p>
-        <div className="profile-stats">
-          <div className="stat-item">{t('about.projectsCount')}</div>
-        </div>
-        {/* <div className="social-icons">
-          <a href="https://github.com/NABIL-HRIZ" target="_blank" rel="noopener noreferrer" className="social-link">
-            <FaGithub className="social-icon" />
-          </a>
-          <a href="mailto:hariznabil663@gmail.com" className="social-link">
-            <FaEnvelope className="social-icon" />
-          </a>
-          <a href="https://www.linkedin.com/in/nabil-hriz-0937b1390/" target="_blank" rel="noopener noreferrer" className="social-link">
-            <FaLinkedin className="social-icon" />
-          </a>
-        </div> */}
-
-        <div className="profile-actions">
-            <a href="/cv-nabil-hriz.pdf" download className="cssbuttons-io-button" style={{ textDecoration: "none" }}>
-            <span style={{ color: "#000" }}>{t('about.downloadCV')}</span>
-            <div className="icon">
-              <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
-              </svg>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-     </div>
-  </div>
-         
-
-      
      <div className="about-bio-container">
       <div className="about-hero">
         
@@ -112,6 +55,10 @@ useEffect(() => {
         </div>
       </div>
 
+      
+
+<div className='who-iam'>
+
   <p className="about-description">
     <Trans
       i18nKey="about.description"
@@ -122,17 +69,49 @@ useEffect(() => {
       ]}
     />
   </p>
+
+  <div className="code-window">
+      <div className="code-header">
+        <div className="dots">
+          <span className="dot red"></span>
+          <span className="dot yellow"></span>
+          <span className="dot green"></span>
+        </div>
+        <span className="file-name">nabil.profile.js</span>
+      </div>
+      <div className="code-content">
+        <pre>
+          <code>
+            <span className="keyword">const</span> <span className="variable">developer</span> = &#123; <br />
+            &nbsp;&nbsp;name: <span className="string">"{developerData.name}"</span>,<br />
+            &nbsp;&nbsp;role: <span className="string">"{developerData.role}"</span>,<br />
+            &nbsp;&nbsp;base: <span className="string">"{developerData.base}"</span>,<br />
+            &nbsp;&nbsp;status: <span className="string">"{developerData.status}"</span>,<br />
+            &nbsp;&nbsp;since: <span className="number">{developerData.since}</span>,<br />
+            &nbsp;&nbsp;webStack: [<span className="string">"{developerData.webStack.join('", "')}"</span>],<br />
+            &nbsp;&nbsp;languages: [<span className="string">"{developerData.languages.join('", "')}"</span>]<br />
+            &#125;;<br />
+            <br />
+            <span className="comment">// available for new projects</span><span className="cursor">|</span>
+          </code>
+        </pre>
+      </div>
+    </div>
+</div>
+
+
     <div className="velocity-wrapper" style={{marginTop:"30px"}}>
         <div className="scroll-track track-right">
-          <div className="scroll-content">
-            JS • REACT • REDUX • TAILWIND
-          </div>
+         <div className="scroll-content">
+  FIGMA <span className="separatoor"></span> JAVASCRIPT <span className="separatoor"></span> REACT <span className="separatoor"></span> TAILWIND  <span className="separatoor"></span> WORDPRESS  
+</div>
          
         </div>
         
         <div className="scroll-track track-left">
           <div className="scroll-content">
-          PHP • LARAVEL • JAVA • Spring Boot • NODE.JS • SQL
+            PHP <span className="separatoor"></span> LARAVEL <span className="separatoor"></span> JAVA <span className="separatoor"></span> SPRINGBOOT  <span className="separatoor"></span> RESTAPI  
+
           </div>
           
         </div>

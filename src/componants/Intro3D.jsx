@@ -1,75 +1,58 @@
-import React, { Suspense, useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { Canvas } from '@react-three/fiber'
-import { useGLTF, OrbitControls, Center } from '@react-three/drei'
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import "../styles/Intro3D.css";
 
-function Model() {
-  const { scene } = useGLTF('/old_computers.glb')
-  return (
-    <Center>
-      <primitive object={scene} scale={1} />
-    </Center>
-  )
-}
+const Intro3D = () => {
+  const container = useRef();
 
-export default function Intro3D({ onFinish }) {
-  const [count, setCount] = useState(5)
+  useGSAP(() => {
+    const tl = gsap.timeline();
 
- 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCount(prev => {
-        if (prev === 1) {
-          clearInterval(timer)
-          onFinish()
-          return 0
-        }
-        return prev - 1
-      })
-    }, 1000)
+    // 1. حركة الحروف (Letter by Letter)
+    tl.from(".char", {
+      y: 100,            // تتحرك من الأسفل
+      opacity: 0,        // تبدأ من الشفافية
+      rotateX: -90,      // إضافة تأثير 3D خفيف
+      stagger: 0.1,      // الفارق الزمني بين كل حرف وحرف
+      duration: 1,
+      ease: "power4.out",
+    })
+    // 2. الانتظار (تقليص المدة قليلاً لجعل الـ UX أسرع)
+    .to({}, { duration: 0.8 })
+    // 3. تأثير المربعات (Stairs Effect)
+    .to(".overlay-bar", {
+      height: "100%",
+      stagger: 0.1,
+      duration: 1.5,
+      ease: "power4.inOut",
+    })
+    .to(container.current, {
+      display: "none"
+    });
 
-    return () => clearInterval(timer)
-  }, [onFinish])
-
-  const handleInteraction = () => {
-    onFinish()
-  }
-
-  const { t } = useTranslation()
+  }, { scope: container });
 
   return (
-    <div style={{ height: '100vh', width: '100vw', background: '#000' }}>
-      <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
-        <ambientLight intensity={0.6} />
-        <directionalLight position={[5, 5, 5]} intensity={1} />
-
-        <Suspense fallback={null}>
-          <Model />
-        </Suspense>
-
-        <OrbitControls
-          enableZoom={false}
-          autoRotate
-          autoRotateSpeed={1}
-          onStart={handleInteraction}
-        />
-      </Canvas>
-
-      
-      <div
-        style={{
-          position: 'absolute',
-          bottom: 70,
-          width: '100%',
-          textAlign: 'center',
-          color: '#2ecc71',
-          fontFamily: 'monospace'
-        }}
-      >
-        {t('intro3d.message', { count })}
+    <div ref={container} className="intro-container">
+      <div className="overlay-container">
+        {[...Array(10)].map((_, i) => ( // زدت عدد المربعات ليكون التأثير أنعم
+          <div key={i} className="overlay-bar"></div>
+        ))}
       </div>
 
-    
+      <div className="name-wrapper">
+        <h1 className="hero-name">
+          {/* تقسيم كلمة NABIL إلى حروف */}
+          {"NABIL".split("").map((char, index) => (
+            <span key={index} className="char">
+              {char}
+            </span>
+          ))}
+        </h1>
+      </div>
     </div>
-  )
-}
+  );
+};
+
+export default Intro3D;

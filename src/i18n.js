@@ -131,8 +131,8 @@ const resources = {
         subtitle: 'Développeur Full Stack ',
         experience: 'disponible (+ 3 ans d\'expérience)',
         projectsCount: ' + 15 projets',
-        description: "Maîtrisant le <0>Front et le Back</0>, je conçois des applications web modernes et performantes. Spécialisé  <1>PHP Laravel Java Spring Boot et React</1>, j'optimise les structures de données pour des <2>résultats concrets</2>.",
-        downloadCV: 'Télécharger CV',
+       description: "Maîtrisant le <0>Front et le Back</0>, je transforme des concepts complexes en solutions digitales fluides. Spécialisé dans la <1>création d'architectures robustes</1>, j'optimise les structures de données pour des <2>résultats concrets</2>."
+       , downloadCV: 'Télécharger CV',
         marquee1: 'LARAVEL • REACT • NODE.JS • REDUX • DOCKER • GITHUB •',
         marquee2: 'MYSQL • MONGODB • CI/CD • FIGMA • TAILWIND • JS •'
       },
