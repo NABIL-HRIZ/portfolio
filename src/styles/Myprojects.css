@@ -2,6 +2,7 @@
   padding: 100px 5%;
   margin-left:40px;
   margin-top:-200px !important;
+
 }
 
 .projects-title {
@@ -11,10 +12,11 @@
   font-weight: 800;
 }
 
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
 .project-card {
@@ -22,7 +24,8 @@
   border-radius: 20px;
   overflow: hidden;
   background: #000;
-  height: 400px;
+  height:400px;
+  
 }
 
 .project-hover-overlay {
@@ -211,9 +214,9 @@
   position: absolute;
   top: -10px;
   right: 10px;
-  font-size: 12rem;
+  font-size: 10rem;
   font-weight: 900;
-  color: rgba(200, 200, 200, 0.776);
+  color: rgba(149, 148, 148, 0.776);
   z-index: 1;
   pointer-events: none;
 }
@@ -222,6 +225,7 @@
   position: relative;
   z-index: 3;
   color: #ffff;
+  top: 10px !important;
 }
 
 .project-name {
@@ -229,6 +233,12 @@
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   font-weight: 800;
   font-size: 1.8rem;
+}
+
+.project-description-short{
+  font-size: 13px !important;
+  color: rgba(247, 243, 243, 0.95) !important;
+  font-weight:500;
 }
 
 .project-tags-hover {

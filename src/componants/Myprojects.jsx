@@ -98,7 +98,7 @@ const hoverColors = [
               
               <div className="hover-content">
                 <h3 className="project-name">{project.name}</h3>
-                <p className="project-description-short">{project.description.substring(0, 800)}...</p>
+                <p className="project-description-short">{project.description.substring(0, 1000)}...</p>
              <div className="project-tags-hover">
   {project.tags.slice(0, 15).map((tag, i) => (
     <motion.span 
