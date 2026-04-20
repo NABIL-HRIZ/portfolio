@@ -1,153 +1,129 @@
-.formations-section {
-  padding: 80px 20px;
-  background: transparent;
-  margin-left:530px;
-  margin-top: -50px !important;
+.h-timeline {
+  height: 400vh;
 }
 
-.section-title {
+.h-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HEADER */
+.h-header {
+  position: absolute;
+  top: 6vh;
+  text-align: center;
+  color: white;
+}
+
+.h-header h2 {
   font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 4rem;
-  background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  width: 80%;
+  font-weight: 800;
 }
 
-.timeline-diplome {
-  color: #4ab677 !important;
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
+.h-header span {
+  color: #2ce6d4;
 }
 
-.timeline-etablissement {
-  color: #e0e0e0 !important;
-  font-size: 1rem !important;
-  margin-top: 5px;
-  font-style: italic;
+.h-header p {
+  opacity: 0.6;
 }
 
-.timeline-description {
-  color: #b0b0b0 !important;
-  font-weight: 300 !important;
-  line-height: 1.5 !important;
+
+.h-track {
+  position: relative;
+  width: 2000px !important;
+  height: 1000px;
+  margin-top:100px !important;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Pivot is at the bottom */
 }
 
-.custom-date-style {
-  color: #fff !important;
-  font-weight: 600 !important;
-  opacity: 0.8;
-  margin: 0 20px;
+.h-arc-svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
-.vertical-timeline-element-content:hover {
-  border-color: #4ab677 !important;
-  box-shadow: 0 0 20px rgba(74, 182, 119, 0.2) !important;
-  transition: all 0.3s ease;
+.h-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  pointer-events: none;
 }
 
-.vertical-timeline-element--experience .vertical-timeline-element-content {
-  background: rgba(0, 30, 40, 0.88) !important;
-  border-color: rgba(125, 244, 204, 0.3) !important;
+.h-node-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s ease;
 }
 
-.vertical-timeline-element--experience .vertical-timeline-element-content:hover {
-  border-color: #7df4cc !important;
-  box-shadow: 0 0 20px rgba(125, 244, 204, 0.2) !important;
+.h-year {
+  font-size: 2.2rem; 
+  font-weight: 900;
+  color: white;
+  margin-bottom: 15px;
+  transition: 0.3s;
 }
 
-.vertical-timeline-element--experience .timeline-diplome {
-  color: #7df4cc !important;
+.h-item.active .h-year {
+  color: #2ce6d4;
+  transform: scale(1.2);
 }
 
-.vertical-timeline-element--experience .timeline-etablissement {
-  color: #c9f9ee !important;
+.h-dot {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
 }
 
-.vertical-timeline-element--education .timeline-diplome {
-  color: #4ab677 !important;
+.h-item.active .h-dot {
+  background: #2ce6d4;
+  box-shadow: 0 0 20px #2ce6d4;
+  transform: scale(1.5);
 }
 
-.vertical-timeline-element--education .timeline-etablissement {
-  color: #e0e0e0 !important;
+/* Hide the horizontal scrollbar since we are using absolute positioning */
+.h-track {
+  overflow: visible;
 }
 
-.vertical-timeline-element-icon svg {
-  animation: iconPulse 2s infinite;
+.h-card {
+  position: absolute;
+  bottom:05vh;
+  width: 420px;
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(10px);
+  color: white;
+  text-align: center;
+
 }
 
-@keyframes iconPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+.h-card h3 {
+  color: #878787;
+  margin-bottom: 10px;
 }
 
-/* --- RESPONSIVE MOBILE --- */
 
-@media (max-width: 1170px) {
-  /* On réduit le margin-left pour les tablettes */
-  .formations-section {
-    margin-left: 50px;
-    padding: 40px 15px;
-  }
+
+
+.h-label {
+  color:#ffffff;;
+  font-size: 17px;
+  margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
-  .formations-section {
-    margin-left: 0; 
-    padding: 40px 10px;
-    width:400px !important;
-    margin-left: 20px;
-    margin-top:80px !important;
-  }
 
-  .section-title {
-    font-size: 2.2rem; 
-    width:400px;
-    margin-bottom: 2rem;
-    margin-left:50px;
-  }
-.timeline-description {
-    font-size: 0.9rem !important;
-    width: 300px !important;
-}
 
-  .custom-date-style {
-    display: block;
-    margin: 10px 0 !important;
-    padding: 0 !important;
-    font-size: 0.9rem;
-    color: #4ab677 !important; 
-  }
-
-  .timeline-diplome {
-    font-size: 1.1rem !important;
-    width:300px !important;
-  }
-
-  .timeline-etablissement {
-    font-size: 0.9rem !important;
-  }
-
-  .vertical-timeline::before {
-    left: 18px !important; 
-  }
-
-  .vertical-timeline-element-icon {
-    width: 40px !important;
-    height: 40px !important;
-    left: 0 !important;
-  }
-  
-  /* Ajuster le contenu pour laisser la place à l'icône à gauche */
-  .vertical-timeline-element-content {
-    margin-left: 50px !important;
-    padding: 15px !important;
-  }
-
-  .vertical-timeline-element-content-arrow {
-    display: none; /* Cache la flèche sur petit écran pour gagner de la place */
-  }
-}

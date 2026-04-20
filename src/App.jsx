@@ -14,6 +14,7 @@ import CanvasCursorWrapper from './componants/CanvasCursorWrapper';
 import AboutMe from './componants/AboutMe';
 import { Analytics } from '@vercel/analytics/react';
 import PortfolioHero from './componants/PortfolioHero';
+import ContactSection from './componants/ContactSection';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -25,7 +26,7 @@ const App = () => {
   return (
     <div className="main-container" style={{ backgroundColor: '#050505', minHeight: '100vh' }}>
      
-      <CanvasCursorWrapper />
+     
 
       {isLoading ? (
         <Intro3D />
@@ -38,11 +39,11 @@ const App = () => {
           <AboutMe />
           <Portfolio />
           <MyProjects />
-          <MyTools />
+          {/* <MyTools /> */}
           <Mydiplomes />
           <Faq />
-          <CollaborateUs />
-          <ContactMe />
+          {/* <CollaborateUs /> */}
+         <ContactSection />
           <Footer />
         </div>
       )}

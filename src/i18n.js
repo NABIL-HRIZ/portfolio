@@ -64,16 +64,24 @@ const resources = {
         header: { lineOne: 'My Journey', lineTwo: 'Academic' }
       ,
       list: [
-        { id: 1, etablissement: 'SIMPLON ACADEMY', periode: 'June 2025 – Present', diplome: 'Training: Full Stack React & Laravel', description: 'Intensive full stack web development training with modern technologies.' },
-        { id: 2, etablissement: "BEN M'SIK UNIVERSITY", periode: 'July 2022', diplome: 'Bachelor in Mathematical and Computer Sciences', description: 'In-depth academic program in mathematics and computer science fundamentals.' },
-        { id: 3, etablissement: 'MOULAY ISMAIL HIGH SCHOOL', periode: 'July 2019', diplome: 'Baccalaureate in Physical and Chemical Sciences', description: 'High school diploma with a scientific specialization.' }
+        { id: 1, type: "education", etablissement: 'SIMPLON ACADEMY', periode: 'June 2025 – Décembre 2025', diplome: 'Training: Full Stack React & Laravel', description: 'Intensive full stack web development training with modern technologies.' },
+        { id: 4, type: "education", etablissement: "BEN M'SIK UNIVERSITY", periode: 'July 2022', diplome: 'Bachelor in Mathematical and Computer Sciences', description: 'In-depth academic program in mathematics and computer science fundamentals.' },
+        { id: 6,  type: "education",etablissement: 'MOULAY ISMAIL HIGH SCHOOL', periode: 'July 2019', diplome: 'Baccalaureate in Physical and Chemical Sciences', description: 'High school diploma with a scientific specialization.' }
       ]
       },
       experiences: {
         list: [
-          { id: 101, etablissement: 'IFGA - Casablanca', periode: 'December 2024 – May 2025', diplome: 'Full-Stack Developer', description: 'Full-Stack development with React.js, Laravel & Spring Boot, API integration and MySQL management.' },
-          { id: 102, etablissement: 'DIRECTINVEST', periode: '2022 – 2024', diplome: 'Front-End Developer', description: 'Front-end development with React.js and Redux, WordPress customization and API integration.' },
-          { id: 103, etablissement: 'SOURCE IT', periode: 'July 2021 – October 2021', diplome: 'Web Developer', description: 'Complete web development, front-end and back-end integration, performance optimization.' }
+          {
+  id: 0,
+  type: "experience",
+  etablissement: "Freelance Developer",
+  periode: "Jan 2026 – Present",
+  diplome: "Full-Stack Freelance Developer",
+  description: "Working as an independent Full-Stack developer . using React.js, Laravel, Spring Boot,WP, API integration."
+},
+          { id: 2, type: "experience", etablissement: 'IFGA - Casablanca', periode: 'Dec 2024 – May 2025', diplome: 'Full-Stack Developer', description: 'Full-Stack development with React.js, Laravel & Spring Boot, API integration and MySQL management.' },
+          { id: 3,type: "experience", etablissement: 'DIRECTINVEST', periode: '2022 – 2024', diplome: 'Front-End Developer', description: 'Front-end development with React.js and Redux, WordPress customization and API integration.' },
+          { id: 5,type: "experience", etablissement: 'SOURCE IT', periode: 'July 2021 – Oct 2021', diplome: 'Web Developer', description: 'Complete web development, front-end and back-end integration, performance optimization.' }
         ]
       },
       portfolio: {
@@ -165,16 +173,24 @@ const resources = {
         header: { lineOne: 'Mon Parcours', lineTwo: 'Académique' }
       ,
       list: [
-        { id: 1, etablissement: 'SIMPLON ACADEMY', periode: 'Juin 2025 – Présent', diplome: 'Certification professionnelle : Développeur Full Stack', description: 'Formation intensive en développement web full stack avec les technologies modernes' },
-        { id: 2, etablissement: "UNIVERSITÉ BEN M'SIK", periode: 'Juillet 2022', diplome: 'Licence fondamentale en sciences mathématiques et informatiques', description: 'Parcours académique approfondi en mathématiques et informatique fondamentale' },
-        { id: 3, etablissement: 'LYCÉE MOULAY ISMAIL', periode: 'Juillet 2019', diplome: 'Baccalauréat en sciences physiques et chimiques', description: 'Diplôme de fin d\'études secondaires avec spécialisation scientifique' }
+        { id: 1, type: "education", etablissement: 'SIMPLON ACADEMY', periode: 'Jui 2025 – Déc 2025', diplome: 'Certification professionnelle : Développeur Full Stack', description: 'Formation intensive en développement web full stack avec les technologies modernes' },
+        { id: 4, type: "education", etablissement: "UNIVERSITÉ BEN M'SIK", periode: 'Juil 2022', diplome: 'Licence fondamentale en sciences mathématiques et informatiques', description: 'Parcours académique approfondi en mathématiques et informatique fondamentale' },
+        { id: 6,type: "education", etablissement: 'LYCÉE MOULAY ISMAIL', periode: 'Juil 2019', diplome: 'Baccalauréat en sciences physiques et chimiques', description: 'Diplôme de fin d\'études secondaires avec spécialisation scientifique' }
       ]
       },
       experiences: {
         list: [
-          { id: 101, etablissement: 'IFGA - Casablanca', periode: 'Décembre 2024 – Mai 2025', diplome: 'Développeur Full-Stack', description: 'Développement Full-Stack avec React.js, Laravel & Spring Boot, intégration API REST et gestion MySQL.' },
-          { id: 102, etablissement: 'DIRECTINVEST', periode: '2022 – 2024', diplome: 'Développeur Front-End', description: 'Développement front-end React.js avec Redux, personnalisation WordPress et intégration API.' },
-          { id: 103, etablissement: 'SOURCE IT', periode: 'Juillet 2021 – Octobre 2021', diplome: 'Développeur Web', description: 'Développement web complet, intégration front-end et back-end, optimisation performances.' }
+{
+  id: 0,
+  type: "experience",
+  etablissement: "Développeur Freelance",
+  periode: "Jan 2026 – Présent",
+  diplome: "Développeur Full-Stack Freelance",
+  description: "Travail en tant que développeur Full-Stack indépendant, avec React.js, Laravel, Spring Boot, WP,intégration d’API, conception de bases de données et déploiement."
+},
+          { id: 2,  type: "experience", etablissement: 'IFGA - Casablanca', periode: 'Déc 2024 – Mai 2025', diplome: 'Développeur Full-Stack', description: 'Développement Full-Stack avec React.js, Laravel & Spring Boot, intégration API REST et gestion MySQL.' },
+          { id: 3, type: "experience", etablissement: 'DIRECTINVEST', periode: '2022 – 2024', diplome: 'Développeur Front-End', description: 'Développement front-end React.js avec Redux, personnalisation WordPress et intégration API.' },
+          { id: 5, type: "experience",  etablissement: 'SOURCE IT', periode: 'Juil 2021 – Octobre 2021', diplome: 'Développeur Web', description: 'Stage en développement web complet, intégration front-end et back-end, optimisation performances.' }
         ]
       },
       portfolio: {

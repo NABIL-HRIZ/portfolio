@@ -1,55 +1,85 @@
-import React, { useState } from 'react';
-import { FaCode, FaRocket, FaUsers, FaTools, FaCalendarAlt } from 'react-icons/fa';
-import { Accordion } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/Faq.css';
-import { motion } from "@motionone/react";
+import React, { useState, useEffect, useRef } from 'react';
+import { animate } from "motion";
 import { useTranslation } from 'react-i18next';
+import '../styles/Faq.css';
+
+const AUTOPLAY_TIME = 6000; // 6 secondes pour laisser le temps de lire
+
 const Faq = () => {
-  const [activeKey, setActiveKey] = useState('0');
   const { t } = useTranslation();
-  const faqData = t('faq.items', { returnObjects: true });
-  const icons = [<FaCode className="faq-icon" />, <FaRocket className="faq-icon" />, <FaCalendarAlt className="faq-icon" />, <FaUsers className="faq-icon" />, <FaTools className="faq-icon" />];
-  const faqItems = (faqData || []).map((item, idx) => ({ id: String(idx), question: item.question, answer: item.answer, icon: icons[idx] || <FaCode className="faq-icon" /> }));
+  const [activeIndex, setActiveIndex] = useState(0);
+  const progressRef = useRef(null);
+  
+  // Récupération des données depuis i18n
+  const header = t('faq.header', { returnObjects: true });
+  const faqItems = t('faq.items', { returnObjects: true }) || [];
+
+  useEffect(() => {
+    if (!faqItems.length) return;
+
+    // Animation de la barre de progression avec Motion One
+    if (progressRef.current) {
+      progressRef.current.style.width = "0%";
+      animate(
+        progressRef.current, 
+        { width: "100%" }, 
+        { duration: AUTOPLAY_TIME / 1000, easing: "linear" }
+      );
+    }
+
+    // Timer pour changer de question
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % faqItems.length);
+    }, AUTOPLAY_TIME);
+
+    return () => clearInterval(interval);
+  }, [activeIndex, faqItems.length]);
+
+  if (!faqItems.length) return null;
+
+  const active = faqItems[activeIndex];
 
   return (
-    <section className="faq-section">
-      <div className="faq-container">
+    <section className="tm-section">
+      <div className="tm-container">
         
-
-         <div className="header-designer-container">
-                        <motion.h2
-                          className="projects-title-large"
-                          initial={{ opacity: 0, x: 50 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.8, easing: "ease-out" }}
-                        >
-                          <span className="line-one">  Foire aux </span>
-                          <span className="line-two highlight-large">Questions</span>
-                        </motion.h2>
-                      </div>
-        
-        <div className="faq-content">
-          <Accordion activeKey={activeKey} onSelect={(key) => setActiveKey(key)}>
-            {faqItems.map((item) => (
-              <Accordion.Item key={item.id} eventKey={item.id} className="faq-accordion-item">
-                <Accordion.Header className="faq-accordion-header">
-                  <div className="question-header">
-                    <div className="question-icon">
-                      {item.icon}
-                    </div>
-                    <span className="question-text">{item.question}</span>
-                  </div>
-                </Accordion.Header>
-                <Accordion.Body className="faq-accordion-body">
-                  <div className="answer-content">
-                    <p>{item.answer}</p>
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
+        {/* Gauche : Titre dynamique et segments de progression */}
+        <div className="tm-left">
+          <h2 className="tm-title">
+            {header.lineOne} <br/> 
+            <span>{header.lineTwo}</span>
+          </h2>
+          <p className="tm-subtitle">
+            {t('faq.subtitle', 'Des réponses claires pour vos projets digitaux.')}
+          </p>
+          
+          <div className="tm-progress-container">
+            {faqItems.map((_, i) => (
+              <div key={i} className="tm-progress-track">
+                {/* La barre s'anime seulement pour l'index actif */}
+                {i === activeIndex && (
+                  <div ref={progressRef} className="tm-progress-fill" />
+                )}
+                {/* Les barres précédentes restent pleines */}
+                {i < activeIndex && <div className="tm-progress-fill static" />}
+              </div>
             ))}
-          </Accordion>
+          </div>
         </div>
+
+        <div className="tm-right">
+          <div key={activeIndex} className="tm-card">
+             <div className="tm-q-tag">Question 0{activeIndex + 1}</div>
+             <h3 className="tm-question">{active.question}</h3>
+             <p className="tm-answer">{active.answer}</p>
+             
+             <div className="tm-footer-brand">
+                <span className="tm-author">Nabil HRIZ</span>
+                <span className="tm-dev">Full-Stack Developer</span>
+             </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
