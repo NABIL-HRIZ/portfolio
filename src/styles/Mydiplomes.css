@@ -10,27 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-/* HEADER */
-.h-header {
-  position: absolute;
-  top: 6vh;
-  text-align: center;
-  color: white;
-}
-
-.h-header h2 {
-  font-size: 3.5rem;
-  font-weight: 800;
-}
-
-.h-header span {
-  color: #2ce6d4;
-}
-
-.h-header p {
-  opacity: 0.6;
+  margin-bottom: 30px;
 }
 
 
@@ -41,7 +21,7 @@
   margin-top:100px !important;
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* Pivot is at the bottom */
+  align-items: flex-end; 
 }
 
 .h-arc-svg {
@@ -70,13 +50,13 @@
 .h-year {
   font-size: 2.2rem; 
   font-weight: 900;
-  color: white;
+  color: rgb(141, 140, 140);
   margin-bottom: 15px;
   transition: 0.3s;
 }
 
 .h-item.active .h-year {
-  color: #2ce6d4;
+  color: #ffffff;
   transform: scale(1.2);
 }
 
@@ -88,12 +68,10 @@
 }
 
 .h-item.active .h-dot {
-  background: #2ce6d4;
-  box-shadow: 0 0 20px #2ce6d4;
+   background-color:#A47251;
   transform: scale(1.5);
 }
 
-/* Hide the horizontal scrollbar since we are using absolute positioning */
 .h-track {
   overflow: visible;
 }
@@ -116,13 +94,18 @@
   margin-bottom: 10px;
 }
 
+.h-desc{
+  color: #cdcccc;
+}
 
 
 
 .h-label {
-  color:#ffffff;;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   color:#dbc7ba;
   font-size: 17px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 

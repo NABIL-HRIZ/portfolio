@@ -63,13 +63,7 @@ const getType = (item) => {
     <section className="h-timeline" ref={wrapperRef}>
       <div className="h-sticky">
 
-        {/* HEADER */}
-        <div className="h-header">
-          <h2>
-            My <span>Journey</span>
-          </h2>
-          <p>Education & Experience</p>
-        </div>
+        
 
     <div className="h-track">
   {/* The SVG Arc Line in the background */}
@@ -110,7 +104,7 @@ const getType = (item) => {
           <div className="h-label">
         {active.etablissement}
       </div>
-          <p>
+          <p className="h-desc">
             {active.description ||
               `${active.diplome || active.poste} - ${
                 active.etablissement || active.entreprise

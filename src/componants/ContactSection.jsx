@@ -21,11 +21,11 @@ const ContactSection = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulation d'envoi
+    
     console.log("Données envoyées :", formData);
     setShowToast(true);
     
-    // Reset après quelques secondes
+   
     setTimeout(() => {
       setShowToast(false);
       setStep(0);
@@ -34,7 +34,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="wow-contact-section">
+    <section className="wow-contact-section" id='contactMe'>
       <div className="virtual-text-bg">CONTACT</div>
 
       {/* NOTIFICATION MODERNE (TOAST) */}

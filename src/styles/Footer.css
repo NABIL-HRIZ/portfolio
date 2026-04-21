@@ -49,7 +49,7 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background: #94e6ca; 
+  background: #a8836b; 
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -75,7 +75,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #94e6ca;
+  background:#a8836b;
   border-radius: 50%;
   z-index: 1;
   animation: pulse-glow 2s infinite;
@@ -149,7 +149,7 @@
 }
 
 .separator {
-  color: #94e6ca;
+  color: #a8836b;
 }
 
 .react-icon {

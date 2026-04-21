@@ -22,12 +22,12 @@ const MyProjects = () => {
   const [showAll, setShowAll] = useState(false);
 
 const hoverColors = [
-  "rgba(255, 77, 77, 0.75)",  
-  "rgba(255, 179, 71, 0.75)",  
-  "rgba(77, 148, 255, 0.75)",  
-   "rgba(74, 182, 119, 0.75)", 
-  "rgba(161, 77, 255, 0.75)",  
-  "rgba(255, 77, 136, 0.75)"   
+  "rgba(139, 94, 60, 0.8)",   // Brown (Cinnamon) - دافئ وقوي
+  "rgb(194, 166, 140)",  // Tan / Muted Brown
+  "rgba(121, 85, 72, 0.8)",   // Deep Coffee
+  "rgb(92, 79, 74)", // Sand / Beige Brown
+  "rgba(93, 64, 55, 0.8)",    // Dark Chocolate
+  "rgba(210, 180, 140, 0.8)"  // Tan Light
 ];
 
   const { t } = useTranslation();
@@ -38,8 +38,8 @@ const hoverColors = [
     1: paws,
     2: fanzone,
     3: eventify,
-    4: secure,
-    5: food,
+    4: food,
+    5: secure,
     6: movie,
     7: weather,
     8: booking,
@@ -63,17 +63,7 @@ const hoverColors = [
     <section className="projects-section" id='projects-section'>
       <div className="projects-container">
         
-          <div className="header-designer-container">
-                <motion.h2
-                  className="projects-title-large"
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, easing: "ease-out" }}
-                >
-                  <span className="line-one">{t('projects.header.lineOne')}</span>
-                  <span className="line-two highlight-large">{t('projects.header.lineTwo')}</span>
-                </motion.h2>
-              </div>
+         
 
     <div className="projects-grid">
         {displayedProjects.map((project, index) => (

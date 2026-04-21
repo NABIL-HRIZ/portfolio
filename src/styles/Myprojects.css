@@ -8,15 +8,15 @@
 .projects-title {
   font-size: 3rem;
   color: #fff;
-  margin-bottom: 60px;
-  font-weight: 800;
+  
+  font-weight: 800 !important;
 }
 
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 40px !important;
 }
 
 .project-card {
@@ -24,7 +24,7 @@
   border-radius: 20px;
   overflow: hidden;
   background: #000;
-  height:400px;
+  height:400px !important;
   
 }
 
@@ -107,6 +107,13 @@
 
 .project-card:hover .project-hover-overlay {
   transform: translateX(0); 
+}
+
+.project-description-short{
+  margin-top:-20px !important;
+}
+.project-name{
+  margin-top: -30px !important;
 }
 
 @media (max-width: 1024px) {
@@ -324,7 +331,7 @@
 }
 
 .btn-demo {
-  background:#b5e6be;
+  background:#382a02;
   color: #000000;
 }
 
@@ -336,7 +343,7 @@
 }
 
 .btn-code:hover {
-  border-color:#b5e6be;
+  border-color:#434330;
   color: #faf9fa;
   transform: translateY(-3px);
 }
@@ -367,10 +374,10 @@
 
 
 .show-more-btn:hover {
-  background: rgba(181, 230, 190, 0.2);
+  background: rgba(151, 79, 3, 0.2);
   border-color: rgba(181, 230, 190, 0.5);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(181, 230, 190, 0.2);
+  box-shadow: 0 10px 25px rgba(163, 145, 105, 0.2);
 }
 
 .btn-arrow {

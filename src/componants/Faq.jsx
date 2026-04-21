@@ -74,7 +74,7 @@ const Faq = () => {
              <p className="tm-answer">{active.answer}</p>
              
              <div className="tm-footer-brand">
-                <span className="tm-author">Nabil HRIZ</span>
+                <span className="tm-author">NABIL HRIZ</span>
                 <span className="tm-dev">Full-Stack Developer</span>
              </div>
           </div>

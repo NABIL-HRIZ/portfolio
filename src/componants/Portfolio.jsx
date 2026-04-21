@@ -25,16 +25,7 @@ const Portfolio = () => {
     <section className="portfolio-section">
       <div className="bg-glow"></div>
 
-      <div className="header-designer-container">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="projects-title-large"
-        >
-          <span className="line-one">{t('portfolio.header.lineOne')}</span>
-          <span className="line-two highlight-large">{t('portfolio.header.lineTwo')}</span>
-        </motion.h2>
-      </div>
+     
 
       <div className="github-calendar-wrapper">
         <div className="calendar-card">

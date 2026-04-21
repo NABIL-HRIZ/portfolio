@@ -1,48 +1,40 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import "../styles/PortfolioHero.css";
 import myPhoto from "../assets/my-picc.png";
+import sticker1 from "../assets/sticky1.png";
+import sticker2 from "../assets/sticky2.png";
+import sticker3 from "../assets/sticky3.png";
 
 const PortfolioHero = () => {
-  return (
-    <section className="hero-container">
-      {/* Top Badge: Online Status */}
-      <div className="status-badge">
-        <span className="dot"></span> Available for new opportunities
-      </div>
+  const { t } = useTranslation();
 
+  return (
+    <section className="hero-container" id="acceuil">
+     
       <div className="hero-grid">
-        {/* COLUMN 1: IDENTITY */}
         <div className="hero-column column-left">
           <div className="identity-block">
-            
+            <img src={sticker2} alt="" className="hero-sticker sticker-2" />
             <h1 className="main-name">NABIL<br />HRIZ</h1>
-            <p className="sub-role">FULL-STACK DEVELOPER</p>
+            <p className="sub-role">{t('portfolioHero.role', 'FULL-STACK DEVELOPER')}</p>
           </div>
         </div>
 
-        {/* COLUMN 2: CENTER IMAGE */}
         <div className="hero-column column-center">
           <div className="image-frame">
             <img src={myPhoto} alt="NABIL HRIZ" className="hero-main-img" />
+            <img src={sticker3} alt="" className="hero-sticker sticker-3" />
           </div>
         </div>
 
-        {/* COLUMN 3: MODERN DETAILS (Top & Bottom) */}
         <div className="hero-column column-right">
-          {/* Top Div */}
           <div className="info-box top-box">
-            <h3 className="box-label">Specialization</h3>
+            <img src={sticker1} alt="" className="hero-sticker sticker-1" />
+            <h3 className="box-label">{t('portfolioHero.specialization', 'Specialization')}</h3>
             <p className="box-text">
-              Building Modern & Innovative <br /> 
-              solutions with React, Laravel <br /> 
-              & Spring Boot.
+              {t('portfolioHero.description', 'Building Modern & Innovative solutions with React, Laravel & Spring Boot.')}
             </p>
-          </div>
-
-          {/* Bottom Div */}
-          <div className="info-box bottom-box">
-            <h2 className="massive-role">CREATIVE<br/>DEV</h2>
-             
           </div>
         </div>
       </div>

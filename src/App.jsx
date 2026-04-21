@@ -15,11 +15,13 @@ import AboutMe from './componants/AboutMe';
 import { Analytics } from '@vercel/analytics/react';
 import PortfolioHero from './componants/PortfolioHero';
 import ContactSection from './componants/ContactSection';
+import Services from './componants/Services';
+import ModernNavbar from './componants/ModernNavbar';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 4500);
+    const timer = setTimeout(() => setIsLoading(false), 4800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -32,14 +34,16 @@ const App = () => {
         <Intro3D />
       ) : (
         <div className="fade-in-content">
-          <Navbar />
+          {/* <Navbar /> */}
+          <ModernNavbar />
           <Analytics />
           {/* <HeroSection /> */}
           <PortfolioHero />
           <AboutMe />
           <Portfolio />
           <MyProjects />
-          {/* <MyTools /> */}
+          <Services />
+            <MyTools /> 
           <Mydiplomes />
           <Faq />
           {/* <CollaborateUs /> */}

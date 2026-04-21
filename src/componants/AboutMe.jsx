@@ -63,9 +63,9 @@ const developerData = {
     <Trans
       i18nKey="about.description"
       components={[
-        <HighLight color="#7df4cc" type="underline" />,
-        <HighLight color="violet" type="underline" />,
-        <HighLight color="#4d94ff" type="underline" />
+        <HighLight color="#957C62" type="underline" />,
+        <HighLight color="#C2A68C" type="underline" />,
+        <HighLight color="#E6D8C3" type="underline" />
       ]}
     />
   </p>
@@ -100,22 +100,7 @@ const developerData = {
 </div>
 
 
-    <div className="velocity-wrapper" style={{marginTop:"30px"}}>
-        <div className="scroll-track track-right">
-         <div className="scroll-content">
-  FIGMA <span className="separatoor"></span> JAVASCRIPT <span className="separatoor"></span> REACT <span className="separatoor"></span> TAILWIND  <span className="separatoor"></span> WORDPRESS  
-</div>
-         
-        </div>
-        
-        <div className="scroll-track track-left">
-          <div className="scroll-content">
-            PHP <span className="separatoor"></span> LARAVEL <span className="separatoor"></span> JAVA <span className="separatoor"></span> SPRINGBOOT  <span className="separatoor"></span> RESTAPI  
-
-          </div>
-          
-        </div>
-      </div>
+   
 </div>
 
     

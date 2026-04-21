@@ -9,26 +9,36 @@ const Intro3D = () => {
   useGSAP(() => {
     const tl = gsap.timeline();
 
-    // 1. حركة الحروف (Letter by Letter)
+    // 1. حركة الحروف مع دوران 3D حقيقي
     tl.from(".char", {
-      y: 100,            // تتحرك من الأسفل
-      opacity: 0,        // تبدأ من الشفافية
-      rotateX: -90,      // إضافة تأثير 3D خفيف
-      stagger: 0.1,      // الفارق الزمني بين كل حرف وحرف
-      duration: 1,
-      ease: "power4.out",
+      y: 150,
+      rotateX: -110,
+      transformOrigin: "top center",
+      opacity: 0,
+      stagger: 0.08,
+      duration: 1.2,
+      ease: "expo.out",
     })
-    // 2. الانتظار (تقليص المدة قليلاً لجعل الـ UX أسرع)
-    .to({}, { duration: 0.8 })
-    // 3. تأثير المربعات (Stairs Effect)
+    // 2. حركة "Flash" سريعة للون البني
+    .to(".char", {
+      color: "#3d2b1f", // بني داكن جداً
+      duration: 0.1,
+      stagger: 0.05,
+    }, "-=0.5")
+    // 3. تأثير الدرج (Stairs) مع شفافية متدرجة
     .to(".overlay-bar", {
       height: "100%",
-      stagger: 0.1,
-      duration: 1.5,
+      stagger: {
+        each: 0.1,
+        from: "start", // أو "center" لتأثير مختلف
+      },
+      duration: 1.2,
       ease: "power4.inOut",
     })
     .to(container.current, {
-      display: "none"
+      y: "-100%", // سحب الـ Intro بالكامل للأعلى بدلاً من الـ display none
+      duration: 1,
+      ease: "power4.inOut",
     });
 
   }, { scope: container });
@@ -36,20 +46,21 @@ const Intro3D = () => {
   return (
     <div ref={container} className="intro-container">
       <div className="overlay-container">
-        {[...Array(10)].map((_, i) => ( // زدت عدد المربعات ليكون التأثير أنعم
+        {[...Array(12)].map((_, i) => ( 
           <div key={i} className="overlay-bar"></div>
         ))}
       </div>
 
       <div className="name-wrapper">
         <h1 className="hero-name">
-          {/* تقسيم كلمة NABIL إلى حروف */}
-          {"NABIL".split("").map((char, index) => (
+          {"DIGITAL".split("").map((char, index) => (
             <span key={index} className="char">
               {char}
             </span>
           ))}
         </h1>
+        {/* إضافة نص فرعي صغير يعطي لمسة احترافية */}
+        <div className="intro-subtext">EXPERIENCE — 2026</div>
       </div>
     </div>
   );
