@@ -41,25 +41,25 @@ const developerData = {
      
      <div className="about-bio-container">
       <div className="about-hero">
+
+<div className="split-title">
+  <span className="small-number">01</span>
+  <h2 className="main-title">
+    {t('about.titre_part1')} <br />
+    <span className="accent-color">{t('about.titre_part2')}</span>
+  </h2>
+</div>
+
         
-        <div className="morph-container">
-          <motion.h1 
-            key={skills[index]}
-            initial={{ opacity: 0, scale: 0.9, filter: "blur(8px)" }}
-            animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-            transition={{ duration: 0.8 }}
-            className="morph-text"
-          >
-            {skills[index]}
-          </motion.h1>
-        </div>
+    
       </div>
 
       
 
 <div className='who-iam'>
 
-  <p className="about-description">
+  <div className='aout-left'>
+<p className="about-description">
     <Trans
       i18nKey="about.description"
       components={[
@@ -69,6 +69,26 @@ const developerData = {
       ]}
     />
   </p>
+
+  <motion.div 
+  className="cv-download-wrapper"
+  
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5, duration: 0.8 }}
+  inView={true} 
+>
+  <a href="/cv-nabil-hriz.pdf" download className="cv-download-link">
+    <span className="cv-icon">↓</span>
+    <span className="cv-text">{t('about.downloadCV')}</span>
+    <div className="cv-underline"></div>
+  </a>
+</motion.div>
+
+  </div>
+
+  
+
 
   <div className="code-window">
       <div className="code-header">
@@ -97,6 +117,9 @@ const developerData = {
         </pre>
       </div>
     </div>
+
+
+
 </div>
 
 

@@ -25,13 +25,18 @@ const Portfolio = () => {
     <section className="portfolio-section">
       <div className="bg-glow"></div>
 
-     
+     <div className="split-title">
+  <span className="small-number">02</span>
+  <h2 className="main-title">
+    {t('portfolio.titre_part1')} <br />
+    <span className="accent-color">{t('portfolio.titre_part2')}</span>
+  </h2>
+</div>
 
       <div className="github-calendar-wrapper">
         <div className="calendar-card">
           <div className="calendar-header">
             <div className="calendar-label">
-              <span>GitHub Activity</span>
             </div>
             <div className="calendar-badge">Live contribution heatmap</div>
           </div>

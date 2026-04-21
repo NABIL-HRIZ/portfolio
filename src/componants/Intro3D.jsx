@@ -36,7 +36,7 @@ const Intro3D = () => {
       ease: "power4.inOut",
     })
     .to(container.current, {
-      y: "-100%", // سحب الـ Intro بالكامل للأعلى بدلاً من الـ display none
+      y: "-100%",
       duration: 1,
       ease: "power4.inOut",
     });
@@ -59,7 +59,6 @@ const Intro3D = () => {
             </span>
           ))}
         </h1>
-        {/* إضافة نص فرعي صغير يعطي لمسة احترافية */}
         <div className="intro-subtext">EXPERIENCE — 2026</div>
       </div>
     </div>

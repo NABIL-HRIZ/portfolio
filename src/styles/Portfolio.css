@@ -1,6 +1,6 @@
 .portfolio-section {
   background: #000;
-  padding: 80px 40px;
+  padding: 80px 70px;
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -18,16 +18,6 @@
   z-index: 5;
 }
 
-.projects-title-large {
-  display: flex !important;
-  flex-direction: column;
-  font-size: clamp(4.2rem, 5vw, 4.2rem); 
-  font-weight: 900;
-  line-height: 0.82; 
-  letter-spacing: -4px;
-  margin: 0;
-  text-transform: uppercase;
-}
 
 
 
@@ -44,8 +34,7 @@
 .calendar-card {
   width: 100%;
   padding: 44px;
-  background: linear-gradient(180deg, rgba(4, 8, 14, 0.98), rgba(3, 5, 10, 0.94));
-  border: 1px solid rgba(118, 212, 155, 0.18);
+  border: 1px solid rgba(197, 158, 30, 0.18);
   border-radius: 36px;
   backdrop-filter: blur(22px);
   position: relative;
@@ -70,30 +59,17 @@
   flex-wrap: wrap;
 }
 
-.calendar-label span:first-child {
-  display: block;
-  font-size: 0.82rem;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color:gray !important;
-  opacity: 0.9;
-}
 
-.calendar-label span:last-child {
-  display: block;
-  font-size: clamp(2rem, 3.2vw, 2.6rem);
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1;
-}
+
+
 
 .calendar-badge {
   padding: 0.8rem 1.4rem;
   border-radius: 999px;
   font-size: 0.92rem;
   font-weight: 700;
-  background: rgba(10, 10, 10, 0.14);
-  color: gray !important;
+  background: rgba(75, 74, 74, 0.14);
+  color: #C2A68C !important;
   border: 1px solid rgba(1, 1, 1, 0.2);
 }
 

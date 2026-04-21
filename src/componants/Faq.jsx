@@ -43,14 +43,19 @@ const Faq = () => {
     <section className="tm-section">
       <div className="tm-container">
         
-        {/* Gauche : Titre dynamique et segments de progression */}
+       
         <div className="tm-left">
-          <h2 className="tm-title">
-            {header.lineOne} <br/> 
-            <span>{header.lineTwo}</span>
-          </h2>
+          <div className="srv-header">
+         <div className="split-title">
+  <span className="small-number">07</span>
+  <h2 className="main-title">
+    {t('faq.titre_part1')} <br />
+    <span className="accent-color">{t('faq.titre_part2')}</span>
+  </h2>
+</div>
+        </div>
           <p className="tm-subtitle">
-            {t('faq.subtitle', 'Des réponses claires pour vos projets digitaux.')}
+            {t('faq.subtitle')}
           </p>
           
           <div className="tm-progress-container">

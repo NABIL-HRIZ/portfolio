@@ -21,9 +21,18 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 4800);
+    const timer = setTimeout(() => setIsLoading(false), 3650);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+  if (!isLoading) {
+    // كايطلع للفوق فاش كايختفي الـ Loader
+    window.scrollTo({ top: 0, behavior: 'instant' }); 
+    // تأكد بلي الـ body مسموح ليه بالسكرول
+    document.body.style.overflow = "auto";
+  }
+}, [isLoading]);
 
   return (
     <div className="main-container" style={{ backgroundColor: '#050505', minHeight: '100vh' }}>
@@ -46,7 +55,6 @@ const App = () => {
             <MyTools /> 
           <Mydiplomes />
           <Faq />
-          {/* <CollaborateUs /> */}
          <ContactSection />
           <Footer />
         </div>

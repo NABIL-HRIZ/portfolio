@@ -1,22 +1,22 @@
 .wow-contact-section {
-  background-color: #050505; /* Noir profond professionnel */
+  background-color: #050505;
   min-height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   padding: 0 10%;
+  margin-top: -120px;
 }
 
-/* TEXTE VIRTUEL GEANT EN ARRIERE-PLAN */
 .virtual-text-bg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 18vw; /* Taille basée sur la largeur de l'écran */
+  font-size: 18vw; 
   font-weight: 900;
-  color: rgba(234, 233, 233, 0.073); /* Très discret */
+  color: rgba(234, 233, 233, 0.073); 
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
   user-select: none;
   z-index: 1;

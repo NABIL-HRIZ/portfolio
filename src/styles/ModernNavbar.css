@@ -16,40 +16,40 @@
 }
 
 .menu-trigger {
-  width: 60px;
-  height: 60px;
-  background: #3d2b1f; 
+  background: transparent;
   border: none;
-  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  padding: 0;
+  z-index: 2001;
+  transition: transform 0.3s ease;
+}
+
+.menu-trigger svg {
+  color: #8b4b21bb !important; 
+  transition: color 0.3s ease;
 }
 
 .menu-trigger:hover {
   transform: scale(1.1);
-  background: #8B5E3C; 
 }
 
-.hamburger {
-  width: 25px;
-  height: 2px;
-  background: white;
-  position: relative;
+.menu-trigger:hover svg {
+  color: #c2a68c !important; 
 }
-.hamburger::before, .hamburger::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: white;
-  left: 0;
-  transition: 0.3s;
+
+.nav-logo-link {
+  transition: opacity 0.3s ease;
+
 }
-.hamburger::before { top: -8px; }
-.hamburger::after { bottom: -8px; }
+
+.nav-logo-link:hover {
+  opacity: 0.8;
+}
+
+
 
 
 .menu-nav-links{
@@ -103,9 +103,9 @@
 .social-icons {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap:15px;
   align-items: flex-start;
-  padding-top:350px;
+  padding-top:280px;
   min-width: 60px;
   margin-left: -80px !important;
 }
@@ -182,12 +182,11 @@
 }
 
 .language-toggle-btn {
-  background:#908f8e;
-  border: 1px solid #462007; 
-  color: #fefefe;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  background:transparent;
+  border:none; 
+  color: #91918f;
+  width:50px;
+  height: 50px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -195,7 +194,21 @@
   transition: all 0.3s ease;
   font-family: 'Fira Code', monospace; 
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size:1.5rem;
+  position: relative; 
+  display: inline-block; 
+}
+
+.language-toggle-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom:3px !important;
+  width: 105%; 
+  height: 4px;
+  background-color: #8B5E3C;
+  opacity: 0.8;
+  z-index: -1; 
 }
 
 .language-toggle-btn:hover {
@@ -207,8 +220,6 @@
   letter-spacing: 1px;
 }
 
-/* تعديل الـ header للتأكد من المحاذاة */
 .modern-header {
   padding: 20px 40px;
-  /* بقية الستايل الخاص بك... */
 }

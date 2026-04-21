@@ -61,12 +61,24 @@ const getType = (item) => {
 
   return (
     <section className="h-timeline" ref={wrapperRef}>
+<div className="dip-header">
+ <div className="srv-header">
+         <div className="split-title">
+  <span className="small-number">06</span>
+  <h2 className="main-title">
+    {t('diplomas.titre_part1')} <br />
+    <span className="accent-color">{t('diplomas.titre_part2')}</span>
+  </h2>
+</div>
+        </div>
+</div>
+
+
       <div className="h-sticky">
 
         
 
     <div className="h-track">
-  {/* The SVG Arc Line in the background */}
   
 
   {items.map((item, i) => {
@@ -87,7 +99,7 @@ const getType = (item) => {
         
           transform: `rotate(${angle}deg) translateY(-580px)`,
           transformOrigin: 'bottom center',
-          bottom: '-250px' // Pivot point
+          bottom: '-250px'
         }}
       >
         <div style={{ transform: `rotate(${textRotation}deg)` }} className="h-node-content">

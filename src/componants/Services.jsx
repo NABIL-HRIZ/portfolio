@@ -35,10 +35,13 @@ const Services = () => {
      
       <div className="srv-container">
         <div className="srv-header">
-          <span className="srv-subtitle">// Expertise</span>
-          <h2 className="srv-title">
-            Pushing boundaries <br /> with code and design.
-          </h2>
+         <div className="split-title">
+  <span className="small-number">04</span>
+  <h2 className="main-title">
+    {t('services.titre_part1')} <br />
+    <span className="accent-color">{t('services.titre_part2')}</span>
+  </h2>
+</div>
         </div>
 
         <div className="srv-grid">

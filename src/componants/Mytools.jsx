@@ -4,9 +4,11 @@ import React, { useState, useEffect } from "react";
 
 import "../styles/Mytools.css";
 
+import { useTranslation } from 'react-i18next';
 
 const MyTools = () => {
  
+  const { t } = useTranslation();
 
 
 
@@ -14,7 +16,15 @@ const MyTools = () => {
     <section className="tools-section" id="tools">
       <div className="tools-container">
       
-        
+         <div className="srv-header">
+         <div className="split-title">
+  <span className="small-number">05</span>
+  <h2 className="main-title">
+    {t('tools.titre_part1')} <br />
+    <span className="accent-color">{t('tools.titre_part2')}</span>
+  </h2>
+</div>
+        </div>
 
         <div className="animated-list-wrapper">
 

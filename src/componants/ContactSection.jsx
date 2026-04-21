@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import { animate } from "motion";
 import { useTranslation } from 'react-i18next';
 import { FaPaperPlane, FaCheckCircle } from 'react-icons/fa';
@@ -9,6 +9,17 @@ const ContactSection = () => {
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState({ email: '', name: '', message: '' });
   const [showToast, setShowToast] = useState(false);
+
+
+const emailRef = useRef(null);
+  const nameRef = useRef(null);
+  const messageRef = useRef(null);
+
+  useEffect(() => {
+    if (step === 0 && emailRef.current) emailRef.current.focus();
+    if (step === 1 && nameRef.current) nameRef.current.focus();
+    if (step === 2 && messageRef.current) messageRef.current.focus();
+  }, [step]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -37,13 +48,12 @@ const ContactSection = () => {
     <section className="wow-contact-section" id='contactMe'>
       <div className="virtual-text-bg">CONTACT</div>
 
-      {/* NOTIFICATION MODERNE (TOAST) */}
       {showToast && (
         <div className="modern-toast">
           <FaCheckCircle className="toast-icon" />
           <div className="toast-content">
-            <p className="toast-msg">Message envoyé avec succès !</p>
-            <p className="toast-sub">Merci {formData.name}, je reviens vers toi vite.</p>
+            <p className="toast-msg">{t('contact.toast.sentTitle')}</p>
+            <p className="toast-sub">{t('contact.toast.sentText', { name: formData.name })}</p>
           </div>
         </div>
       )}
@@ -63,49 +73,46 @@ const ContactSection = () => {
             <form className="term-body" onSubmit={handleSubmit}>
               <p className="term-intro"># Initializing contact sequence...</p>
               
-              {/* ETAPE 1: EMAIL */}
               <div className={`term-field active`}>
                 <span className="term-label">01. Email:</span>
                 <input 
-                  type="email" 
-                  name="email"
-                  placeholder="Enter email..."
-                  value={formData.email}
-                  onChange={handleChange}
-                  onKeyDown={(e) => e.key === 'Enter' && (e.preventDefault(), handleNextStep(0))}
-                  autoFocus
-                  className="term-input-field"
-                />
+    ref={emailRef} 
+    type="email" 
+    name="email"
+    placeholder="Enter email..."
+    value={formData.email}
+    onChange={handleChange}
+    onKeyDown={(e) => e.key === 'Enter' && (e.preventDefault(), handleNextStep(0))}
+    className="term-input-field"
+  />
               </div>
 
-              {/* ETAPE 2: NOM */}
               {step >= 1 && (
                 <div className="term-field active">
                   <span className="term-label">02. Name:</span>
                   <input 
                     type="text" 
                     name="name"
+                    ref={nameRef}
                     placeholder="Enter name..."
                     value={formData.name}
                     onChange={handleChange}
                     onKeyDown={(e) => e.key === 'Enter' && (e.preventDefault(), handleNextStep(1))}
-                    autoFocus
                     className="term-input-field"
                   />
                 </div>
               )}
 
-              {/* ETAPE 3: MESSAGE */}
               {step >= 2 && (
                 <div className="term-field active">
                   <span className="term-label">03. Message:</span>
                   <textarea 
                     name="message"
+                    ref={messageRef}
                     placeholder="Write your project details..."
                     value={formData.message}
                     onChange={handleChange}
                     className="term-textarea-field"
-                    autoFocus
                   />
                   <button type="submit" className="term-submit-btn">
                     <FaPaperPlane /> Send Message
@@ -117,9 +124,15 @@ const ContactSection = () => {
         </div>
 
         <div className="wow-info-side">
-          <h2 className="wow-main-title">
-            Let's build <br /> <span>something great.</span>
-          </h2>
+          <div className="srv-header">
+         <div className="split-title">
+  <span className="small-number">08</span>
+  <h2 className="main-title">
+    {t('contact.titre_part1')} <br />
+    <span className="accent-color">{t('contact.titre_part2')}</span>
+  </h2>
+</div>
+        </div>
         </div>
       </div>
     </section>

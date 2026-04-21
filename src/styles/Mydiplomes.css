@@ -1,16 +1,21 @@
 .h-timeline {
   height: 400vh;
+  margin-top: -60px;
+}
+
+.dip-header{
+  padding: 0px 60px;
+  margin-bottom: -140px;
 }
 
 .h-sticky {
   position: sticky;
-  top: 0;
+  top: -30px !important;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
 }
 
 

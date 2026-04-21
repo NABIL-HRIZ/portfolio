@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import my8logo from "../assets/my-logo.png";
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaLinkedinIn, FaArrowRight } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaArrowRight, FaWhatsapp, FaTimes } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import { HiMenuAlt3 } from "react-icons/hi";
 import "../styles/ModernNavbar.css";
 
 const ModernNavbar = () => {
@@ -23,9 +24,10 @@ const ModernNavbar = () => {
   ];
 
   const socials = [
-    { icon: <FaGithub />, href: "https://github.com/nabil-hriz" },
-    { icon: <FaLinkedinIn />, href: "https://linkedin.com/in/nabil-hriz" },
-    { icon: <SiGmail />, href: "#contactMe" },
+    { icon: <FaGithub />, href: "https://github.com/NABIL-HRIZ" },
+    { icon: <FaLinkedinIn />, href: "https://www.linkedin.com/in/nabil-hriz-0937b1390/" },
+    { icon: <SiGmail />, href: "mailto:hariznabil663@gmail.com" },
+    { icon: <FaWhatsapp />, href: "https://wa.me/212609153426" }
   ];
 
   const itemVariants = {
@@ -40,22 +42,44 @@ const ModernNavbar = () => {
   return (
     <>
       <header className="modern-header">
-        <img src={my8logo} alt="Nabil Logo" className="nav-logo-img" />
+        <a href="#acceuil" className="nav-logo-link">
+          <img src={my8logo} alt="Nabil Logo" className="nav-logo-img" />
+        </a>
         
-        <div className="nav-controls">
+       <div className="nav-controls">
           <button 
             onClick={toggleLanguage}
             className="language-toggle-btn"
-            aria-label="Change Language"
           >
             <span className="lang-text">{i18n.language.toUpperCase()}</span>
           </button>
 
+          {/* تبديل الأيقونات هنا */}
           <button 
-            className={`menu-trigger ${isOpen ? 'active' : ''}`} 
+            className="menu-trigger" 
             onClick={() => setIsOpen(!isOpen)}
           >
-            <span className="hamburger"></span>
+            <AnimatePresence mode="wait">
+              {isOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                >
+                  <FaTimes size={28} color="#a8836b" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="burger"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                >
+                  <HiMenuAlt3 size={32} color="#f6f5f3" />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </button>
         </div>
       </header>
@@ -63,20 +87,14 @@ const ModernNavbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div 
-            initial={{ opacity: 0, x: "100%", borderRadius: "100% 0 0 100%" }}
-            animate={{ opacity: 1, x: 0, borderRadius: "0% 0 0 0%" }}
-            exit={{ opacity: 0, x: "100%", borderRadius: "100% 0 0 100%" }}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
             transition={{ duration: 0.6, ease: [0.76, 0, 0.24, 1] }}
             className="full-menu-overlay"
           >
             <div className="menu-main-content">
-              <motion.div 
-                className="social-icons"
-                variants={itemVariants}
-                initial="closed"
-                animate="open"
-                custom={menuItems.length}
-              >
+              <motion.div className="social-icons" variants={itemVariants} initial="closed" animate="open" custom={0}>
                 {socials.map((social, i) => (
                   <a key={i} href={social.href} target="_blank" rel="noopener noreferrer">
                     {social.icon}
@@ -93,7 +111,7 @@ const ModernNavbar = () => {
                     variants={itemVariants}
                     initial="closed"
                     animate="open"
-                    custom={i}
+                    custom={i + 1}
                   >
                     {item.label}
                   </motion.a>
@@ -110,7 +128,7 @@ const ModernNavbar = () => {
               animate="open"
               custom={menuItems.length + 1}
             >
-              CONTACT US <FaArrowRight size={20} />
+              {t('nav.contact')} <FaArrowRight size={20} />
             </motion.a>
 
             <div className="menu-footer">NABIL HRIZ — 2026</div>

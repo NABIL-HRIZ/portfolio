@@ -23,7 +23,7 @@ const MyProjects = () => {
 
 const hoverColors = [
   "rgba(139, 94, 60, 0.8)",   // Brown (Cinnamon) - دافئ وقوي
-  "rgb(194, 166, 140)",  // Tan / Muted Brown
+  "rgba(93, 64, 55, 0.8)",  // Tan / Muted Brown
   "rgba(121, 85, 72, 0.8)",   // Deep Coffee
   "rgb(92, 79, 74)", // Sand / Beige Brown
   "rgba(93, 64, 55, 0.8)",    // Dark Chocolate
@@ -63,6 +63,13 @@ const hoverColors = [
     <section className="projects-section" id='projects-section'>
       <div className="projects-container">
         
+        <div className="split-title">
+  <span className="small-number">03</span>
+  <h2 className="main-title">
+    {t('projects.titre_part1')} <br />
+    <span className="accent-color">{t('projects.titre_part2')}</span>
+  </h2>
+</div>
          
 
     <div className="projects-grid">
@@ -144,6 +151,9 @@ const hoverColors = [
               {showAll ? t('projects.showLess') : t('projects.showMore')} 
                <span className="btn-arrow">{showAll ? '↑' : '↓'}</span>
             </button>
+
+            
+
           </div>
         )}
       </div>

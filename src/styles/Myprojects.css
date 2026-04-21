@@ -1,6 +1,6 @@
 .projects-section {
   padding: 100px 5%;
-  margin-left:40px;
+  margin-left:10px;
   margin-top:-200px !important;
 
 }
@@ -17,6 +17,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px !important;
+  padding:30px !important;
 }
 
 .project-card {
@@ -25,6 +26,7 @@
   overflow: hidden;
   background: #000;
   height:400px !important;
+  cursor: pointer;
   
 }
 
@@ -374,10 +376,10 @@
 
 
 .show-more-btn:hover {
-  background: rgba(151, 79, 3, 0.2);
-  border-color: rgba(181, 230, 190, 0.5);
+  background:#C2A68C;
+  border-color: rgba(58, 36, 2, 0.5);
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(163, 145, 105, 0.2);
+  color: #000;
 }
 
 .btn-arrow {
