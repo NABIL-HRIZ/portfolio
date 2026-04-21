@@ -68,9 +68,9 @@
   border-radius: 999px;
   font-size: 0.92rem;
   font-weight: 700;
-  background: rgba(75, 74, 74, 0.14);
+  background: rgba(0, 0, 0, 0.14);
   color: #C2A68C !important;
-  border: 1px solid rgba(1, 1, 1, 0.2);
+  border: 1px solid rgba(227, 215, 165, 0.979);
 }
 
 .calendar-card .react-activity-calendar,

@@ -2,7 +2,11 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../styles/Mydiplomes.css";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
+
 
 const Mydiplomes = () => {
   const { t } = useTranslation();
@@ -11,6 +15,15 @@ const Mydiplomes = () => {
 
   const diplomaItems = t("diplomas.list", { returnObjects: true }) || [];
   const experienceItems = t("experiences.list", { returnObjects: true }) || [];
+
+
+  
+useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
 const items = useMemo(() => {
   const diplomas = t("diplomas.list", { returnObjects: true }) || [];
@@ -60,9 +73,9 @@ const getType = (item) => {
   const active = items[activeIndex];
 
   return (
-    <section className="h-timeline" ref={wrapperRef}>
+    <section className="h-timeline" ref={wrapperRef} >
 <div className="dip-header">
- <div className="srv-header">
+ <div className="srv-header" data-aos="fade-right" >
          <div className="split-title">
   <span className="small-number">06</span>
   <h2 className="main-title">
@@ -74,11 +87,11 @@ const getType = (item) => {
 </div>
 
 
-      <div className="h-sticky">
+      <div className="h-sticky" >
 
         
 
-    <div className="h-track">
+    <div className="h-track" >
   
 
   {items.map((item, i) => {

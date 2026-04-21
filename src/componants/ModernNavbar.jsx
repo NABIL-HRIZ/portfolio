@@ -54,7 +54,6 @@ const ModernNavbar = () => {
             <span className="lang-text">{i18n.language.toUpperCase()}</span>
           </button>
 
-          {/* تبديل الأيقونات هنا */}
           <button 
             className="menu-trigger" 
             onClick={() => setIsOpen(!isOpen)}

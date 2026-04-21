@@ -31,3 +31,12 @@
 
 
 
+
+
+.tool-card:nth-child(odd):hover {
+  animation: floatCard 3s ease-in-out infinite;
+}
+
+.tool-card:nth-child(even):hover {
+  animation: floatCard 3s ease-in-out infinite 0.5s;
+}

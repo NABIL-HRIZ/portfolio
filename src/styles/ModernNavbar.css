@@ -16,28 +16,32 @@
 }
 
 .menu-trigger {
-  background: transparent;
-  border: none;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  z-index: 2001;
-  transition: transform 0.3s ease;
+  width: 60px;  
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+background-color: transparent;
+border: none !important;
 }
 
 .menu-trigger svg {
-  color: #8b4b21bb !important; 
-  transition: color 0.3s ease;
+  width: 45px !important;  
+  height: 45px !important;
+  color: #C2A68C !important; 
+  stroke-width: 2.5; 
+  transition: all 0.3s ease;
 }
 
 .menu-trigger:hover {
-  transform: scale(1.1);
+  transform: scale(1.1); 
 }
 
 .menu-trigger:hover svg {
-  color: #c2a68c !important; 
+  color: #d7bfa9 !important; 
+  filter: drop-shadow(0 0 10px rgba(162, 71, 11, 0.4));
 }
 
 .nav-logo-link {
@@ -178,14 +182,14 @@
 .nav-controls {
   display: flex;
   align-items: center;
-  gap: 15px; 
+  gap: 5px; 
 }
 
 .language-toggle-btn {
   background:transparent;
   border:none; 
-  color: #91918f;
-  width:50px;
+  color: #8f8f8f;
+  width:40px;
   height: 50px;
   cursor: pointer;
   display: flex;

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
   import { motion } from "@motionone/react";
 import { useTranslation } from 'react-i18next';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import '../styles/Myprojects.css';
 
 
@@ -32,6 +33,11 @@ const hoverColors = [
 
   const { t } = useTranslation();
 
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
+
   const translations = t('projects.list', { returnObjects: true }) || [];
 
   const imageMap = {
@@ -60,100 +66,103 @@ const hoverColors = [
   const displayedProjects = showAll ? projects : projects.slice(0, 4);
 
   return (
-    <section className="projects-section" id='projects-section'>
+   <section className="projects-section" id='projects-section'>
       <div className="projects-container">
         
-        <div className="split-title">
-  <span className="small-number">03</span>
-  <h2 className="main-title">
-    {t('projects.titre_part1')} <br />
-    <span className="accent-color">{t('projects.titre_part2')}</span>
-  </h2>
-</div>
-         
+        <div className="split-title" data-aos="fade-right">
+          <span className="small-number">03</span>
+          <h2 className="main-title">
+            {t('projects.titre_part1')} <br />
+            <span className="accent-color">{t('projects.titre_part2')}</span>
+          </h2>
+        </div>
 
-    <div className="projects-grid">
-        {displayedProjects.map((project, index) => (
-        <motion.div
-      key={project.id}
-      className={`project-card ${index % 2 === 0 ? 'slide-from-left' : 'slide-from-right'}`}
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-    >
-            <div className="project-base-image">
-              <img src={project.image} alt={project.name} />
-            </div>
-
-            <div 
-              className="project-hover-overlay" 
-              style={{ backgroundColor: hoverColors[index % hoverColors.length] }}
+        <div className="projects-grid projects-grid-container">
+          {displayedProjects.map((project, index) => (
+            <div
+              key={project.id}
+              className="project-card"
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              data-aos-delay={index * 100}
             >
-              <div className="project-number">
-                {String(index + 1).padStart(2, '0')}
+              <div className="project-base-image">
+                <img src={project.image} alt={project.name} />
               </div>
-              
-              <div className="hover-content">
-                <h3 className="project-name">{project.name}</h3>
-                <p className="project-description-short">{project.description.substring(0, 1000)}...</p>
-             <div className="project-tags-hover">
-  {project.tags.slice(0, 15).map((tag, i) => (
-    <motion.span 
-      key={i} 
-      className="mini-tag"
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 0.3 + (i * 0.1), duration: 0.4 }}
-    >
-      {tag}
-    </motion.span>
-  ))}
-</div>
-              
-            
-             <div className="project-buttons">
+
+              <div 
+                className="project-hover-overlay" 
+                style={{ backgroundColor: hoverColors[index % hoverColors.length] }}
+              >
+                <div className="project-number">{String(index + 1).padStart(2, '0')}</div>
+                <div className="hover-content">
+                  <h3 className="project-name">{project.name}</h3>
+                  <p className="project-description-short">{project.description.substring(0, 500)}...</p>
+                  <div className="project-tags-hover">
+                    {project.tags.slice(0, 10).map((tag, i) => (
+                      <span key={i} className="mini-tag">{tag}</span>
+                    ))}
+                  </div>
+                  
+
+<div className="project-buttons">
+
+
 
 <a href={project.codeLink} alt="Code source" className='buttonn'>
+
   <i>C</i>
+
   <i>o</i>
+
   <i>d</i>
+
   <i>e</i>
+
   <i>&nbsp;</i>
+
   
+
   <i>s</i>
+
   <i>o</i>
+
   <i>u</i>
+
   <i>r</i>
+
   <i>c</i>
+
   <i>e</i>
+
+
 
 </a>
 
-                  
-                  {/* <a href={project.codeLink} className="btn btn-code">
-                    Code source
-                  </a> */}
-                </div>
-            
 
+
+                  
+
+                  {/* <a href={project.codeLink} className="btn btn-code">
+
+                    Code source
+
+                  </a> */}
+
+                </div>
+
+
+                </div>
               </div>
             </div>
-          </motion.div>
-        ))}
-      </div>
+          ))}
+        </div>
 
         {projects.length > 4 && (
-          <div className="show-more-container">
-            <button
-              className="show-more-btn"
-              onClick={() => setShowAll(!showAll)}
-            >
+          <div className="show-more-container" data-aos="zoom-in">
+            <button className="show-more-btn" onClick={() => setShowAll(!showAll)}>
               {showAll ? t('projects.showLess') : t('projects.showMore')} 
-               <span className="btn-arrow">{showAll ? '↑' : '↓'}</span>
+              <span className="btn-arrow">{showAll ? '↑' : '↓'}</span>
             </button>
-
-            
-
           </div>
         )}
       </div>

@@ -21,15 +21,13 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 3650);
+    const timer = setTimeout(() => setIsLoading(false), 3800);
     return () => clearTimeout(timer);
   }, []);
 
   useEffect(() => {
   if (!isLoading) {
-    // كايطلع للفوق فاش كايختفي الـ Loader
     window.scrollTo({ top: 0, behavior: 'instant' }); 
-    // تأكد بلي الـ body مسموح ليه بالسكرول
     document.body.style.overflow = "auto";
   }
 }, [isLoading]);
@@ -43,10 +41,8 @@ const App = () => {
         <Intro3D />
       ) : (
         <div className="fade-in-content">
-          {/* <Navbar /> */}
           <ModernNavbar />
           <Analytics />
-          {/* <HeroSection /> */}
           <PortfolioHero />
           <AboutMe />
           <Portfolio />

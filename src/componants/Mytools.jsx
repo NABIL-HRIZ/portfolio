@@ -4,19 +4,25 @@ import React, { useState, useEffect } from "react";
 
 import "../styles/Mytools.css";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { useTranslation } from 'react-i18next';
 
 const MyTools = () => {
  
   const { t } = useTranslation();
 
-
-
+useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <section className="tools-section" id="tools">
       <div className="tools-container">
       
-         <div className="srv-header">
+         <div className="srv-header"  data-aos="fade-right">
          <div className="split-title">
   <span className="small-number">05</span>
   <h2 className="main-title">
@@ -26,7 +32,7 @@ const MyTools = () => {
 </div>
         </div>
 
-        <div className="animated-list-wrapper">
+        <div className="animated-list-wrapper" data-aos="fade-up" data-aos-delay="200">
 
          <div className="velocity-wrapper">
   <div className="scroll-track track-left">
