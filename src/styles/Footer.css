@@ -14,11 +14,11 @@
 }
 
 .sig-text {
-  font-family: 'Dancing Script', cursive; 
-  font-size: 2.5rem;
-  color: #a8836b;
-  margin: 0;
-  transform: rotate(-3deg);
+  font-family: 'Dancing Script', cursive !important; 
+  font-size: 2.5rem !important;
+  color: #a8836b !important;
+  margin: 0 !important;
+  transform: rotate(-3deg) !important;
 }
 
 .sig-line {

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import "../styles/PortfolioHero.css";
-import myPhoto from "../assets/photoo.png";
+import myPhoto from "../assets/imagr-hero.png";
 import sticker1 from "../assets/sticky1.png";
 import sticker2 from "../assets/sticky2.png";
 import sticker3 from "../assets/sticky3.png";
@@ -46,7 +46,18 @@ const PortfolioHero = () => {
             >
               {t('portfolioHero.role', 'FULL-STACK DEVELOPER')}
             </p>
+
+   <div className="hero-cta-container" >
+              <a href="#projects" className="dev-cta">
+                <span className="bracket">[</span>
+                <span className="cta-text">{t('portfolioHero.cta')}</span>
+                <span className="bracket">]</span>
+                <span className="cta-arrow">→</span>
+              </a>
+            </div>
           </div>
+          
+
         </div>
 
         <div className="hero-column column-center">

@@ -126,7 +126,7 @@ const getType = (item) => {
 
         <div className="h-card">
           <h3>{active.periode}</h3>
-          <div className="h-label">
+          <div className="h-labeel">
         {active.etablissement}
       </div>
           <p className="h-desc">

@@ -75,6 +75,7 @@
 .h-item.active .h-dot {
    background-color:#A47251;
   transform: scale(1.5);
+
 }
 
 .h-track {
@@ -88,7 +89,10 @@
   padding: 25px;
   border-radius: 18px;
   background: rgba(18, 18, 18, 0.85);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(55, 45, 4, 0.692);
+  box-shadow: 0 2px 3px rgb(238, 230, 201);
+  border-top: 0;
   color: white;
   text-align: center;
 
@@ -105,13 +109,14 @@
 
 
 
-.h-label {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.h-labeel {
    color:#dbc7ba;
   font-size: 17px;
   margin-bottom: 10px;
   font-weight: bold;
+ 
 }
+
 
 
 

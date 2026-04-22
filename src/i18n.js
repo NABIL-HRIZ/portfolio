@@ -79,7 +79,7 @@ const resources = {
   etablissement: "Freelance Developer",
   periode: "Jan 2026 – Present",
   diplome: "Full-Stack Freelance Developer",
-  description: "Working as an independent Full-Stack developer . using React.js, Laravel, Spring Boot,WP, API integration."
+  description: "Working as an independent Full-Stack developer from A to Z."
 },
           { id: 2, type: "experience", etablissement: 'IFGA - CASA', periode: 'Dec 2024 – May 2025', diplome: 'Full-Stack Developer', description: 'Full-Stack development with React.js, Laravel & Spring Boot, API integration and MySQL management.' },
           { id: 3,type: "experience", etablissement: 'DIRECTINVEST', periode: '2022 – 2024', diplome: 'Front-End Developer', description: 'Front-end development with React.js and Redux, WordPress customization and API integration.' },
@@ -94,6 +94,7 @@ const resources = {
         role: 'FULL-STACK DEVELOPER',
         specialization: 'Specialization',
         description: 'Building Modern & Innovative solutions with React, Laravel & Spring Boot.'
+        ,cta:"browse_work"
       },
       contact: {
          titre_part1: "Let's build",
@@ -210,7 +211,7 @@ const resources = {
   etablissement: "Développeur Freelance",
   periode: "Jan 2026 – Présent",
   diplome: "Développeur Full-Stack Freelance",
-  description: "Travail en tant que développeur Full-Stack indépendant, avec React.js, Laravel, Spring Boot, WP,intégration d’API, conception de bases de données et déploiement."
+  description: "Développeur Full-Stack freelance | depuis la conception à le  déploiement d’applications web"
 },
           { id: 2,  type: "experience", etablissement: 'IFGA - CASA', periode: 'Déc 2024 – Mai 2025', diplome: 'Développeur Full-Stack', description: 'Développement Full-Stack avec React.js, Laravel & Spring Boot, intégration API REST et gestion MySQL.' },
           { id: 3, type: "experience", etablissement: 'DIRECTINVEST', periode: '2022 – 2024', diplome: 'Développeur Front-End', description: 'Développement front-end React.js avec Redux, personnalisation WordPress et intégration API.' },
@@ -226,6 +227,7 @@ const resources = {
         role: 'DÉVELOPPEUR FULL-STACK',
         specialization: 'Spécialisation',
         description: 'Création de solutions modernes et innovantes avec React, Laravel & Spring Boot.'
+        ,cta:"voir_projets"
       },
       contact: {
         titre_part1: "Créons",

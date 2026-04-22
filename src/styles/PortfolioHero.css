@@ -33,6 +33,7 @@ z-index: 10;
 
 .identity-block {
   margin-bottom: 40px;
+  
 }
 
 
@@ -43,6 +44,8 @@ z-index: 10;
   letter-spacing: -5px;
   margin: 10px 0;
   color: #000;
+  z-index: -1;
+
 }
 
 .sub-role {
@@ -80,13 +83,24 @@ z-index: 10;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  padding-bottom: 50px; 
 }
 
 .hero-main-img {
-  transform: scale(1.3) !important; 
-  margin-top:60px; 
-  max-height: 90vh;
-  z-index: 1;
+  position: relative;
+  transform: scale(1.5) !important; 
+  max-height: 80vh;
+  z-index: 3;
+  -webkit-mask-image: linear-gradient(to bottom, 
+    rgba(0,0,0,1) 70%,  
+    rgba(245, 241, 220, 0.966) 80%, 
+    rgba(248, 219, 186, 0.977) 100%   
+  );
+  mask-image: linear-gradient(to bottom, 
+    rgba(0,0,0,1) 70%, 
+    rgba(100, 98, 93, 0.5) 90%, 
+    rgba(225, 200, 174, 0.007) 100%
+  );
 }
 
 .column-center {
@@ -177,4 +191,61 @@ z-index: 10;
 
 .identity-block, .image-frame, .info-box {
   position: relative;
+}
+
+.hero-cta-container {
+  margin-top: 20px;
+}
+
+.dev-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-family: 'Fira Code', 'Courier New', monospace; 
+  font-size: 1.2rem;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+.bracket {
+  color: #be8159; 
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.cta-text {
+  letter-spacing: -0.5px;
+  font-weight: 500;
+}
+
+.cta-arrow {
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  color: #A47251;
+}
+
+
+.dev-cta:hover {
+  transform: translateX(5px);
+}
+
+.dev-cta:hover .bracket:first-child {
+  transform: translateX(-3px);
+}
+
+.dev-cta:hover .bracket:last-child {
+  transform: translateX(3px);
+}
+
+.dev-cta:hover .cta-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* لون خفيف فاش كيدوز الماوس على النص */
+.dev-cta:hover .cta-text {
+  color: #A47251;
 }
