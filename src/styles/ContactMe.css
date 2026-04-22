@@ -31,8 +31,13 @@
   gap: 50px;
   width: 100%;
 }
+.contact-description {
+    opacity: 0.7;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: -20px;
 
-/* TITRE GAUCHE */
+  }
 .wow-main-title {
   font-size: 4rem;
   font-weight: 800;
@@ -167,4 +172,220 @@
   color: #888;
   font-size: 0.85rem;
   margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .wow-contact-section {
+    padding: 0 6%;
+  }
+
+  .wow-container {
+    gap: 30px;
+  }
+
+  .wow-main-title {
+    font-size: 3rem;
+  }
+
+  .modern-terminal {
+    height: 320px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .wow-contact-section {
+    padding: 40px 16px;
+    margin-top: -60px;
+    min-height: auto;
+  }
+
+  .virtual-text-bg {
+    font-size: 18vw;
+  }
+
+  .wow-container {
+   display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between; /* 🔥 KEY */
+    gap: 20px;
+  }
+
+  .wow-main-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .wow-main-title span {
+    display: block;
+  }
+
+  .modern-terminal {
+    height: 280px !important;
+    border-radius: 10px;
+  }
+
+  .term-header {
+    padding: 10px 16px;
+  }
+
+  .term-body {
+    padding: 20px;
+  }
+
+  .term-field {
+    margin: 15px 0;
+    padding: 8px;
+  }
+
+  .term-label {
+    margin-right: 8px;
+  }
+
+  .term-input-field,
+  .term-textarea-field {
+    font-size: 0.9rem;
+  }
+
+  .term-textarea-field {
+    height: 60px;
+  }
+
+  .term-submit-btn {
+    margin-top: 15px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .modern-toast {
+    top: 20px;
+    right: 16px;
+    left: 16px;
+    bottom: auto;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .toast-icon {
+    font-size: 1.5rem;
+  }
+
+  .toast-msg {
+    font-size: 0.95rem;
+  }
+
+  .toast-sub {
+    font-size: 0.8rem;
+  }
+
+  .wow-info-side {
+    order: 1;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  
+  .wow-terminal-side {
+    order: 2;
+    margin-top: auto; 
+  }
+   .contact-description {
+    max-width: 90%;
+    margin: 10px auto;
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .wow-contact-section {
+    padding: 30px 12px;
+    margin-top: -40px;
+  }
+
+  .virtual-text-bg {
+    font-size:18vw;
+  }
+
+  .wow-main-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  .modern-terminal {
+    height: 240px !important;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .term-header {
+    padding: 8px 12px;
+  }
+
+  .term-user {
+    font-size: 12px;
+  }
+
+  .t-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .term-body {
+    padding: 15px;
+    font-size: 0.85rem;
+  }
+
+  .term-field {
+    margin: 12px 0;
+    padding: 6px;
+  }
+
+  .term-label {
+    font-size: 0.9rem;
+    margin-right: 6px;
+  }
+
+  .term-input-field,
+  .term-textarea-field {
+    font-size: 0.85rem;
+  }
+
+  .term-textarea-field {
+    height: 50px;
+    margin-top: 8px;
+  }
+
+  .term-submit-btn {
+    margin-top: 12px;
+    padding: 7px 14px;
+    font-size: 0.8rem;
+    gap: 8px;
+  }
+
+  .term-submit-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .modern-toast {
+    top: 15px;
+    right: 12px;
+    left: 12px;
+    padding: 12px;
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+
+  .toast-icon {
+    font-size: 1.2rem;
+  }
+
+  .toast-msg {
+    font-size: 0.9rem;
+  }
+
+  .toast-sub {
+    font-size: 0.75rem;
+  }
 }

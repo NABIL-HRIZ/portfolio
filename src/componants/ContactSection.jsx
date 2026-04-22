@@ -140,7 +140,7 @@ const ContactSection = () => {
             </div>
           </div>
           <p className="contact-description">
-            Ready to bring your digital ideas to life. Let's build something extraordinary together.
+            {t('contact.description')}
           </p>
         </div>
       </div>

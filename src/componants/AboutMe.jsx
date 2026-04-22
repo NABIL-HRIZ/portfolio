@@ -48,7 +48,7 @@ const AboutMe = () => {
         </div>
 
         <div className='who-iam'>
-          <div className='aout-left' data-aos="fade-up" data-aos-delay="200">
+          <div className='about-left' data-aos="fade-up" data-aos-delay="200">
             <p className="about-description">
               <Trans
                 i18nKey="about.description"

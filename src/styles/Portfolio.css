@@ -119,43 +119,55 @@
 
 
 
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
   .portfolio-section {
-    margin-left: 0 !important;
-    width: 100% !important;
+    padding: 60px 30px;
   }
-  
+
   .calendar-card {
-    max-width: 100%;
-    padding: 32px;
+    padding: 30px;
   }
 }
 
+
 @media (max-width: 768px) {
-  .portfolio-section h2 {
-    font-size: 2.8rem;
-    margin-top: 80px;
-    margin-left: 24px;
+  .portfolio-section {
+    padding: 50px 20px;
   }
-  
+
   .calendar-card {
-    padding: 24px;
+    padding: 20px;
   }
 
-  .react-activity-calendar__footer {
-    font-size: 10px !important;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
+  .calendar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
+  .calendar-badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .portfolio-section {
+    padding: 40px 15px;
+  }
+
+  .calendar-card {
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .calendar-badge {
+    font-size: 0.7rem;
+  }
+
+  .react-activity-calendar__footer,
   .react-activity-calendar__legend-month {
-    font-size: 10px !important;
-  }
-
-  .projects-title-large {
-    font-size: 2.5rem !important;
-    margin-left: 24px;
+    font-size: 8px !important;
   }
 }

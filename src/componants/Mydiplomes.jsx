@@ -16,6 +16,11 @@ const Mydiplomes = () => {
   const diplomaItems = t("diplomas.list", { returnObjects: true }) || [];
   const experienceItems = t("experiences.list", { returnObjects: true }) || [];
 
+const isMobile = window.innerWidth < 768;
+
+
+
+
 
   
 useEffect(() => {
@@ -71,6 +76,37 @@ const getType = (item) => {
   if (!items.length) return null;
 
   const active = items[activeIndex];
+
+    if (isMobile) {
+  return (
+    <section className="h-timeline">
+       <div className="srv-header" data-aos="fade-right" >
+         <div className="split-title">
+  <span className="small-number">06</span>
+  <h2 className="main-title">
+    {t('diplomas.titre_part1')} <br />
+    <span className="accent-color">{t('diplomas.titre_part2')}</span>
+  </h2>
+</div>
+        </div>
+      <div className="h-sticky">
+        <div className="mobile-timeline">
+          {items.map((item) => (
+            <div key={item.id} className="mobile-item">
+              <div className="h-year">{item.periode}</div>
+              <div className="h-labeel">
+                {item.etablissement || item.entreprise}
+              </div>
+              <p className="h-desc">
+                {item.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
   return (
     <section className="h-timeline" ref={wrapperRef} >

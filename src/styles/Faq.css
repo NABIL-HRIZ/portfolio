@@ -174,7 +174,6 @@
   letter-spacing: 1px;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .tm-container { grid-template-columns: 1fr; }
   .tm-title { font-size: 3rem; }
@@ -199,7 +198,7 @@
 
 @media (max-width: 768px) {
   .tm-section {
-    padding: 80px 5%;
+    padding: 200px 5% !important;
   }
 
   .tm-right {

@@ -42,3 +42,71 @@
   color: #908f8f;
   font-size: 0.8rem;
 }
+
+@media (max-width: 768px) {
+  .modern-footer {
+    padding: 30px 20px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .final-signature {
+    bottom: 30px;
+    right: 20px;
+  }
+
+  .sig-text {
+    font-size: 1.8rem !important;
+  }
+
+  .sig-line {
+    width: 100px;
+    margin: 8px 0 8px auto;
+  }
+
+  .dev-tag {
+    font-size: 0.6rem;
+  }
+
+  .footer-copyright {
+    bottom: 30px;
+    left: 20px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile Responsive - Small Mobile */
+@media (max-width: 480px) {
+  .modern-footer {
+    padding: 20px 12px;
+  }
+
+  .final-signature {
+    bottom: 20px;
+    right: 15px;
+    text-align: right;
+  }
+
+  .sig-text {
+    font-size: 1.4rem !important;
+    transform: rotate(-2deg) !important;
+  }
+
+  .sig-line {
+    width: 80px;
+    margin: 6px 0 6px auto;
+  }
+
+  .dev-tag {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+  }
+
+  .footer-copyright {
+    bottom: 20px;
+    left: 15px;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+  }
+}

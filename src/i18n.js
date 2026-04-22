@@ -103,6 +103,7 @@ const resources = {
         sending: 'Sending...',
         send: 'Send message',
         toast: { sentTitle: 'Message Sent!', sentText: 'Thanks {{name}}, your message was sent successfully.', errorTitle: 'Error!', errorText: 'Error sending the message.' }
+       , description: 'Ready to bring your digital ideas to life. Let\'s build something extraordinary together.'
       },
       collaborate: {
         header: { lineOne: 'Let\'s', lineTwo: 'Work Together' },
@@ -236,6 +237,7 @@ const resources = {
         sending: 'Envoi en cours...',
         send: 'Envoyer le message',
         toast: { sentTitle: 'Message Envoyé!', sentText: 'Merci {{name}}, votre message a été envoyé avec succès.', errorTitle: 'Erreur!', errorText: 'Erreur lors de l\'envoi du message.' }
+      ,description: 'Prêt à donner vie à vos idées digitales. Construisons ensemble quelque chose d\'extraordinaire.'
       },
       collaborate: {
         header: { lineOne: 'Travaillons', lineTwo: 'Ensemble' },
