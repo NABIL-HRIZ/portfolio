@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './componants/Navbar';
-import HeroSection from './componants/HeroSection';
 import MyProjects from './componants/Myprojects';
 import MyTools from './componants/Mytools';
 import Mydiplomes from './componants/Mydiplomes';
 import Faq from './componants/Faq';
-import CollaborateUs from './componants/CollaborateUs';
 import Footer from './componants/Footer';
-import ContactMe from './componants/ContactMe';
 import Portfolio from './componants/Portfolio';
 import Intro3D from './componants/Intro3D';
-import CanvasCursorWrapper from './componants/CanvasCursorWrapper';
 import AboutMe from './componants/AboutMe';
-import { Analytics } from '@vercel/analytics/react';
 import PortfolioHero from './componants/PortfolioHero';
 import ContactSection from './componants/ContactSection';
 import Services from './componants/Services';
@@ -21,7 +15,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 3900);
+    const timer = setTimeout(() => setIsLoading(false), 4000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -42,7 +36,6 @@ const App = () => {
       ) : (
         <div className="fade-in-content">
           <ModernNavbar />
-          <Analytics />
           <PortfolioHero />
           <AboutMe />
           <Portfolio />

@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import "../styles/PortfolioHero.css";
-import myPhoto from "../assets/imagr-hero.png";
+import myPhoto from "../assets/image-hero.webp";
 import sticker1 from "../assets/sticky1.png";
 import sticker2 from "../assets/sticky2.png";
 import sticker3 from "../assets/sticky3.png";
