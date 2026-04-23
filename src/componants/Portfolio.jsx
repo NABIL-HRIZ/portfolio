@@ -66,7 +66,7 @@ const Portfolio = () => {
               fontSize={15}
               colorScheme="dark"
               theme={{
-                dark: ['#0b1220', '#0f3b26', '#1f6b42', '#37a562', '#7ae582'],
+               dark: ['#161b22', '#2d333b', '#444c56', '#768390', '#adbac7'],
               }}
             />
           </div>

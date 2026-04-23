@@ -7,6 +7,7 @@ import myPhoto from "../assets/image-hero.webp";
 import sticker1 from "../assets/sticky1.png";
 import sticker2 from "../assets/sticky2.png";
 import sticker3 from "../assets/sticky3.png";
+import { FaArrowTurnDown } from "react-icons/fa6";
 
 const PortfolioHero = () => {
   const { t } = useTranslation();
@@ -16,6 +17,8 @@ const PortfolioHero = () => {
       duration: 1000,
       easing: 'ease-out-quart',
       once: true,
+      disable: window.innerWidth < 768,
+
     });
   }, []);
 
@@ -52,7 +55,7 @@ const PortfolioHero = () => {
                 <span className="bracket">[</span>
                 <span className="cta-text">{t('portfolioHero.cta')}</span>
                 <span className="bracket">]</span>
-                <span className="cta-arrow">→</span>
+                <span className="cta-arrow"><FaArrowTurnDown /></span>
               </a>
             </div>
           </div>
@@ -62,6 +65,7 @@ const PortfolioHero = () => {
 
         <div className="hero-column column-center">
           <div className="image-frame">
+            
             <img 
               src={myPhoto} 
               alt="NABIL HRIZ" 

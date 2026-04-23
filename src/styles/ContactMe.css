@@ -194,26 +194,28 @@
 
 @media (max-width: 768px) {
   .wow-contact-section {
-    padding: 40px 16px;
-    margin-top: -60px;
+    padding: 40px 30px !important;
+    margin-top:-120px !important;
     min-height: auto;
   }
 
   .virtual-text-bg {
     font-size: 18vw;
+    margin-top: -110px !important;
   }
 
   .wow-container {
    display: flex;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: space-between; /* 🔥 KEY */
+    justify-content: space-between;
     gap: 20px;
   }
 
   .wow-main-title {
     font-size: 2.2rem;
     line-height: 1.2;
+    margin-left: 30px !important;
   }
 
   .wow-main-title span {
@@ -221,7 +223,7 @@
   }
 
   .modern-terminal {
-    height: 280px !important;
+    height:400px !important;
     border-radius: 10px;
   }
 
@@ -258,41 +260,40 @@
   }
 
   .modern-toast {
-    top: 20px;
-    right: 16px;
-    left: 16px;
+    top: 20px !important;
+    right: 16px !important;
+    left: 16px !important;
     bottom: auto;
-    padding: 16px;
+    padding: 10px !important;
     gap: 12px;
   }
 
   .toast-icon {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
 
   .toast-msg {
-    font-size: 0.95rem;
+    font-size: 0.8rem !important;
   }
 
   .toast-sub {
-    font-size: 0.8rem;
+    font-size: 0.8rem !important;
   }
 
   .wow-info-side {
     order: 1;
-    text-align: center;
     margin-top: 20px;
   }
 
   
   .wow-terminal-side {
     order: 2;
-    margin-top: auto; 
+    margin-bottom:190px !important; 
   }
    .contact-description {
     max-width: 90%;
-    margin: 10px auto;
     opacity: 0.6;
+    margin-bottom:20px !important;
   }
 }
 
@@ -313,7 +314,7 @@
   }
 
   .modern-terminal {
-    height: 240px !important;
+    height: 400px !important;
     border-radius: 8px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   }
@@ -372,20 +373,20 @@
     top: 15px;
     right: 12px;
     left: 12px;
-    padding: 12px;
+    padding: 12px !important;
     gap: 10px;
     font-size: 0.85rem;
   }
 
   .toast-icon {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 
   .toast-msg {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
 
   .toast-sub {
-    font-size: 0.75rem;
+    font-size: 0.75rem !important;
   }
 }

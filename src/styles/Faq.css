@@ -198,7 +198,8 @@
 
 @media (max-width: 768px) {
   .tm-section {
-    padding: 200px 5% !important;
+    padding: 200px 30px !important;
+    margin-top: -200px;
   }
 
   .tm-right {

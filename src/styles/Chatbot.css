@@ -1,0 +1,19 @@
+/* Cibler le bouton du chatbot Chatbase */
+#chatbase-bubble-button {
+  width: 45px !important;  /* Au lieu des ~60px par défaut */
+  height: 45px !important;
+  bottom: 20px !important; /* Ajuste la distance du bord bas */
+  right: 20px !important;  /* Ajuste la distance du bord droit */
+  transition: transform 0.3s ease !important;
+}
+
+/* Réduire aussi la taille de l'image à l'intérieur */
+#chatbase-bubble-button img {
+  width: 25px !important;
+  height: 25px !important;
+}
+
+/* Effet au survol plus discret */
+#chatbase-bubble-button:hover {
+  transform: scale(1.1) !important;
+}

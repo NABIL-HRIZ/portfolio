@@ -141,8 +141,8 @@
 
 .cursor {
   display: inline-block;
-  width: 8px;
-  height: 15px;
+  width: 5px;
+  height: 10px;
   background: #C2A68C !important;
   margin-left: 5px;
   animation: blink 1s infinite;

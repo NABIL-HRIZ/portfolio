@@ -16,14 +16,19 @@ const ContactSection = () => {
   const messageRef = useRef(null);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 1000, once: true , disable: window.innerWidth < 768,
+});
   }, []);
 
-  useEffect(() => {
+useEffect(() => {
+  const isMobile = window.innerWidth < 768;
+  
+  if (!isMobile) {
     if (step === 0 && emailRef.current) emailRef.current.focus();
     if (step === 1 && nameRef.current) nameRef.current.focus();
     if (step === 2 && messageRef.current) messageRef.current.focus();
-  }, [step]);
+  }
+}, [step]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

@@ -12,6 +12,8 @@ z-index: 10;
 }
 
 
+
+
 .hero-grid {
   display: flex;
   justify-content: space-between;
@@ -85,6 +87,8 @@ z-index: 10;
   z-index: 1;
   padding-bottom: 50px; 
 }
+
+
 
 .hero-main-img {
   position: relative;
@@ -176,7 +180,7 @@ z-index: 10;
 .sticker-3 {
   width:300px;
   bottom:-10%;
-  right: -320px;
+  right: -360px;
 }
 
 @keyframes floating {
@@ -225,6 +229,7 @@ z-index: 10;
   transform: translateX(-10px);
   transition: all 0.3s ease;
   color: #A47251;
+  margin-top: 20px !important;
 }
 
 
@@ -297,13 +302,14 @@ z-index: 10;
 
   .hero-grid {
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 50px !important;
     padding: 15px 2%;
     gap: 2rem;
+
   }
 
   .hero-column {
-    justify-content: center;
+    justify-content: center !;
   }
 
   .main-name {
@@ -369,36 +375,43 @@ z-index: 10;
     font-size: 0.8rem;
   }
 
+  .hero-sticker {
+    display: block;
+    position: absolute;
+    width: 180px !important; 
+    z-index: 10;
+  }
+
   .sticker-1 {
-    width: 250px;
-    top: -170px;
-    left: -50px;
+    top: -130px !important;
+    left: -30px !important;
   }
 
   .sticker-2 {
 
-     width: 250px;
-    top: -80px;
-    left:-170px;
-    z-index:-3;
+    top: 180px !important;
+    left:140px !important;
   }
 
   .sticker-3 {
-      width: 200px;
-    top: -80px;
-    left:280px;
+    top: -260px;
+    left:180px;
   }
 
   .dev-cta {
     font-size: 1rem;
+    display: block !important;
   }
 
   .cta-arrow {
-    font-size: 1.2rem;
+    display: none !important;
+  }
+
+  .hero-cta-container{
+    
   }
 }
 
-/* Mobile Responsive - Small Mobile */
 @media (max-width: 480px) {
   .hero-container {
     padding: 15px 12px !important;
@@ -454,7 +467,7 @@ z-index: 10;
   }
 
   .hero-sticker {
-    display: none;
+    display: block;
   }
 
   .dev-cta {
@@ -464,7 +477,7 @@ z-index: 10;
   }
 
   .cta-arrow {
-    display: none;
+    display:block;
   }
 
   .cta-text {

@@ -133,11 +133,20 @@
   }
 }@media (max-width: 768px) {
 
+
+  .dip-header {
+    padding: 0 20px; 
+    margin-bottom: -20px; 
+    position: relative;
+    z-index: 10;
+  }
+
   .h-timeline {
     height: auto;
-    padding:120px 20px;
-
+    padding: 60px 30px; 
+    margin-top: -120px;
   }
+ 
 
   .h-track {
     width: 100%;
@@ -146,7 +155,6 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
-    margin-top: 40px;
   }
 
   .h-item {
@@ -174,6 +182,12 @@
     width: 100%;
     bottom: auto;
     margin-top: 30px;
+  }
+
+  .h-sticky {
+    position: relative; /* On enlève le sticky sur mobile pour un flux naturel */
+    height: auto;
+    top: 0 !important;
   }
 }
 @media (max-width: 480px) {

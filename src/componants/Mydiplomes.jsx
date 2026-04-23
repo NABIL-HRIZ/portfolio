@@ -80,29 +80,25 @@ const getType = (item) => {
     if (isMobile) {
   return (
     <section className="h-timeline">
-       <div className="srv-header" data-aos="fade-right" >
-         <div className="split-title">
-  <span className="small-number">06</span>
-  <h2 className="main-title">
-    {t('diplomas.titre_part1')} <br />
-    <span className="accent-color">{t('diplomas.titre_part2')}</span>
-  </h2>
-</div>
+       <div className="srv-header" data-aos="fade-right">
+          <div className="split-title">
+            <span className="small-number">06</span>
+            <h2 className="main-title">
+              {t('diplomas.titre_part1')} <br />
+              <span className="accent-color">{t('diplomas.titre_part2')}</span>
+            </h2>
+          </div>
         </div>
-      <div className="h-sticky">
-        <div className="mobile-timeline">
-          {items.map((item) => (
-            <div key={item.id} className="mobile-item">
-              <div className="h-year">{item.periode}</div>
-              <div className="h-labeel">
-                {item.etablissement || item.entreprise}
-              </div>
-              <p className="h-desc">
-                {item.description}
-              </p>
+      <div className="mobile-timeline-content" style={{ padding: '20px' }}>
+        {items.map((item) => (
+          <div key={item.id} className="mobile-item" style={{ marginBottom: '40px' }}>
+            <div className="h-year" style={{ color: '#A47251' }}>{item.periode}</div>
+            <div className="h-labeel" style={{ fontSize: '1.2rem', margin: '10px 0' }}>
+              {item.etablissement || item.entreprise}
             </div>
-          ))}
-        </div>
+            <p className="h-desc">{item.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -161,7 +157,7 @@ const getType = (item) => {
 </div>
 
         <div className="h-card">
-          <h3>{active.periode}</h3>
+          <h3 style={{color:"#A47251"}}>{active.periode}</h3>
           <div className="h-labeel">
         {active.etablissement}
       </div>

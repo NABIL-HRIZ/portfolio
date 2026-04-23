@@ -60,7 +60,7 @@ const AboutMe = () => {
               />
             </p>
 
-            <div className="cv-download-wrapper" data-aos="fade-up" data-aos-delay="400">
+            <div className="cv-download-wrapper" data-aos="fade-up" data-aos-delay="100">
               <a href="/cv-nabil-hriz.pdf" download className="cv-download-link">
                 <span className="cv-icon">↓</span>
                 <span className="cv-text">{t('about.downloadCV')}</span>
@@ -96,7 +96,7 @@ const AboutMe = () => {
                   &nbsp;&nbsp;languages: [<span className="string">"{developerData.languages.join('", "')}"</span>]<br />
                   &#125;;<br />
                   <br />
-                  <span className="comment">// available for new projects</span><span className="cursor">|</span>
+                  <span className="comment">// available for new projects</span><span className="cursor"></span>
                 </code>
               </pre>
             </div>

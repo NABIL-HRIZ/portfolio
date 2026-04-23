@@ -11,6 +11,7 @@ import PortfolioHero from './componants/PortfolioHero';
 import ContactSection from './componants/ContactSection';
 import Services from './componants/Services';
 import ModernNavbar from './componants/ModernNavbar';
+import Chatbot from './componants/Chatbot';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -26,6 +27,8 @@ const App = () => {
   }
 }, [isLoading]);
 
+
+
   return (
     <div className="main-container" style={{ backgroundColor: '#050505', minHeight: '100vh' }}>
      
@@ -35,6 +38,7 @@ const App = () => {
         <Intro3D />
       ) : (
         <div className="fade-in-content">
+          <Chatbot />
           <ModernNavbar />
           <PortfolioHero />
           <AboutMe />

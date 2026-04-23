@@ -41,11 +41,11 @@ const resources = {
         codeAlt: 'Code source'
       ,
       list: [
-        {id:1, name: 'PAWSADOPT - PET ADOPTION OPTIMIZATION', description: 'Design and implementation of a comprehensive Full-Stack application optimizing the pet adoption process through interactive mapping and secure monetization. Mastery of the entire development cycle: from performant REST APIs to a responsive front-end with deep third-party service integration.', tags: ['Spring Boot 3','Java','React','Tailwind CSS','MySQL','Leaflet.js','Stripe API','Spring Security','Axios','Docker']},
-        { id: 2, name: 'FANZONE - FAN ZONES DIGITALISATION (CAN 2025)', description: 'Design and implementation of an advanced Full-Stack web platform (React.js/Laravel) to manage 10+ Fan Zones (booking, e-tickets with QR scan, Stripe integration, webhooks, statistics). Containerized with Docker and CI/CD optimized.', tags: ['Laravel','React','Redux','MySQL','PDF','QR Scan','Swagger','Stripe','Mailhog','AOS'] },
-        { id: 3, name: 'EVENTIFY - EVENT MANAGEMENT', description: 'Full-Stack developer — Built a Laravel API (validation, cache, tests, Stripe/webhook) and React.js frontend with validated forms and dynamic UI. Complete client-server integration with secure online payments.', tags: ['Laravel','React','Redux','Bootstrap','MySQL','Stripe','Webhook','Mailhog','Gsap'] },
-        { id: 4, name: 'FOODIEAPP – ONLINE ORDERING', description: 'React frontend app with Redux for state management, external API consumption, real-time cart updates, error handling and performance optimizations. Responsive interactive UI.', tags: ['React','Redux','Tailwind','EmailJs','Gsap'] },
-        { id: 5, name: 'SECUREBOARD – TASK MANAGEMENT', description: 'Full-Stack app (Laravel + React) for project management with auth, roles & permissions, real-time notifications (Pusher), async emails and API documentation (Swagger).', tags: ['Laravel','React','Pusher','Echo','MailTrap'] },
+        {id:1, name: 'PAWSADOPT ', description: 'Design and implementation of a comprehensive Full-Stack application optimizing the pet adoption process through interactive mapping and secure monetization. Mastery of the entire development cycle: from performant REST APIs to a responsive front-end with deep third-party service integration.', tags: ['Spring Boot 3','Java','React','Tailwind CSS','MySQL','Leaflet.js','Stripe API','Spring Security','Axios','Docker']},
+        { id: 2, name: 'FANZONE (CAN 2025)', description: 'Design and implementation of an advanced Full-Stack web platform (React.js/Laravel) to manage 10+ Fan Zones (booking, e-tickets with QR scan, Stripe integration, webhooks, statistics). Containerized with Docker and CI/CD optimized.', tags: ['Laravel','React','Redux','MySQL','PDF','QR Scan','Swagger','Stripe','Mailhog','AOS'] },
+        { id: 3, name: 'EVENTIFY', description: 'Full-Stack developer — Built a Laravel API (validation, cache, tests, Stripe/webhook) and React.js frontend with validated forms and dynamic UI. Complete client-server integration with secure online payments.', tags: ['Laravel','React','Redux','Bootstrap','MySQL','Stripe','Webhook','Mailhog','Gsap'] },
+        { id: 4, name: 'FOODIEAPP ', description: 'React frontend app with Redux for state management, external API consumption, real-time cart updates, error handling and performance optimizations. Responsive interactive UI.', tags: ['React','Redux','Tailwind','EmailJs','Gsap'] },
+        { id: 5, name: 'SECUREBOARD ', description: 'Full-Stack app (Laravel + React) for project management with auth, roles & permissions, real-time notifications (Pusher), async emails and API documentation (Swagger).', tags: ['Laravel','React','Pusher','Echo','MailTrap'] },
 
         { id: 6, name: 'MOVIESCOPE', description: 'Modern web app to discover and explore movies and series with a clean UI, interactive features and an immersive intro video.', tags: ['React','Swiper','AOS','REST API'] },
         { id: 7, name: 'HITRADIO_WEATHER', description: 'Weather features integrated for HitRadio to enrich listeners experience on the official site with modern UX and dynamic data.', tags: ['React','GSAP','REST API'] },
@@ -87,7 +87,9 @@ const resources = {
         ]
       },
       portfolio: {
-        header: { lineOne: 'MY ACTIVITY', lineTwo: 'OPEN SOURCE' }
+         titre_part1: "MY ACTIVITY",
+        titre_part2: "OPEN SOURCE"
+        
       },
       portfolioHero: {
         name: 'NABIL HRIZ',
