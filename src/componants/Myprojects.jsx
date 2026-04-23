@@ -19,16 +19,19 @@ import honey from '../assets/honey.jpg'
 import weather from '../assets/weather.png'
 import fanzone from '../assets/fanzone.jpg'
 import paws from '../assets/paws.png'
+import nike from '../assets/nike.jpeg'
+import store from '../assets/store.png'
+
 const MyProjects = () => {
   const [showAll, setShowAll] = useState(false);
 
 const hoverColors = [
-  "rgba(139, 94, 60, 0.8)",   // Brown (Cinnamon) - دافئ وقوي
-  "rgba(93, 64, 55, 0.8)",  // Tan / Muted Brown
-  "rgba(121, 85, 72, 0.8)",   // Deep Coffee
-  "rgb(92, 79, 74)", // Sand / Beige Brown
-  "rgba(93, 64, 55, 0.8)",    // Dark Chocolate
-  "rgba(210, 180, 140, 0.8)"  // Tan Light
+  "rgba(62, 39, 35, 0.85)",  
+  "rgba(93, 64, 55, 0.85)",   
+  "rgba(78, 52, 46, 0.85)",   
+  "rgba(56, 42, 38, 0.85)",   
+  "rgba(84, 58, 52, 0.85)",   
+  "rgba(109, 76, 65, 0.85)", 
 ];
 
   const { t } = useTranslation();
@@ -45,15 +48,17 @@ const hoverColors = [
     2: fanzone,
     3: eventify,
     4: food,
-    5: secure,
-    6: movie,
-    7: weather,
-    8: booking,
-    9: educaty,
-    10: jardinage,
-    11: honey,
-    12: dari,
-    13: pizza
+    5:nike,
+    6:store,
+    7: secure,
+    8: movie,
+    9: weather,
+    10: booking,
+    11: educaty,
+    12: jardinage,
+    13: honey,
+    14: dari,
+    15: pizza
   };
 
   const projects = translations.map((p) => ({
@@ -63,7 +68,7 @@ const hoverColors = [
     codeLink: p.codeLink || '#'
   }));
 
-  const displayedProjects = showAll ? projects : projects.slice(0, 4);
+  const displayedProjects = showAll ? projects : projects.slice(0, 6);
 
   return (
    <section className="projects-section" id='projects-section'>

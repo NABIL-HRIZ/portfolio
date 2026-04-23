@@ -45,16 +45,18 @@ const resources = {
         { id: 2, name: 'FANZONE (CAN 2025)', description: 'Design and implementation of an advanced Full-Stack web platform (React.js/Laravel) to manage 10+ Fan Zones (booking, e-tickets with QR scan, Stripe integration, webhooks, statistics). Containerized with Docker and CI/CD optimized.', tags: ['Laravel','React','Redux','MySQL','PDF','QR Scan','Swagger','Stripe','Mailhog','AOS'] },
         { id: 3, name: 'EVENTIFY', description: 'Full-Stack developer — Built a Laravel API (validation, cache, tests, Stripe/webhook) and React.js frontend with validated forms and dynamic UI. Complete client-server integration with secure online payments.', tags: ['Laravel','React','Redux','Bootstrap','MySQL','Stripe','Webhook','Mailhog','Gsap'] },
         { id: 4, name: 'FOODIEAPP ', description: 'React frontend app with Redux for state management, external API consumption, real-time cart updates, error handling and performance optimizations. Responsive interactive UI.', tags: ['React','Redux','Tailwind','EmailJs','Gsap'] },
-        { id: 5, name: 'SECUREBOARD ', description: 'Full-Stack app (Laravel + React) for project management with auth, roles & permissions, real-time notifications (Pusher), async emails and API documentation (Swagger).', tags: ['Laravel','React','Pusher','Echo','MailTrap'] },
+        { id: 5, name: 'NIKE EVENT ', description: "oa landing page for the Nike Dance Event in Casablanca, designed to promote a unique and immersive dance competition. The project was planned and managed on ClickUp, designed on Figma, then developed and implemented on WordPress, hosted on Hostinger, with tracking integrated through Google Analytics..", tags: ['Figma','WordPress','Google Analytics','Hostinger'] },
+         {id : 6 , name : 'ECOMMERCE STORE',description: "Developed a comprehensive e-commerce platform using WordPress and Custom Fields, featuring advanced product management, a seamless shopping cart system, and a fully responsive user interface for a smooth purchasing experience.",tags:["WordPress","WooCommerce","PHP","Custom Fields (ACF)","SEO (Yoast)","Google Analytics"]},
+        { id: 6, name: 'SECUREBOARD ', description: 'Full-Stack app (Laravel + React) for project management with auth, roles & permissions, real-time notifications (Pusher), async emails and API documentation (Swagger).', tags: ['Laravel','React','Pusher','Echo','MailTrap'] },
 
-        { id: 6, name: 'MOVIESCOPE', description: 'Modern web app to discover and explore movies and series with a clean UI, interactive features and an immersive intro video.', tags: ['React','Swiper','AOS','REST API'] },
-        { id: 7, name: 'HITRADIO_WEATHER', description: 'Weather features integrated for HitRadio to enrich listeners experience on the official site with modern UX and dynamic data.', tags: ['React','GSAP','REST API'] },
-        { id: 8, name: 'Sky 365', description: 'Modern responsive hotel booking website.', tags: ['Figma','React','Uiverse','Material UI'] },
-        { id: 9, name: 'Educaty', description: 'Innovative learning platform transforming how students access online educational resources.', tags: ['Figma','React','Bootstrap'] },
-        { id: 10, name: 'SERVICE_JARDINAGE', description: 'Professional gardening services website with online quote requests.', tags: ['React','Bootstrap','EmailJS','Swiper'] },
-        { id: 11, name: 'HONEY WEB', description: 'Selection of artisanal honeys from local sustainable sources with product descriptions and categories.', tags: ['React','Bootstrap','EmailJS'] },
-        { id: 12, name: 'DARIShop', description: 'Ecommerce platform for home products — curated selections to beautify and optimize living spaces.', tags: ['Laravel','Blade','MySQL','HTML','CSS','JS','Tailwind'] },
-        { id: 13, name: 'Pizza Dyalna', description: 'Delicious pizza website delivering flavorful experiences and easy online ordering.', tags: ['Laravel','Blade','MySQL','HTML','CSS','JS','Tailwind'] }
+        { id: 7, name: 'MOVIESCOPE', description: 'Modern web app to discover and explore movies and series with a clean UI, interactive features and an immersive intro video.', tags: ['React','Swiper','AOS','REST API'] },
+        { id: 8, name: 'HITRADIO_WEATHER', description: 'Weather features integrated for HitRadio to enrich listeners experience on the official site with modern UX and dynamic data.', tags: ['React','GSAP','REST API'] },
+        { id: 9, name: 'Sky 365', description: 'Modern responsive hotel booking website.', tags: ['Figma','React','Uiverse','Material UI'] },
+        { id: 10, name: 'Educaty', description: 'Innovative learning platform transforming how students access online educational resources.', tags: ['Figma','React','Bootstrap'] },
+        { id: 11, name: 'SERVICE_JARDINAGE', description: 'Professional gardening services website with online quote requests.', tags: ['React','Bootstrap','EmailJS','Swiper'] },
+        { id: 12, name: 'HONEY WEB', description: 'Selection of artisanal honeys from local sustainable sources with product descriptions and categories.', tags: ['React','Bootstrap','EmailJS'] },
+        { id: 13, name: 'DARIShop', description: 'Ecommerce platform for home products — curated selections to beautify and optimize living spaces.', tags: ['Laravel','Blade','MySQL','HTML','CSS','JS','Tailwind'] },
+        { id: 14, name: 'Pizza Dyalna', description: 'Delicious pizza website delivering flavorful experiences and easy online ordering.', tags: ['Laravel','Blade','MySQL','HTML','CSS','JS','Tailwind'] }
       ]
       },
       tools: {
@@ -136,7 +138,7 @@ const resources = {
     { id: "01", title: "Full-Stack Development", desc: "Building scalable web applications using React, Laravel, and Spring Boot with clean, maintainable code." },
     { id: "02", title: "UI/UX Design", desc: "Creating modern, sleek, and user-centric interfaces with a focus on minimalist and tech-oriented aesthetics." },
     { id: "03", title: "Database Architecture", desc: "Designing robust database schemas and optimizing complex queries for high-performance systems." },
-    { id: "04", title: "Digital Solutions", desc: "End-to-end project management from initial brief to secure deployment and technical maintenance." }
+    { id: "04", title: "Hosting & SEO Optimization", desc: " manage web hosting, SEO optimization, and analytics integration  to enhance visibility and monitor website performance" }
   ]
 }
     }
@@ -178,16 +180,19 @@ const resources = {
         { id: 2, name: 'FANZONE (CAN 2025)', description: "Conception et réalisation d'une plateforme web avancée Full-Stack (React.js/Laravel) pour la gestion digitalisée (réservation, e-tickets QR Code, scan, intégration Stripe et webhooks, statistiques) des 10+ Fan Zones. Projet conteneurisé avec Docker et optimisé par des pipelines de CI/CD", tags: ['Laravel','React','Redux','Mysql','PDF Simple','Scan QR','Swagger','Stripe','Mailhog','AOS Animation'] },        
         { id: 3, name: 'EVENTIFY ', description: "Développeur Full Stack - Réalisation d'une application web en Laravel (API REST, validation, cache, tests, intégration Stripe et webhook) et React.js (interface dynamique, gestion des états, formulaires validés). Conception, intégration et communication client–serveur complètes avec paiement en ligne sécurisé.", tags: ['Laravel','React','Redux','Bootstrap','Mysql','Stripe','Webhook','Mailhog','Gsap'] },
         { id: 4, name: 'FOODIEAPP ', description: "Développeur Front-End React – Développement d'une application web avec React et Redux pour la gestion d'état, consommation d'une API externe, mise à jour du panier en temps réel, gestion des erreurs et optimisation des performances. Interface réactive et responsive.", tags: ['React','Redux','Tailwind','EmailJs','React Bits','Gsap','AtroposJs','Aos','Rest Api'] },
-        { id: 5, name: 'SECUREBOARD – TASK MANAGEMENT', description: 'Full-Stack app (Laravel + React) for project management with auth, roles & permissions, real-time notifications (Pusher), async emails and API documentation (Swagger).', tags: ['Laravel','React','Pusher','Echo','MailTrap'] },
+        { id: 5, name: 'NIKE EVENT ', description: "Création de la page d'atterrissage pour l'événement Nike Dance à Casablanca. Ce projet immersif a suivi un cycle complet : planification via ClickUp, conception UI sur Figma, développement WordPress et hébergement sur Hostinger, incluant le tracking via Google Analytics.", tags: ['Figma','WordPress','Google Analytics','Hostinger'] },
+       {id:6 , name : 'ECOMMERCE STORE', description : "Réalisation d'une plateforme e-commerce complète avec WordPress et custom Fields , intégrant une gestion de produits, un système de panier, une interface utilisateur réactive et une expérience d'achat fluide.", tags: ['WordPress', 'WooCommerce', 'PHP', 'Custom Fields (ACF)', 'SEO (Yoast)', 'Google Analytics'] },
+
+        { id: 7, name: 'SECUREBOARD – TASK MANAGEMENT', description: 'Full-Stack app (Laravel + React) for project management with auth, roles & permissions, real-time notifications (Pusher), async emails and API documentation (Swagger).', tags: ['Laravel','React','Pusher','Echo','MailTrap'] },
        
-        { id: 6, name: 'MOVIESCOPE', description: "Une application web moderne permettant de découvrir et explorer films et séries selon vos préférences, avec une interface épurée, des fonctionnalités interactives et une vidéo d'introduction immersive.", tags: ['React','SwiperJs','Uiverse','AOS (Animate On Scroll)','Rest Api'] },
-        { id: 7, name: 'HITRADIO_WEATHER', description: "HitRadio, une station de radio dynamique et populaire, souhaite enrichir l'expérience de ses auditeurs en intégrant des fonctionnalités météorologiques avancées sur leur site web officiel", tags: ['React','Splite 3D','Gsap','Rest Api'] },
-        { id: 8, name: 'Sky 365', description: "Un site web pour le booking en ligne des hotels moderne et responsive.", tags: ['Figma','React','Uiverse','Material UI'] },
-        { id: 9, name: 'Educaty', description: "Plateforme d’apprentissage innovante qui révolutionne la manière dont les étudiants accèdent aux ressources éducatives en ligne.", tags: ['Figma','React','Bootstrap','WebLeb','Dribble Inspiration'] },
-        { id: 10, name: 'SERVICE_JARDINAGE', description: "Notre site propose une gamme complète de services professionnels pour prendre soin de votre jardin et de votre espace extérieur, demander un devis en ligne", tags: ['React','Bootstrap','EmailJS','SwiperJs'] },
-        { id: 11, name: 'HONEY WEB', description: "Notre site propose une sélection variée de miels artisanaux provenant de sources locales et durables. Que vous recherchiez du miel cru, du miel biologique ou des variétés spéciales comme le miel de lavande ou de trèfle", tags: ['React','Bootstrap','EmailJS'] },
-        { id:12, name: 'DARIShop', description: "Plateforme eCommerce dédiée à l'univers de la maison. Parcourez notre sélection variée de produits soigneusement sélectionnés pour embellir et optimiser votre espace de vie", tags: ['Laravel','Blade','Mysql','HTML','CSS','JS','Tailwind'] },
-        { id:13, name: 'Pizza Dyalna', description: "Plongez dans un monde de saveurs délicieuses où chaque bouchée est une explosion de goût.. Un site Web", tags: ['Laravel','Blade','Mysql','HTML','CSS','JS','Tailwind'] }
+        { id: 8, name: 'MOVIESCOPE', description: "Une application web moderne permettant de découvrir et explorer films et séries selon vos préférences, avec une interface épurée, des fonctionnalités interactives et une vidéo d'introduction immersive.", tags: ['React','SwiperJs','Uiverse','AOS (Animate On Scroll)','Rest Api'] },
+        { id: 9, name: 'HITRADIO_WEATHER', description: "HitRadio, une station de radio dynamique et populaire, souhaite enrichir l'expérience de ses auditeurs en intégrant des fonctionnalités météorologiques avancées sur leur site web officiel", tags: ['React','Splite 3D','Gsap','Rest Api'] },
+        { id: 10, name: 'Sky 365', description: "Un site web pour le booking en ligne des hotels moderne et responsive.", tags: ['Figma','React','Uiverse','Material UI'] },
+        { id: 11, name: 'Educaty', description: "Plateforme d’apprentissage innovante qui révolutionne la manière dont les étudiants accèdent aux ressources éducatives en ligne.", tags: ['Figma','React','Bootstrap','WebLeb','Dribble Inspiration'] },
+        { id: 12, name: 'SERVICE_JARDINAGE', description: "Notre site propose une gamme complète de services professionnels pour prendre soin de votre jardin et de votre espace extérieur, demander un devis en ligne", tags: ['React','Bootstrap','EmailJS','SwiperJs'] },
+        { id: 13, name: 'HONEY WEB', description: "Notre site propose une sélection variée de miels artisanaux provenant de sources locales et durables. Que vous recherchiez du miel cru, du miel biologique ou des variétés spéciales comme le miel de lavande ou de trèfle", tags: ['React','Bootstrap','EmailJS'] },
+        { id:14, name: 'DARIShop', description: "Plateforme eCommerce dédiée à l'univers de la maison. Parcourez notre sélection variée de produits soigneusement sélectionnés pour embellir et optimiser votre espace de vie", tags: ['Laravel','Blade','Mysql','HTML','CSS','JS','Tailwind'] },
+        { id:15, name: 'Pizza Dyalna', description: "Plongez dans un monde de saveurs délicieuses où chaque bouchée est une explosion de goût.. Un site Web", tags: ['Laravel','Blade','Mysql','HTML','CSS','JS','Tailwind'] }
       ]
       },
       tools: {
@@ -270,7 +275,7 @@ const resources = {
     { id: "01", title: "Développement Full-Stack", desc: "Création d'applications web scalables avec React, Laravel et Spring Boot, garantissant un code propre." },
     { id: "02", title: "Design UI/UX", desc: "Conception d'interfaces modernes et épurées, mettant l'accent sur une esthétique minimaliste et technologique." },
     { id: "03", title: "Architecture de Données", desc: "Conception de schémas de bases de données robustes et optimisation de requêtes pour des systèmes performants." },
-    { id: "04", title: "Solutions Digitales", desc: "Gestion de projet de A à Z, du brief initial au déploiement sécurisé et à la maintenance technique." }
+    { id: "04", title: "Hébergement & Optimisation SEO", desc: "Gestion de l'hébergement web, optimisation du référencement naturel (SEO) et intégration d'analytiques pour améliorer la visibilité et surveiller les performances du site." }
   ]
 }
     }
