@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import my8logo from "../assets/my-logo.png";
+import my8logo from "../assets/my-logo.webp";
 import { useTranslation } from 'react-i18next';
 import { FaGithub, FaLinkedinIn, FaArrowRight, FaWhatsapp, FaTimes } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";

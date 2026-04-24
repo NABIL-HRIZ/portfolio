@@ -327,23 +327,27 @@ border: none !important;
   }
 
   .contact-btn {
-    bottom: 30px;
-    right: 30px;
+    position: relative;
     padding: 15px 20px !important;
     font-size: 0.75rem;
     letter-spacing: 1px;
     display: block !important;
+    top: -280px !important;
+    left:240px !important;
+
   }
 
   .contact-btn {
     padding: 15px 20px !important;
+
   
   }
 
   .menu-footer {
-    bottom:40px !important;
+    position: relative;
     left:80px !important;
     font-size: 0.75rem;
+    top: -300px !important;
   }
 
   .language-toggle-btn {

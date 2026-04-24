@@ -4,9 +4,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import "../styles/PortfolioHero.css";
 import myPhoto from "../assets/image-hero.webp";
-import sticker1 from "../assets/sticky1.png";
-import sticker2 from "../assets/sticky2.png";
-import sticker3 from "../assets/sticky3.png";
+import sticker1 from "../assets/sticky1.webp";
+import sticker2 from "../assets/sticky2.webp";
+import sticker3 from "../assets/sticky3.webp";
 import { FaArrowTurnDown } from "react-icons/fa6";
 
 const PortfolioHero = () => {

@@ -140,6 +140,7 @@
 @media (max-width: 768px) {
   .srv-section {
     padding: 60px 7px !important;
+    margin-bottom: -320px !important;
   }
 
   .srv-item {
@@ -151,15 +152,17 @@
   .srv-number {
     font-size: 1.5rem;
     margin-bottom: 5px;
+    color: #A47251;
   }
 
   .srv-item-title {
     font-size: 1.5rem;
+    color: #feffff;
   }
 
   .srv-item-desc {
     font-size: 0.95rem;
-    margin-left: 0; /* 🔥 important */
+    margin-left: 0;
   }
 
   .srv-line {

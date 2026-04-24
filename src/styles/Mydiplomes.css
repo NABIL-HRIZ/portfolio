@@ -144,7 +144,7 @@
   .h-timeline {
     height: auto;
     padding: 60px 30px; 
-    margin-top: -120px;
+    margin-bottom: -250px !important;
   }
  
 

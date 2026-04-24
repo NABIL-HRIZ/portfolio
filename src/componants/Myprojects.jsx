@@ -16,11 +16,11 @@ import pizza from '../assets/pizza.jpg'
 import dari from '../assets/dari.jpg'
 import jardinage from '../assets/jardinage.jpg'
 import honey from '../assets/honey.jpg'
-import weather from '../assets/weather.png'
+import weather from '../assets/weather.webp'
 import fanzone from '../assets/fanzone.jpg'
-import paws from '../assets/paws.png'
+import paws from '../assets/paws.webp'
 import nike from '../assets/nike.jpeg'
-import store from '../assets/store.png'
+import store from '../assets/store.webp'
 
 const MyProjects = () => {
   const [showAll, setShowAll] = useState(false);
@@ -36,9 +36,7 @@ const hoverColors = [
 
   const { t } = useTranslation();
 
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
+
 
 
   const translations = t('projects.list', { returnObjects: true }) || [];
@@ -69,6 +67,24 @@ const hoverColors = [
   }));
 
   const displayedProjects = showAll ? projects : projects.slice(0, 6);
+
+    useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('mobile-active');
+      } else {
+        entry.target.classList.remove('mobile-active');
+      }
+    });
+  }, { threshold: 1 });
+  const cards = document.querySelectorAll('.project-card');
+  cards.forEach((card) => observer.observe(card));
+
+  return () => observer.disconnect();
+}, [displayedProjects]);
 
   return (
    <section className="projects-section" id='projects-section'>

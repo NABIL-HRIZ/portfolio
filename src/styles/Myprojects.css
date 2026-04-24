@@ -433,11 +433,26 @@
   }
 }
 
+@media (max-width: 992px) {
+  
+  .project-card.mobile-active .project-hover-overlay {
+    transform: translateX(0);
+  }
+
+  .project-card.mobile-active .project-base-image img {
+    transform: scale(1.1) blur(2px);
+  }
+
+  .projects-grid-container:hover .project-card {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+}
 
 @media (max-width: 768px) {
   .projects-section {
     padding: 80px 20px;
-    margin-top: -180px !important;
   }
 
   .project-card {

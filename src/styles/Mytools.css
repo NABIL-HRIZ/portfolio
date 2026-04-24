@@ -139,7 +139,7 @@
 @media (max-width: 768px) {
   .tools-section {
     padding: 80px 0px;
-    margin-top:-130px;
+margin-bottom: -300px !important;    
     
   }
 

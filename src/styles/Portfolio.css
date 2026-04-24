@@ -134,6 +134,11 @@
 @media (max-width: 768px) {
   .portfolio-section {
     padding: 50px 20px;
+    margin-bottom: -450px !important;
+  }
+
+  .bg-glow{
+   margin-top: -420px !important;
   }
 
   .calendar-card {
@@ -156,6 +161,7 @@
 @media (max-width: 480px) {
   .portfolio-section {
     padding: 40px 15px;
+    height: 50vh !important;
   }
 
   .calendar-card {
