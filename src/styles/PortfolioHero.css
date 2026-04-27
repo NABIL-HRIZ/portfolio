@@ -164,14 +164,15 @@
 }
 
 .sticker-2 {
-  width: 350px;
+  width: 300px;
   top: -230px;
-  right: 90px;
+  right: 180px;
+  margin-top:40px !important;
 }
 
 .sticker-3 {
   width: 300px;
-  bottom: -10%;
+  bottom: -18%;
   right: -360px;
 }
 
