@@ -234,8 +234,8 @@ const resources = {
         name: 'NABIL HRIZ',
         role: 'DÉVELOPPEUR FULL-STACK',
         specialization: 'Spécialisation',
-        description: 'Création de solutions modernes et innovantes avec React, Laravel & Spring Boot.'
-        ,cta:"voir_projets"
+        description:"Développeur Full Stack — je conçois des applications web modernes et des expériences adaptées au mobile.",
+        cta:"voir_projets"
       },
       contact: {
         titre_part1: "Créons",
